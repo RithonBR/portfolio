@@ -1,0 +1,29 @@
+.video-background{
+    position: relative;
+   }
+   
+.title{
+    font-family: 'monoton';
+    color: var(--amarelo-destaque);
+    font-size: 1.5rem;
+}
+
+.text-pad{
+    font-family: 'rubikiglitch';
+    color: var(--cinza-escuro);
+    font-size: 1rem;
+}
+
+.quick-facts,.list-facts,.text-pad,.titulo{
+    margin-top: 10px;
+}
+
+.char-img{
+    width: 50vw;
+    max-width: 180px;
+    border-radius: 60px;
+}
+
+.contrast {
+    color: var(--amarelo-destaque);
+}

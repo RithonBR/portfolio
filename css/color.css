@@ -1,0 +1,11 @@
+:root {
+    --roxo-fundo: #6A1B9A; /* Roxo principal para o fundo */
+    --roxo-claro: #8E44AD; /* Roxo mais claro para destaques */
+    --amarelo-destaque: #F1C40F; /* Contraste vibrante */
+    --cinza-claro: #F2F2F2; /* Cinza claro para textos e fundos */
+    --cinza-escuro: #2C2C2C; /* Cinza escuro para contrastes suaves */
+    --rosa-suave: #F39CBB; /* Rosa complementar para elementos de destaque */
+    --verde-suave: #27AE60; /* Verde suave para botões de ação */
+    --branco: #FFFFFF; /* Branco para textos e ícones */
+  }
+  

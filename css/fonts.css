@@ -1,0 +1,17 @@
+@font-face {
+    font-family: rubikiso;
+    src: url(../fonts/RubikIso-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: rubikiglitch;
+    src: url(../fonts/RubikGlitch-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: monoton;
+    src: url(../fonts/Monoton-Regular.ttf);
+    font-display: swap;
+}
