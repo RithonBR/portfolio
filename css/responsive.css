@@ -10,15 +10,24 @@ body{
 }
  }
 
-/* Celulares pequenos (max-width: 360px) */
-@media (min-width: 303px) and (max-width: 427px) {
+ @media (min-width: 303px) and (max-width: 331px) {
   .container-home{
-    max-width: 185.156px;
+    min-width: 185.156px;
+  }
+  .title{
+    font-size: 0.7rem;
+  }
+ }
+
+
+@media (min-width: 331px) and (max-width: 427px) {
+  .container-home{
+    min-width: 185.156px;
   }
 
  }
  
- /* Celulares médios (max-width: 480px) */
+
  @media (min-width: 428px) and (max-width: 540px) {
   .container-home{
     max-width: 261.547px;
@@ -26,28 +35,28 @@ body{
 
  }
  
- /* Tablets (601px a 768px) */
+
  @media (min-width: 541px) and (max-width: 768px) {
   .container-home{
     max-width: 333.656px;
   }
  }
  
- /* Desktops pequenos (769px a 1024px) */
+
  @media (min-width: 769px) and (max-width: 1024px) {
   .container-home{
     max-width: 333.656px;
   }
  }
  
- /* Desktops médios (1025px a 1280px) */
+ 
  @media (min-width: 1025px) and (max-width: 1280px) {
   .container-home{
     max-width: 333.656px;
   }
  }
  
- /* Desktops grandes (1281px e acima) */
+
  @media (min-width: 1281px) {
   .container-home{
     max-width: 333.656px;
