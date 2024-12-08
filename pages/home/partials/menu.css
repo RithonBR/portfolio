@@ -1,3 +1,9 @@
+.painel-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container-home{
     display: flex;
     flex-direction: column;
@@ -8,8 +14,27 @@
     border-width: 3px;
     background: linear-gradient(180deg,rgba(217, 234, 242, 0.05%), rgba(217, 234, 242, 0.8));
     padding: 30px;
+    /* VAPOVAPO */
+    position: absolute;
+    top: 3em;
+    width: 61.11vw;
+    margin: auto;
 }
 .title-container{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+.redes-sociais{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-rede-social{
+    margin-left: 10px;
+    width: 3em;
+    margin-top: 15px;
 }
