@@ -1,40 +1,46 @@
-.painel-home{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Estilo para o painel principal da página inicial */
+.painel-home {
+    display: flex; /* Define um layout flexível */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
 }
 
-.container-home{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    margin-top: 50px;
-    border-width: 3px;
-    background: linear-gradient(180deg,rgba(217, 234, 242, 0.05%), rgba(217, 234, 242, 0.8));
-    padding: 30px;
-    /* VAPOVAPO */
-    position: absolute;
-    top: 3em;
-    width: 61.11vw;
-    margin: auto;
-}
-.title-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.redes-sociais{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Container principal da página inicial */
+.container-home {
+    display: flex; /* Define um layout flexível */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: center; /* Alinha os itens ao centro horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    border-radius: 30px; /* Define bordas arredondadas */
+    margin-top: 50px; /* Espaço superior de 50px */
+    border-width: 3px; /* Define a largura da borda */
+    background: linear-gradient(180deg, rgba(217, 234, 242, 0.05%), rgba(217, 234, 242, 0.8)); /* Fundo com gradiente */
+    padding: 30px; /* Espaçamento interno de 30px */
+    position: absolute; /* Posiciona o container de forma absoluta */
+    top: 3em; /* Espaçamento superior de 3em */
+    width: 61.11vw; /* Largura relativa à largura da janela */
+    margin: auto; /* Centraliza horizontalmente */
 }
 
-.icone-rede-social{
-    margin-left: 10px;
-    width: 3em;
-    margin-top: 15px;
+/* Estilo para o título do container */
+.title-container {
+    display: flex; /* Define um layout flexível */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: center; /* Alinha os itens ao centro horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+/* Estilo para a seção de redes sociais */
+.redes-sociais {
+    display: flex; /* Define um layout flexível */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: center; /* Alinha os itens ao centro horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+/* Estilo para os ícones das redes sociais */
+.icone-rede-social {
+    margin-left: 10px; /* Margem à esquerda de 10px */
+    width: 3em; /* Define a largura como 3em */
+    margin-top: 15px; /* Margem superior de 15px */
 }

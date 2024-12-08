@@ -1,9 +1,22 @@
-@import url(css/reset.css);
-@import url(css/responsive.css);
-@import url(css/video-background.css);
-@import url(css/color.css);
-@import url(css/fonts.css);
-@import url(css/simpleThings.css);
+/* Importa o arquivo "reset.css", que provavelmente contém um reset de estilos para remover inconsistências entre navegadores. 
+   Isso ajuda a garantir que os elementos tenham um comportamento uniforme. */
+   @import url(css/reset.css);
 
-@import url(pages/home/home.css);
-
+   /* Importa o arquivo "responsive.css", que provavelmente contém estilos para tornar o site responsivo, ajustando-se a diferentes tamanhos de tela (ex.: mobile, tablet, desktop). */
+   @import url(css/responsive.css);
+   
+   /* Importa o arquivo "video-background.css", que deve conter estilos específicos para fundos de vídeo no site, como ajustes de posicionamento, tamanho e comportamento. */
+   @import url(css/video-background.css);
+   
+   /* Importa o arquivo "color.css", que provavelmente define as cores principais do site, incluindo paletas de tema, cores de fundo e textos. */
+   @import url(css/color.css);
+   
+   /* Importa o arquivo "fonts.css", onde estão configuradas as fontes usadas no site (ex.: fontes externas, tamanhos padrão e pesos). */
+   @import url(css/fonts.css);
+   
+   /* Importa o arquivo "simpleThings.css", que deve conter pequenos estilos auxiliares ou ajustes menores aplicados ao site. */
+   @import url(css/simpleThings.css);
+   
+   /* Importa o arquivo "home.css", localizado na pasta "pages/home", que define os estilos específicos para a página inicial do site. */
+   @import url(pages/home/home.css);
+   

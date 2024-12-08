@@ -1,2 +1,8 @@
-@import url(partials/menu.css);
-@import url(../../global.css);
+/* Importa o arquivo de estilos "menu.css" da pasta "partials" localizada no mesmo diretório deste arquivo.
+   Utilizado para modularizar os estilos e facilitar a manutenção do código. */
+   @import url(partials/menu.css);
+
+   /* Importa o arquivo "global.css" localizado dois níveis acima na hierarquia de diretórios.
+      Este arquivo provavelmente contém estilos globais aplicados ao site inteiro, como reset de CSS ou definições padrão. */
+   @import url(../../global.css);
+   

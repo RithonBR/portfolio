@@ -1,53 +1,59 @@
-.video-background{
-    position: relative;
-   }
-   
-.title{
-    font-family: 'rubikiglitch';
-    text-decoration: underline;
-    color: var(--amarelo-destaque);
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    animation: jump 1s infinite ease-in-out;
-    -webkit-text-stroke: 0.2px var(--teste);
+/* Estilo para o vídeo de fundo */
+.video-background {
+    position: relative; /* Define o vídeo de fundo como relativo, permitindo o posicionamento de outros elementos em relação a ele */
 }
 
-.text-pad{
-    font-family: 'rubikiglitch';
-    color: var(--cinza-escuro);
-    font-size: 1rem;
+/* Estilo para o título */
+.title {
+    font-family: 'rubikiglitch'; /* Define a fonte como 'rubikiglitch' para o título */
+    text-decoration: underline; /* Adiciona um sublinhado ao texto do título */
+    color: var(--amarelo-destaque); /* Define a cor do título usando a variável CSS 'amarelo-destaque' */
+    font-size: 1.5rem; /* Define o tamanho da fonte para 1.5rem */
+    margin-top: 0.5rem; /* Define uma margem superior de 0.5rem */
+    animation: jump 1s infinite ease-in-out; /* Aplica uma animação de 'pular' no título */
+    -webkit-text-stroke: 0.2px var(--teste); /* Aplica um contorno ao texto com a cor definida pela variável 'teste' */
 }
 
-.quick-facts,.list-facts,.text-pad,.titulo{
-    margin-top: 10px;
+/* Estilo para o texto com a classe 'text-pad' */
+.text-pad {
+    font-family: 'rubikiglitch'; /* Define a mesma fonte 'rubikiglitch' para o texto */
+    color: var(--cinza-escuro); /* Define a cor do texto usando a variável 'cinza-escuro' */
+    font-size: 1rem; /* Define o tamanho da fonte para 1rem */
 }
 
-.char-img{
-    width: 50vw;
-    max-width: 180px;
-    border-radius: 60px;
+/* Estilo para os elementos 'quick-facts', 'list-facts', 'text-pad' e 'titulo' */
+.quick-facts, .list-facts, .text-pad, .titulo {
+    margin-top: 10px; /* Adiciona uma margem superior de 10px para esses elementos */
 }
 
+/* Estilo para a imagem com a classe 'char-img' */
+.char-img {
+    width: 50vw; /* Define a largura da imagem como 50% da largura da janela de visualização */
+    max-width: 180px; /* Define a largura máxima da imagem como 180px */
+    border-radius: 60px; /* Aplica bordas arredondadas com raio de 60px para a imagem */
+}
+
+/* Estilo para os elementos com a classe 'contrast' */
 .contrast {
-    color: var(--amarelo-destaque);
+    color: var(--amarelo-destaque); /* Aplica a cor definida pela variável 'amarelo-destaque' ao texto */
 }
 
-.decoration-bar{
-    width:100%;
-    height:15px;
-    border-bottom: 1px solid rgba(255,255,255,.25);
+/* Estilo para a barra de decoração */
+.decoration-bar {
+    width: 100%; /* A barra ocupa 100% da largura disponível */
+    height: 15px; /* Define a altura da barra como 15px */
+    border-bottom: 1.5px solid rgba(255, 255, 255, .25); /* Aplica uma borda inferior sutil com 25% de opacidade */
 }
 
-
+/* Animação 'jump' que faz o elemento subir e descer */
 @keyframes jump {
     0% {
-      transform: translateY(0);
+      transform: translateY(0); /* No início da animação, o elemento está na posição normal */
     }
     50% {
-      transform: translateY(-5px);
+      transform: translateY(-5px); /* No meio da animação, o elemento se move para cima 5px */
     }
     100% {
-      transform: translateY(0);
-    }}
-
-
+      transform: translateY(0); /* No final da animação, o elemento retorna à posição normal */
+    }
+}

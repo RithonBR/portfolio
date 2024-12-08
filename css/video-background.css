@@ -1,11 +1,12 @@
-#video-background{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
+/* Estilo para o elemento de vídeo de fundo */
+#video-background {
+    width: 100vw; /* Define a largura do vídeo como 100% da largura da janela de visualização */
+    height: 100vh; /* Define a altura do vídeo como 100% da altura da janela de visualização */
+    object-fit: cover; /* Faz com que o vídeo preencha o espaço sem distorcer, cortando o excesso se necessário */
+    position: fixed; /* Posiciona o vídeo de forma fixa, para que ele permaneça no mesmo lugar ao rolar a página */
+    left: 0; /* Alinha o vídeo à borda esquerda da janela */
+    right: 0; /* Alinha o vídeo à borda direita da janela (não usado, mas é redundância para alinhamento completo) */
+    top: 0; /* Alinha o vídeo à parte superior da janela */
+    bottom: 0; /* Alinha o vídeo à parte inferior da janela */
+    z-index: -1; /* Coloca o vídeo atrás de outros elementos na hierarquia de camadas */
 }
