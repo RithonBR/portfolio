@@ -22,6 +22,13 @@
     text-align: justify;
 }
 
+.text-pad-2 {
+    font-family: 'rubikiglitch'; /* Define a mesma fonte 'rubikiglitch' para o texto */
+    color: var(--cinza-escuro); /* Define a cor do texto usando a variável 'cinza-escuro' */
+    font-size: 1rem; /* Define o tamanho da fonte para 1rem */
+    margin-top: 10px;
+}
+
 /* Estilo para os elementos 'quick-facts', 'list-facts', 'text-pad' e 'titulo' */
 .quick-facts, .list-facts, .text-pad, .titulo {
     margin-top: 10px; /* Adiciona uma margem superior de 10px para esses elementos */
@@ -57,4 +64,8 @@
     100% {
       transform: translateY(0); /* No final da animação, o elemento retorna à posição normal */
     }
+}
+
+imput , label {
+    font-family: 'rubikiglitch';
 }

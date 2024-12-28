@@ -92,12 +92,13 @@
   cursor: pointer; /* Define o cursor como ponteiro */
   outline: none; /* Remove borda de foco */
   user-select: none; /* Evita seleção do texto */
+  right: 20px
 }
 
 /* Estilo do fundo do switch */
 .switch--shadow + label {
   padding: 2px; /* Espaçamento interno */
-  width: 140px; /* Largura */
+  width: 160px; /* Largura */
   height: 30px; /* Altura */
   background-color: #dddddd; /* Cor de fundo */
   border-radius: 30px; /* Bordas arredondadas */
@@ -135,6 +136,13 @@
   transition: all 0.4s;
 }
 
+.switch--shadow + label:before,
+  .switch--shadow + label:after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 /* Estado alternado do switch */
 .switch--shadow:checked + label:before {
   background-color: #8ce196; /* Cor para o estado ativo */
@@ -142,7 +150,7 @@
 }
 
 .switch--shadow:checked + label:after {
-  transform: translateX(110px); /* Move o botão para o lado direito */
+  transform: translateX(120px); /* Move o botão para o lado direito */
 }
 
 /* Estilo para listas de projetos e experiências */
@@ -152,4 +160,13 @@
   align-items: center; /* Centraliza os itens horizontalmente */
   justify-content: center; /* Centraliza os itens verticalmente */
   text-align: center; /* Centraliza o texto */
+}
+
+.list-projects{
+  margin-right: 20px;
+}
+
+.projects-experience{
+  margin-top: 15px;
+  display: flex;
 }
