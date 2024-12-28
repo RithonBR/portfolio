@@ -1,78 +1,125 @@
-/* Para telas muito pequenas */
+/* 
+Para telas muito pequenas (máximo de 302px) 
+Objetivo: Garantir uma exibição funcional para telas extremamente pequenas.
+*/
 @media (max-width: 302px) {
+  /* Esconde o conteúdo principal para telas muito pequenas */
   .container-home {
       opacity: 0;
   }
+
+  /* Remove o vídeo de fundo para economizar recursos */
   .videoback {
       display: none;
   }
+
+  /* Oculta os ícones laterais das redes sociais */
   .redes-sociais-Lateral {
       visibility: hidden;
   }
+
+  /* Esconde seções específicas para telas pequenas */
   #prog, #agro, #mobile, .container-home-switch {
       display: none;
   }
+
+  /* Define uma imagem de fundo fixa para contexto */
   body {
       background-image: url(../icons/gato-com-arma.jpg);
   }
 }
 
-/* Para telas de 303px a 540px */
+/* 
+Para telas de largura entre 303px e 540px 
+Objetivo: Ajustar o layout para dispositivos móveis pequenos.
+*/
 @media (min-width: 303px) and (max-width: 540px) {
+  /* Define um tamanho mínimo para o contêiner principal */
   .container-home {
       min-width: 185.156px;
   }
-  .projects-experience{
+
+  /* Ajusta a direção dos elementos de projeto e experiência para coluna */
+  .projects-experience {
     flex-direction: column;
   }
+
+  /* Reduz o tamanho da fonte dos títulos */
   .title {
       font-size: 0.7rem;
   }
+
+  /* Oculta os ícones laterais das redes sociais */
   .redes-sociais-Lateral {
       visibility: hidden;
   }
+
+  /* Esconde as seções "prog" e "agro" */
   #prog, #agro {
       display: none;
   }
+
+  /* Mostra o conteúdo específico para dispositivos móveis */
   #mobile {
       display: block;
   }
-  .projects-experience .list-experience .text-pad, .projects-experience .list-projects .text-pad {
-    font-size: 0.9rem; /* Tamanho da fonte */
-}
-.experience{
-  margin-top: 10px;
-}
+
+  /* Reduz o tamanho da fonte nos textos de experiência e projetos */
+  .projects-experience .list-experience .text-pad,
+  .projects-experience .list-projects .text-pad {
+    font-size: 0.9rem;
+  }
+
+  /* Adiciona margem superior à seção de experiência */
+  .experience {
+      margin-top: 10px;
+  }
 }
 
-/* Para telas de 541px a 768px */
+/* 
+Para telas de largura entre 541px e 768px 
+Objetivo: Ajustar o layout para tablets e dispositivos intermediários.
+*/
 @media (min-width: 541px) and (max-width: 768px) {
+  /* Define um tamanho máximo para o contêiner principal */
   .container-home {
       max-width: 333.656px;
   }
+
+  /* Esconde o conteúdo específico para dispositivos móveis */
   #mobile {
       display: none;
   }
-  #teste{
+
+  /* Oculta elementos não necessários nesta faixa */
+  #teste {
     display: none;
   }
-  #hidden{
+  #hidden {
     display: none;
   }
 }
 
-/* Para telas maiores */
+/* 
+Para telas maiores (mínimo de 769px) 
+Objetivo: Layout para dispositivos com grandes resoluções, como desktops.
+*/
 @media (min-width: 769px) {
+  /* Define o mesmo tamanho máximo para o contêiner principal */
   .container-home {
       max-width: 333.656px;
   }
+
+  /* Esconde o conteúdo específico para dispositivos móveis */
   #mobile {
       display: none;
   }
-  #teste{
+
+  /* Oculta elementos não necessários */
+  #teste {
     display: none;
   }
-  #hidden{
+  #hidden {
     display: none;
   }
 }
