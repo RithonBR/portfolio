@@ -12,15 +12,28 @@
     align-items: center; /* Alinha os itens ao centro horizontalmente */
     justify-content: center; /* Centraliza os itens verticalmente */
     border-radius: 30px; /* Define bordas arredondadas */
-    margin-top: 50px; /* Espaço superior de 50px */
     border-width: 3px; /* Define a largura da borda */
     background: linear-gradient(180deg, rgba(217, 234, 242, 0.05%), rgba(217, 234, 242, 0.8)); /* Fundo com gradiente */
     padding: 30px; /* Espaçamento interno de 30px */
     position: absolute; /* Posiciona o container de forma absoluta */
-    top: 3em; /* Espaçamento superior de 3em */
+    top: 5em; /* Espaçamento superior de 3em */
     width: 61.11vw; /* Largura relativa à largura da janela */
     margin: auto; /* Centraliza horizontalmente */
 }
+
+.container-home-switch {
+    padding: 30px; /* Espaçamento interno de 30px */
+    position: absolute; /* Posiciona o container de forma absoluta */
+    top: 5em; /* Espaçamento superior de 3em */
+    margin: auto; /* Centraliza horizontalmente */
+}
+
+.container-teste{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
 
 /* Estilo para o título do container */
 .title-container {
@@ -43,4 +56,32 @@
     margin-left: 10px; /* Margem à esquerda de 10px */
     width: 3em; /* Define a largura como 3em */
     margin-top: 15px; /* Margem superior de 15px */
+}
+
+.redes-sociais-Lateral{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: -230px;
+    top: 5rem;
+}
+
+.switch__container{
+    display: flex;
+    position: relative;
+    top: -6rem;
+    right: -36px;
+}
+
+.projects-experience{
+    margin-top: 15px;
+    display: flex;
+}
+
+.projects{
+    margin-right: 20px;
+}
+
+#prog,#agro{
+    display: none;
 }

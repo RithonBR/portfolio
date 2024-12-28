@@ -1,64 +1,78 @@
+/* Para telas muito pequenas */
 @media (max-width: 302px) {
-.container-home{
-  opacity: 0%;
+  .container-home {
+      opacity: 0;
+  }
+  .videoback {
+      display: none;
+  }
+  .redes-sociais-Lateral {
+      visibility: hidden;
+  }
+  #prog, #agro, #mobile, .container-home-switch {
+      display: none;
+  }
+  body {
+      background-image: url(../icons/gato-com-arma.jpg);
+  }
 }
-.videoback{
-  display: none;
+
+/* Para telas de 303px a 540px */
+@media (min-width: 303px) and (max-width: 540px) {
+  .container-home {
+      min-width: 185.156px;
+  }
+  .projects-experience{
+    flex-direction: column;
+  }
+  .title {
+      font-size: 0.7rem;
+  }
+  .redes-sociais-Lateral {
+      visibility: hidden;
+  }
+  #prog, #agro {
+      display: none;
+  }
+  #mobile {
+      display: block;
+  }
+  .projects-experience .list-experience .text-pad, .projects-experience .list-projects .text-pad {
+    font-size: 0.9rem; /* Tamanho da fonte */
 }
-body{
-  background-image: url(../icons/gato-com-arma.jpg);
+.experience{
+  margin-top: 10px;
 }
- }
+}
 
- @media (min-width: 303px) and (max-width: 331px) {
-  .container-home{
-    min-width: 185.156px;
+/* Para telas de 541px a 768px */
+@media (min-width: 541px) and (max-width: 768px) {
+  .container-home {
+      max-width: 333.656px;
   }
-  .title{
-    font-size: 0.7rem;
+  #mobile {
+      display: none;
   }
- }
-
-
-@media (min-width: 331px) and (max-width: 427px) {
-  .container-home{
-    min-width: 185.156px;
+  #teste{
+    display: none;
   }
-
- }
- 
-
- @media (min-width: 428px) and (max-width: 540px) {
-  .container-home{
-    max-width: 261.547px;
+  #hidden{
+    display: none;
   }
+}
 
- }
- 
-
- @media (min-width: 541px) and (max-width: 768px) {
-  .container-home{
-    max-width: 333.656px;
+/* Para telas maiores */
+@media (min-width: 769px) {
+  .container-home {
+      max-width: 333.656px;
   }
- }
- 
-
- @media (min-width: 769px) and (max-width: 1024px) {
-  .container-home{
-    max-width: 333.656px;
+  #mobile {
+      display: none;
   }
- }
- 
- 
- @media (min-width: 1025px) and (max-width: 1280px) {
-  .container-home{
-    max-width: 333.656px;
+  #teste{
+    display: none;
   }
- }
- 
-
- @media (min-width: 1281px) {
-  .container-home{
-    max-width: 333.656px;
+  #hidden{
+    display: none;
   }
- }
+}
