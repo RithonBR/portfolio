@@ -5,24 +5,6 @@
    ============================================================ */
 
 /* ===========================
-   Telas muito pequenas (< 302px)
-   ===========================
-   302px é menor que qualquer smartphone moderno (menor é 360px).
-   Abaixo disso o layout quebraria visualmente — mais simples ocultar que distorcer.
-   Não foi encontrado nenhum dispositivo real nesse tamanho; é um safety net. */
-@media (max-width: 302px) {
-    /* Oculta o container com opacity: 0 (em vez de display: none) para manter
-       o espaço e não colapsar o layout — apenas torna invisível */
-    .container-home {
-        opacity: 0;
-    }
-    /* Remove o vídeo para economizar recursos em dispositivos muito limitados */
-    .videoback {
-        display: none;
-    }
-}
-
-/* ===========================
    Mobile (até 540px)
    ===========================
    540px cobre celulares em portrait e pequenos tablets.
