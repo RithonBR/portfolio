@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<!-- RTH World Explorer — Política de Privacidade (página oculta, acesso apenas por link direto) -->
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Política de Privacidade do RTH World Explorer.">
+  <link rel="shortcut icon" href="../icons/tridente.ico" type="image/x-icon">
+  <title>Política de Privacidade — RTH World Explorer</title>
+  <link rel="stylesheet" href="../pages/home/home.css">
+  <style>
+    .privacy-page {
+      padding-top: 56px;
+      min-height: 100vh;
+    }
+
+    .privacy-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 5vw, 2rem);
+      color: var(--texto-principal, #e0e0e0);
+    }
+
+    .privacy-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border: 1px solid var(--neon-ciano, #00f5ff);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--neon-ciano, #00f5ff);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .privacy-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .privacy-meta {
+      font-size: 0.85rem;
+      color: var(--texto-secundario, #999);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* ─── Lang toggle ─── */
+    .privacy-lang {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .privacy-lang-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      font-family: ui-monospace, monospace;
+    }
+
+    .privacy-lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border: 1px solid rgba(0,245,255,0.3);
+      border-radius: 100px;
+      overflow: hidden;
+      background: none;
+      cursor: pointer;
+    }
+
+    .privacy-lang-btn span {
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-family: ui-monospace, monospace;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.4);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .privacy-lang-btn span.active {
+      background: rgba(0,245,255,0.12);
+      color: var(--neon-ciano, #00f5ff);
+    }
+
+    .privacy-lang-sep {
+      color: rgba(255,255,255,0.2);
+      font-size: 0.75rem;
+      font-family: ui-monospace, monospace;
+    }
+
+    /* ─── Sections ─── */
+    .privacy-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .privacy-section h2 {
+      font-weight: 600;
+      color: var(--neon-ciano, #00f5ff);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.85rem;
+    }
+
+    .privacy-section p,
+    .privacy-section li {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 0.5rem;
+    }
+
+    .privacy-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .privacy-section ul li::before {
+      content: "→ ";
+      color: var(--neon-ciano, #00f5ff);
+      font-size: 0.8em;
+    }
+
+    /* ─── Rights grid ─── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    .right-card {
+      background: rgba(0,245,255,0.03);
+      border: 1px solid rgba(0,245,255,0.12);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+    }
+
+    .right-card strong {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--neon-ciano, #00f5ff);
+      margin-bottom: 0.3rem;
+    }
+
+    .right-card span {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ─── Legal basis table ─── */
+    .legal-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.75rem;
+      font-size: 0.88rem;
+    }
+
+    .legal-table th {
+      text-align: left;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .legal-table td {
+      padding: 0.6rem 0.75rem;
+      color: rgba(255,255,255,0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      line-height: 1.5;
+      vertical-align: top;
+    }
+
+    .legal-table td:first-child {
+      color: rgba(255,255,255,0.5);
+      white-space: nowrap;
+      width: 32%;
+    }
+
+    /* ─── Highlight box ─── */
+    .privacy-highlight {
+      background: rgba(0,245,255,0.04);
+      border-left: 3px solid var(--neon-ciano, #00f5ff);
+      border-radius: 0 8px 8px 0;
+      padding: 0.85rem 1.1rem;
+      margin: 0.75rem 0;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.72);
+    }
+
+    /* ─── Contact card ─── */
+    .privacy-contact {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .privacy-contact p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      margin: 0 0 0.4rem 0;
+    }
+
+    .privacy-contact a {
+      color: var(--neon-ciano, #00f5ff);
+      text-decoration: none;
+    }
+
+    .privacy-contact a:hover { text-decoration: underline; }
+
+    .privacy-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-principal" role="navigation" aria-label="Navegação principal">
+    <a href="../index.html" class="nav-brand">RTH</a>
+    <ul>
+      <li><a href="../index.html">Sobre</a></li>
+      <li><a href="../pages/projetos.html">Projetos</a></li>
+      <li><a href="../pages/rth-project.html">RTH Project</a></li>
+      <li><a href="../pages/rth-explorer.html">RTH World Explorer</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="privacy-page">
+    <div class="privacy-inner">
+
+      <span class="privacy-badge">RTH World Explorer</span>
+      <h1 class="privacy-title" data-key="page-title">Política de Privacidade</h1>
+      <p class="privacy-meta" data-key="page-meta">Última atualização: novembro de 2026</p>
+
+      <div class="privacy-lang">
+        <span class="privacy-lang-label" data-key="lang-label">Idioma</span>
+        <button class="privacy-lang-btn" id="lang-toggle" aria-label="Alternar idioma">
+          <span id="opt-pt" class="active">PT</span>
+          <span class="privacy-lang-sep"> | </span>
+          <span id="opt-en">EN</span>
+        </button>
+      </div>
+
+      <!-- Introdução -->
+      <div class="privacy-section">
+        <p data-key="intro">O <strong>RTH World Explorer</strong> é um aplicativo mobile <strong>de código aberto e sem fins lucrativos</strong>, desenvolvido de forma independente para coleta de pontos geográficos e parâmetros produtivos em campo. Esta Política de Privacidade descreve quais informações são coletadas pelo aplicativo, de que forma são utilizadas, como são armazenadas e quais são os direitos do titular em relação a esses dados. Ao utilizar o aplicativo, o usuário declara estar ciente e de acordo com os termos aqui descritos.</p>
+      </div>
+
+      <hr class="privacy-divider">
+
+      <!-- 1. Dados Coletados -->
+      <div class="privacy-section">
+        <h2 data-key="s1-title">1. Dados Coletados</h2>
+        <ul>
+          <li data-key="s1-i1">Localização GPS (latitude, longitude e direção) — coletada exclusivamente quando o usuário aciona a captura de coordenada</li>
+          <li data-key="s1-i2">Imagens capturadas pela câmera do dispositivo para registro de pontos de coleta e comprovantes de despesas</li>
+          <li data-key="s1-i3">Dados inseridos pelo usuário em formulários: nome do responsável, rota, cultura, observações e parâmetros produtivos</li>
+          <li data-key="s1-i4">Preferências do aplicativo: idioma, tema visual e rascunhos de formulários salvos localmente</li>
+          <li data-key="s1-i5">Dados de uso do aplicativo — somente mediante consentimento explícito do usuário nas configurações</li>
+        </ul>
+      </div>
+
+      <!-- 2. Base Legal -->
+      <div class="privacy-section">
+        <h2 data-key="s2-title">2. Base Legal para o Tratamento (Art. 7 — LGPD)</h2>
+        <p data-key="s2-intro">Todo tratamento de dados realizado pelo RTH World Explorer possui fundamento legal expresso na Lei Geral de Proteção de Dados (Lei nº 13.709/2018):</p>
+        <table class="legal-table">
+          <thead>
+            <tr>
+              <th data-key="s2-th1">Dado</th>
+              <th data-key="s2-th2">Base Legal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-key="s2-r1a">Localização GPS</td>
+              <td data-key="s2-r1b">Consentimento do titular (Art. 7, I) — acionado pelo próprio usuário</td>
+            </tr>
+            <tr>
+              <td data-key="s2-r2a">Imagens da câmera</td>
+              <td data-key="s2-r2b">Consentimento do titular (Art. 7, I) — acionado pelo próprio usuário</td>
+            </tr>
+            <tr>
+              <td data-key="s2-r3a">Dados de formulário</td>
+              <td data-key="s2-r3b">Execução de contrato / legítimo interesse (Art. 7, II e IX) — necessários para o funcionamento do app</td>
+            </tr>
+            <tr>
+              <td data-key="s2-r4a">Preferências locais</td>
+              <td data-key="s2-r4b">Legítimo interesse (Art. 7, IX) — melhoria da experiência do usuário</td>
+            </tr>
+            <tr>
+              <td data-key="s2-r5a">Dados de uso (opcional)</td>
+              <td data-key="s2-r5b">Consentimento explícito do titular (Art. 7, I) — opt-in nas configurações do app</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 3. Uso dos Dados -->
+      <div class="privacy-section">
+        <h2 data-key="s3-title">3. Uso dos Dados</h2>
+        <ul>
+          <li data-key="s3-i1">Todos os dados são armazenados localmente no dispositivo do usuário</li>
+          <li data-key="s3-i2">Nenhum dado é transmitido automaticamente para servidores externos</li>
+          <li data-key="s3-i3">O usuário pode exportar os dados nos formatos CSV, Excel ou por compartilhamento nativo do sistema operacional</li>
+          <li data-key="s3-i4">O aplicativo não utiliza conta de usuário, autenticação social nem perfil online</li>
+        </ul>
+      </div>
+
+      <!-- 4. Permissões -->
+      <div class="privacy-section">
+        <h2 data-key="s4-title">4. Permissões Solicitadas</h2>
+        <ul>
+          <li data-key="s4-i1"><strong>Localização:</strong> para capturar as coordenadas GPS dos pontos registrados em campo</li>
+          <li data-key="s4-i2"><strong>Câmera:</strong> para registrar imagens associadas aos pontos de coleta e comprovantes</li>
+          <li data-key="s4-i3"><strong>Armazenamento:</strong> para salvar imagens e exportar arquivos CSV/Excel no dispositivo</li>
+          <li data-key="s4-i4"><strong>Internet:</strong> para carregar os tiles do mapa (OpenStreetMap) quando há conexão disponível</li>
+          <li data-key="s4-i5"><strong>Notificações:</strong> para informar o progresso de exportações realizadas em segundo plano</li>
+        </ul>
+      </div>
+
+      <!-- 5. Compartilhamento -->
+      <div class="privacy-section">
+        <h2 data-key="s5-title">5. Compartilhamento de Dados</h2>
+        <p data-key="s5-p1">O RTH World Explorer <strong>não compartilha dados com terceiros de forma automática</strong>. Os arquivos exportados (CSV, Excel) permanecem sob controle exclusivo do usuário. O aplicativo não transmite informações para servidores de análise de uso (<em>analytics</em>), plataformas de publicidade ou quaisquer serviços externos.</p>
+        <p data-key="s5-p2">Caso o usuário deseje contribuir com o aprimoramento contínuo do aplicativo, existe a opção de compartilhar dados de uso com o desenvolvedor diretamente pelo menu de configurações. Essa funcionalidade é <strong>inteiramente opcional</strong>, depende de consentimento explícito do titular e pode ser revogada a qualquer momento, sem qualquer impacto no funcionamento do aplicativo.</p>
+      </div>
+
+      <!-- 6. Localização -->
+      <div class="privacy-section">
+        <h2 data-key="s6-title">6. Dados de Localização</h2>
+        <p data-key="s6-p">A localização é capturada de forma pontual (<em>snapshot</em>) somente quando o usuário aciona explicitamente a função de captura de coordenada. O aplicativo não realiza rastreamento contínuo de localização em segundo plano fora das funcionalidades explícitas de mapa e GPS sob demanda.</p>
+      </div>
+
+      <!-- 7. Segurança -->
+      <div class="privacy-section">
+        <h2 data-key="s7-title">7. Medidas de Segurança</h2>
+        <p data-key="s7-p">O RTH World Explorer adota as seguintes medidas para proteger os dados do usuário:</p>
+        <ul>
+          <li data-key="s7-i1">Os dados são armazenados em banco de dados local (SQLite) no diretório privado do aplicativo, inacessível a outros apps sem permissão explícita do sistema</li>
+          <li data-key="s7-i2">Imagens são salvas no armazenamento interno privado do aplicativo</li>
+          <li data-key="s7-i3">Nenhuma informação pessoal é transmitida sem ação explícita do usuário (exportação ou compartilhamento opcional)</li>
+          <li data-key="s7-i4">Quando o compartilhamento opcional de dados de uso está ativado, a transmissão ocorre por conexão cifrada (HTTPS/TLS)</li>
+        </ul>
+        <div class="privacy-highlight" data-key="s7-note">Nenhuma medida de segurança é absolutamente infalível. Recomendamos que o usuário mantenha o sistema operacional e o aplicativo sempre atualizados.</div>
+      </div>
+
+      <!-- 8. Retenção e Exclusão -->
+      <div class="privacy-section">
+        <h2 data-key="s8-title">8. Retenção e Exclusão de Dados</h2>
+        <p data-key="s8-p">Os dados ficam armazenados no banco de dados local do dispositivo e nas pastas de armazenamento interno do aplicativo. O usuário pode excluir pontos, imagens e registros individualmente pelo próprio app, ou remover todos os dados desinstalando o aplicativo do dispositivo. Não há retenção de dados em servidores externos após a desinstalação.</p>
+      </div>
+
+      <!-- 9. Direitos do Titular -->
+      <div class="privacy-section">
+        <h2 data-key="s9-title">9. Direitos do Titular (Art. 18 — LGPD)</h2>
+        <p data-key="s9-p1">O RTH World Explorer não armazena, processa nem transmite qualquer dado que configure tratamento irregular nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018). O aplicativo não possui sistema de contas, cadastro ou autenticação de usuários — todas as informações coletadas permanecem exclusivamente no dispositivo do titular e sob seu controle direto.</p>
+        <p data-key="s9-p2">A única hipótese de envio de dados ao desenvolvedor ocorre mediante consentimento explícito e voluntário do usuário, ativado nas configurações do aplicativo. Ao exercer essa opção, o usuário realiza uma <strong>doação voluntária de dados de uso</strong> ao criador do app, com o objetivo de apoiar a produção de artigos técnicos e científicos nas áreas de mapeamento agrícola e sensoriamento remoto. Essa autorização pode ser revogada a qualquer momento, sem qualquer impacto no funcionamento do aplicativo.</p>
+        <p data-key="s9-intro">Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018), o titular dos dados pessoais possui os seguintes direitos, exercíveis mediante solicitação ao controlador:</p>
+        <div class="rights-grid">
+          <div class="right-card">
+            <strong data-key="r1-t">Acesso</strong>
+            <span data-key="r1-d">Confirmar a existência de tratamento e obter acesso aos dados pessoais mantidos pelo app.</span>
+          </div>
+          <div class="right-card">
+            <strong data-key="r2-t">Correção</strong>
+            <span data-key="r2-d">Solicitar a correção de dados incompletos, inexatos ou desatualizados.</span>
+          </div>
+          <div class="right-card">
+            <strong data-key="r3-t">Eliminação</strong>
+            <span data-key="r3-d">Requisitar a exclusão dos dados tratados com base em consentimento.</span>
+          </div>
+          <div class="right-card">
+            <strong data-key="r4-t">Portabilidade</strong>
+            <span data-key="r4-d">Solicitar a exportação dos dados em formato interoperável para outro fornecedor.</span>
+          </div>
+          <div class="right-card">
+            <strong data-key="r5-t">Revogação</strong>
+            <span data-key="r5-d">Retirar o consentimento a qualquer momento, inclusive o do compartilhamento opcional de dados de uso.</span>
+          </div>
+          <div class="right-card">
+            <strong data-key="r6-t">Oposição</strong>
+            <span data-key="r6-d">Opor-se ao tratamento realizado com fundamento em outras bases legais, em caso de descumprimento.</span>
+          </div>
+          <div class="right-card">
+            <strong data-key="r7-t">Informação</strong>
+            <span data-key="r7-d">Obter informações sobre entidades públicas e privadas com quem os dados foram compartilhados.</span>
+          </div>
+          <div class="right-card">
+            <strong data-key="r8-t">Revisão</strong>
+            <span data-key="r8-d">Solicitar revisão de decisões tomadas exclusivamente com base em tratamento automatizado.</span>
+          </div>
+        </div>
+        <p data-key="s9-how" style="margin-top:1rem;">Para exercer qualquer um desses direitos, entre em contato pelo e-mail <a href="mailto:suporterthproject@gmail.com" style="color:var(--neon-ciano,#00f5ff);">suporterthproject@gmail.com</a>. Responderemos em até 15 dias úteis.</p>
+      </div>
+
+      <!-- 10. Público-Alvo -->
+      <div class="privacy-section">
+        <h2 data-key="s10-title">10. Público-Alvo e Proteção de Menores</h2>
+        <p data-key="s10-p">O RTH World Explorer é destinado exclusivamente a profissionais e equipes de campo do setor agrícola. O aplicativo não é direcionado a crianças menores de 13 anos (COPPA) ou menores de 18 anos sem supervisão parental (LGPD, Art. 14) e não coleta dados de menores de forma intencional. Caso tal situação seja identificada, os dados serão removidos imediatamente mediante solicitação.</p>
+      </div>
+
+      <!-- 11. Usuários da UE -->
+      <div class="privacy-section">
+        <h2 data-key="s11-title">11. Usuários da União Europeia (GDPR)</h2>
+        <p data-key="s11-p1">Para usuários localizados no Espaço Econômico Europeu, esta política é igualmente aplicável em conformidade com o Regulamento Geral de Proteção de Dados (GDPR — Regulamento UE 2016/679). Os direitos descritos na Seção 9 correspondem aos direitos previstos nos Artigos 15 a 22 do GDPR.</p>
+        <p data-key="s11-p2">Usuários europeus têm ainda o direito de apresentar reclamação perante a autoridade supervisora de proteção de dados do seu país de residência, caso considerem que o tratamento de seus dados viola o GDPR.</p>
+      </div>
+
+      <!-- 12. Controlador e Encarregado -->
+      <div class="privacy-section">
+        <h2 data-key="s12-title">12. Controlador e Encarregado dos Dados</h2>
+        <ul>
+          <li data-key="s12-i1"><strong data-key="s12-controller-label">Controlador:</strong> <span data-key="s12-controller">Luciano dos Santos Cardoso Junior</span></li>
+          <li data-key="s12-i2"><strong data-key="s12-dpo-label">Encarregado (DPO):</strong> <span data-key="s12-dpo">Luciano dos Santos Cardoso Junior</span></li>
+          <li data-key="s12-i3"><strong data-key="s12-email-label">Contato:</strong> <a href="mailto:suporterthproject@gmail.com" style="color:var(--neon-ciano,#00f5ff);">suporterthproject@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <!-- 13. Alterações -->
+      <div class="privacy-section">
+        <h2 data-key="s13-title">13. Alterações nesta Política</h2>
+        <p data-key="s13-p">Esta Política de Privacidade poderá ser atualizada periodicamente para refletir mudanças no aplicativo ou em requisitos legais aplicáveis. A data da última atualização será sempre indicada no topo desta página. O uso continuado do aplicativo após quaisquer alterações implica aceitação da versão vigente.</p>
+      </div>
+
+      <div class="privacy-contact">
+        <p data-key="contact-title"><strong>Dúvidas, solicitações ou exercício de direitos?</strong></p>
+        <p data-key="contact-body">Entre em contato com o encarregado de proteção de dados:<br>
+          <a href="mailto:suporterthproject@gmail.com">suporterthproject@gmail.com</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const strings = {
+      pt: {
+        "page-title": "Política de Privacidade",
+        "page-meta": "Última atualização: novembro de 2026",
+        "lang-label": "Idioma",
+        "intro": "O <strong>RTH World Explorer</strong> é um aplicativo mobile <strong>de código aberto e sem fins lucrativos</strong>, desenvolvido de forma independente para coleta de pontos geográficos e parâmetros produtivos em campo. Esta Política de Privacidade descreve quais informações são coletadas pelo aplicativo, de que forma são utilizadas, como são armazenadas e quais são os direitos do titular em relação a esses dados. Ao utilizar o aplicativo, o usuário declara estar ciente e de acordo com os termos aqui descritos.",
+        "s1-title": "1. Dados Coletados",
+        "s1-i1": "Localização GPS (latitude, longitude e direção) — coletada exclusivamente quando o usuário aciona a captura de coordenada",
+        "s1-i2": "Imagens capturadas pela câmera do dispositivo para registro de pontos de coleta e comprovantes de despesas",
+        "s1-i3": "Dados inseridos pelo usuário em formulários: nome do responsável, rota, cultura, observações e parâmetros produtivos",
+        "s1-i4": "Preferências do aplicativo: idioma, tema visual e rascunhos de formulários salvos localmente",
+        "s1-i5": "Dados de uso do aplicativo — somente mediante consentimento explícito do usuário nas configurações",
+        "s2-title": "2. Base Legal para o Tratamento (Art. 7 — LGPD)",
+        "s2-intro": "Todo tratamento de dados realizado pelo RTH World Explorer possui fundamento legal expresso na Lei Geral de Proteção de Dados (Lei nº 13.709/2018):",
+        "s2-th1": "Dado", "s2-th2": "Base Legal",
+        "s2-r1a": "Localização GPS", "s2-r1b": "Consentimento do titular (Art. 7, I) — acionado pelo próprio usuário",
+        "s2-r2a": "Imagens da câmera", "s2-r2b": "Consentimento do titular (Art. 7, I) — acionado pelo próprio usuário",
+        "s2-r3a": "Dados de formulário", "s2-r3b": "Execução de contrato / legítimo interesse (Art. 7, II e IX) — necessários para o funcionamento do app",
+        "s2-r4a": "Preferências locais", "s2-r4b": "Legítimo interesse (Art. 7, IX) — melhoria da experiência do usuário",
+        "s2-r5a": "Dados de uso (opcional)", "s2-r5b": "Consentimento explícito do titular (Art. 7, I) — opt-in nas configurações do app",
+        "s3-title": "3. Uso dos Dados",
+        "s3-i1": "Todos os dados são armazenados localmente no dispositivo do usuário",
+        "s3-i2": "Nenhum dado é transmitido automaticamente para servidores externos",
+        "s3-i3": "O usuário pode exportar os dados nos formatos CSV, Excel ou por compartilhamento nativo do sistema operacional",
+        "s3-i4": "O aplicativo não utiliza conta de usuário, autenticação social nem perfil online",
+        "s4-title": "4. Permissões Solicitadas",
+        "s4-i1": "<strong>Localização:</strong> para capturar as coordenadas GPS dos pontos registrados em campo",
+        "s4-i2": "<strong>Câmera:</strong> para registrar imagens associadas aos pontos de coleta e comprovantes",
+        "s4-i3": "<strong>Armazenamento:</strong> para salvar imagens e exportar arquivos CSV/Excel no dispositivo",
+        "s4-i4": "<strong>Internet:</strong> para carregar os tiles do mapa (OpenStreetMap) quando há conexão disponível",
+        "s4-i5": "<strong>Notificações:</strong> para informar o progresso de exportações realizadas em segundo plano",
+        "s5-title": "5. Compartilhamento de Dados",
+        "s5-p1": "O RTH World Explorer <strong>não compartilha dados com terceiros de forma automática</strong>. Os arquivos exportados (CSV, Excel) permanecem sob controle exclusivo do usuário. O aplicativo não transmite informações para servidores de análise de uso (<em>analytics</em>), plataformas de publicidade ou quaisquer serviços externos.",
+        "s5-p2": "Caso o usuário deseje contribuir com o aprimoramento contínuo do aplicativo, existe a opção de compartilhar dados de uso com o desenvolvedor diretamente pelo menu de configurações. Essa funcionalidade é <strong>inteiramente opcional</strong>, depende de consentimento explícito do titular e pode ser revogada a qualquer momento, sem qualquer impacto no funcionamento do aplicativo.",
+        "s6-title": "6. Dados de Localização",
+        "s6-p": "A localização é capturada de forma pontual (<em>snapshot</em>) somente quando o usuário aciona explicitamente a função de captura de coordenada. O aplicativo não realiza rastreamento contínuo de localização em segundo plano fora das funcionalidades explícitas de mapa e GPS sob demanda.",
+        "s7-title": "7. Medidas de Segurança",
+        "s7-p": "O RTH World Explorer adota as seguintes medidas para proteger os dados do usuário:",
+        "s7-i1": "Os dados são armazenados em banco de dados local (SQLite) no diretório privado do aplicativo, inacessível a outros apps sem permissão explícita do sistema",
+        "s7-i2": "Imagens são salvas no armazenamento interno privado do aplicativo",
+        "s7-i3": "Nenhuma informação pessoal é transmitida sem ação explícita do usuário (exportação ou compartilhamento opcional)",
+        "s7-i4": "Quando o compartilhamento opcional de dados de uso está ativado, a transmissão ocorre por conexão cifrada (HTTPS/TLS)",
+        "s7-note": "Nenhuma medida de segurança é absolutamente infalível. Recomendamos que o usuário mantenha o sistema operacional e o aplicativo sempre atualizados.",
+        "s8-title": "8. Retenção e Exclusão de Dados",
+        "s8-p": "Os dados ficam armazenados no banco de dados local do dispositivo e nas pastas de armazenamento interno do aplicativo. O usuário pode excluir pontos, imagens e registros individualmente pelo próprio app, ou remover todos os dados desinstalando o aplicativo do dispositivo. Não há retenção de dados em servidores externos após a desinstalação.",
+        "s9-title": "9. Direitos do Titular (Art. 18 — LGPD)",
+        "s9-p1": "O RTH World Explorer não armazena, processa nem transmite qualquer dado que configure tratamento irregular nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018). O aplicativo não possui sistema de contas, cadastro ou autenticação de usuários — todas as informações coletadas permanecem exclusivamente no dispositivo do titular e sob seu controle direto.",
+        "s9-p2": "A única hipótese de envio de dados ao desenvolvedor ocorre mediante consentimento explícito e voluntário do usuário, ativado nas configurações do aplicativo. Ao exercer essa opção, o usuário realiza uma <strong>doação voluntária de dados de uso</strong> ao criador do app, com o objetivo de apoiar a produção de artigos técnicos e científicos nas áreas de mapeamento agrícola e sensoriamento remoto. Essa autorização pode ser revogada a qualquer momento, sem qualquer impacto no funcionamento do aplicativo.",
+        "s9-intro": "Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018), o titular dos dados pessoais possui os seguintes direitos, exercíveis mediante solicitação ao controlador:",
+        "r1-t": "Acesso", "r1-d": "Confirmar a existência de tratamento e obter acesso aos dados pessoais mantidos pelo app.",
+        "r2-t": "Correção", "r2-d": "Solicitar a correção de dados incompletos, inexatos ou desatualizados.",
+        "r3-t": "Eliminação", "r3-d": "Requisitar a exclusão dos dados tratados com base em consentimento.",
+        "r4-t": "Portabilidade", "r4-d": "Solicitar a exportação dos dados em formato interoperável para outro fornecedor.",
+        "r5-t": "Revogação", "r5-d": "Retirar o consentimento a qualquer momento, inclusive o do compartilhamento opcional de dados de uso.",
+        "r6-t": "Oposição", "r6-d": "Opor-se ao tratamento realizado com fundamento em outras bases legais, em caso de descumprimento.",
+        "r7-t": "Informação", "r7-d": "Obter informações sobre entidades públicas e privadas com quem os dados foram compartilhados.",
+        "r8-t": "Revisão", "r8-d": "Solicitar revisão de decisões tomadas exclusivamente com base em tratamento automatizado.",
+        "s9-how": "Para exercer qualquer um desses direitos, entre em contato pelo e-mail <a href=\"mailto:suporterthproject@gmail.com\" style=\"color:var(--neon-ciano,#00f5ff);\">suporterthproject@gmail.com</a>. Responderemos em até 15 dias úteis.",
+        "s10-title": "10. Público-Alvo e Proteção de Menores",
+        "s10-p": "O RTH World Explorer é destinado exclusivamente a profissionais e equipes de campo do setor agrícola. O aplicativo não é direcionado a crianças menores de 13 anos (COPPA) ou menores de 18 anos sem supervisão parental (LGPD, Art. 14) e não coleta dados de menores de forma intencional. Caso tal situação seja identificada, os dados serão removidos imediatamente mediante solicitação.",
+        "s11-title": "11. Usuários da União Europeia (GDPR)",
+        "s11-p1": "Para usuários localizados no Espaço Econômico Europeu, esta política é igualmente aplicável em conformidade com o Regulamento Geral de Proteção de Dados (GDPR — Regulamento UE 2016/679). Os direitos descritos na Seção 9 correspondem aos direitos previstos nos Artigos 15 a 22 do GDPR.",
+        "s11-p2": "Usuários europeus têm ainda o direito de apresentar reclamação perante a autoridade supervisora de proteção de dados do seu país de residência, caso considerem que o tratamento de seus dados viola o GDPR.",
+        "s12-title": "12. Controlador e Encarregado dos Dados",
+        "s12-i1": "<strong>Controlador:</strong> Luciano dos Santos Cardoso Junior",
+        "s12-i2": "<strong>Encarregado (DPO):</strong> Luciano dos Santos Cardoso Junior",
+        "s12-i3": "<strong>Contato:</strong> <a href=\"mailto:suporterthproject@gmail.com\" style=\"color:var(--neon-ciano,#00f5ff);\">suporterthproject@gmail.com</a>",
+        "s13-title": "13. Alterações nesta Política",
+        "s13-p": "Esta Política de Privacidade poderá ser atualizada periodicamente para refletir mudanças no aplicativo ou em requisitos legais aplicáveis. A data da última atualização será sempre indicada no topo desta página. O uso continuado do aplicativo após quaisquer alterações implica aceitação da versão vigente.",
+        "contact-title": "<strong>Dúvidas, solicitações ou exercício de direitos?</strong>",
+        "contact-body": "Entre em contato com o encarregado de proteção de dados:<br><a href=\"mailto:suporterthproject@gmail.com\">suporterthproject@gmail.com</a>"
+      },
+      en: {
+        "page-title": "Privacy Policy",
+        "page-meta": "Last updated: November 2026",
+        "lang-label": "Language",
+        "intro": "<strong>RTH World Explorer</strong> is an <strong>open-source, non-profit mobile application</strong>, independently developed for geographic point collection and productive parameter recording in the field. This Privacy Policy describes what information is collected by the application, how it is used, how it is stored, and what rights the data subject has regarding their data. By using the application, the user acknowledges having read and agreed to the terms described herein.",
+        "s1-title": "1. Data Collected",
+        "s1-i1": "GPS location (latitude, longitude and heading) — collected only when the user triggers the coordinate capture",
+        "s1-i2": "Photos taken by the device camera for collection point records and expense receipts",
+        "s1-i3": "Form data entered by the user: author name, route, crop, observations and productive parameters",
+        "s1-i4": "App preferences: language, visual theme and locally saved form drafts",
+        "s1-i5": "App usage data — only upon explicit user consent in settings",
+        "s2-title": "2. Legal Basis for Processing (Art. 7 — LGPD)",
+        "s2-intro": "All data processing carried out by RTH World Explorer has an express legal basis under Brazil's General Data Protection Law (Lei nº 13.709/2018):",
+        "s2-th1": "Data", "s2-th2": "Legal Basis",
+        "s2-r1a": "GPS location", "s2-r1b": "Data subject's consent (Art. 7, I) — triggered by the user",
+        "s2-r2a": "Camera images", "s2-r2b": "Data subject's consent (Art. 7, I) — triggered by the user",
+        "s2-r3a": "Form data", "s2-r3b": "Contract performance / legitimate interest (Art. 7, II and IX) — required for app functionality",
+        "s2-r4a": "Local preferences", "s2-r4b": "Legitimate interest (Art. 7, IX) — improving the user experience",
+        "s2-r5a": "Usage data (optional)", "s2-r5b": "Explicit consent of the data subject (Art. 7, I) — opt-in in app settings",
+        "s3-title": "3. How Data Is Used",
+        "s3-i1": "All data is stored locally on the user's device",
+        "s3-i2": "No data is automatically transmitted to external servers",
+        "s3-i3": "The user may export data in CSV, Excel format or via the operating system's native share function",
+        "s3-i4": "The application does not use user accounts, social authentication or online profiles",
+        "s4-title": "4. Permissions Requested",
+        "s4-i1": "<strong>Location:</strong> to capture GPS coordinates of points recorded in the field",
+        "s4-i2": "<strong>Camera:</strong> to capture images associated with collection points and receipts",
+        "s4-i3": "<strong>Storage:</strong> to save images and export CSV/Excel files on the device",
+        "s4-i4": "<strong>Internet:</strong> to load map tiles (OpenStreetMap) when a connection is available",
+        "s4-i5": "<strong>Notifications:</strong> to report the progress of exports performed in the background",
+        "s5-title": "5. Data Sharing",
+        "s5-p1": "RTH World Explorer <strong>does not share data with third parties automatically</strong>. Exported files (CSV, Excel) remain under the user's exclusive control. The application does not transmit information to analytics servers, advertising platforms or any external services.",
+        "s5-p2": "If the user wishes to contribute to the continuous improvement of the application, there is an option to share usage data with the developer directly through the app's settings menu. This feature is <strong>entirely optional</strong>, requires the data subject's explicit consent, and may be revoked at any time without any impact on the application's functionality.",
+        "s6-title": "6. Location Data",
+        "s6-p": "Location is captured as a point-in-time snapshot only when the user explicitly triggers the coordinate capture function. The application does not perform continuous background location tracking outside of the explicit map and on-demand GPS features.",
+        "s7-title": "7. Security Measures",
+        "s7-p": "RTH World Explorer adopts the following measures to protect user data:",
+        "s7-i1": "Data is stored in a local database (SQLite) in the application's private directory, inaccessible to other apps without explicit system permission",
+        "s7-i2": "Images are saved in the application's private internal storage",
+        "s7-i3": "No personal information is transmitted without explicit user action (export or optional sharing)",
+        "s7-i4": "When the optional usage data sharing is enabled, transmission occurs over an encrypted connection (HTTPS/TLS)",
+        "s7-note": "No security measure is absolutely foolproof. We recommend that users keep both the operating system and the application up to date at all times.",
+        "s8-title": "8. Data Retention and Deletion",
+        "s8-p": "Data is stored in the application's local database and internal storage folders on the device. The user may delete individual points, images and records directly within the app, or remove all data by uninstalling the application. No data is retained on external servers after uninstallation.",
+        "s9-title": "9. Data Subject Rights (Art. 18 — LGPD)",
+        "s9-p1": "RTH World Explorer does not store, process or transmit any data in a manner that would constitute irregular processing under Brazil's General Data Protection Law (Lei nº 13.709/2018). The application has no account system, registration or user authentication — all collected information remains exclusively on the data subject's device and under their direct control.",
+        "s9-p2": "The only circumstance under which data may be sent to the developer is upon the user's explicit and voluntary consent, enabled through the application's settings. By activating this option, the user makes a <strong>voluntary donation of usage data</strong> to the app's creator, with the purpose of supporting the production of technical and scientific articles in the fields of agricultural mapping and remote sensing. This authorization may be revoked at any time without any impact on the application's functionality.",
+        "s9-intro": "Under Brazil's General Data Protection Law (Lei nº 13.709/2018), the data subject has the following rights, which may be exercised by contacting the data controller:",
+        "r1-t": "Access", "r1-d": "Confirm the existence of processing and obtain access to personal data held by the app.",
+        "r2-t": "Correction", "r2-d": "Request correction of incomplete, inaccurate or outdated data.",
+        "r3-t": "Deletion", "r3-d": "Request deletion of data processed on the basis of consent.",
+        "r4-t": "Portability", "r4-d": "Request export of data in an interoperable format for transfer to another provider.",
+        "r5-t": "Revocation", "r5-d": "Withdraw consent at any time, including consent to optional usage data sharing.",
+        "r6-t": "Objection", "r6-d": "Object to processing carried out on other legal bases in the event of non-compliance.",
+        "r7-t": "Information", "r7-d": "Obtain information about public and private entities with whom data has been shared.",
+        "r8-t": "Review", "r8-d": "Request review of decisions made solely on the basis of automated processing.",
+        "s9-how": "To exercise any of these rights, please contact us at <a href=\"mailto:suporterthproject@gmail.com\" style=\"color:var(--neon-ciano,#00f5ff);\">suporterthproject@gmail.com</a>. We will respond within 15 business days.",
+        "s10-title": "10. Target Audience and Protection of Minors",
+        "s10-p": "RTH World Explorer is intended exclusively for agricultural field professionals and teams. The application is not directed at children under 13 years of age (COPPA) or minors under 18 without parental supervision (LGPD, Art. 14) and does not intentionally collect data from minors. If such a situation is identified, the data will be removed immediately upon request.",
+        "s11-title": "11. European Union Users (GDPR)",
+        "s11-p1": "For users located in the European Economic Area, this policy is equally applicable in accordance with the General Data Protection Regulation (GDPR — EU Regulation 2016/679). The rights described in Section 9 correspond to the rights set out in Articles 15 to 22 of the GDPR.",
+        "s11-p2": "European users also have the right to lodge a complaint with the data protection supervisory authority of their country of residence if they believe that the processing of their data violates the GDPR.",
+        "s12-title": "12. Data Controller and Data Protection Officer",
+        "s12-i1": "<strong>Controller:</strong> Luciano dos Santos Cardoso Junior",
+        "s12-i2": "<strong>Data Protection Officer (DPO):</strong> Luciano dos Santos Cardoso Junior",
+        "s12-i3": "<strong>Contact:</strong> <a href=\"mailto:suporterthproject@gmail.com\" style=\"color:var(--neon-ciano,#00f5ff);\">suporterthproject@gmail.com</a>",
+        "s13-title": "13. Changes to This Policy",
+        "s13-p": "This Privacy Policy may be updated periodically to reflect changes in the application or applicable legal requirements. The date of the last update will always be indicated at the top of this page. Continued use of the application after any changes implies acceptance of the current version.",
+        "contact-title": "<strong>Questions, requests or exercise of rights?</strong>",
+        "contact-body": "Contact the data protection officer:<br><a href=\"mailto:suporterthproject@gmail.com\">suporterthproject@gmail.com</a>"
+      }
+    };
+
+    let currentLang = localStorage.getItem('privacy-lang') || 'pt';
+
+    function applyLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('privacy-lang', lang);
+      document.documentElement.lang = lang === 'pt' ? 'pt-br' : 'en';
+      document.getElementById('opt-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('opt-en').classList.toggle('active', lang === 'en');
+      const s = strings[lang];
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.dataset.key;
+        if (s[key] !== undefined) el.innerHTML = s[key];
+      });
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function () {
+      applyLang(currentLang === 'pt' ? 'en' : 'pt');
+    });
+
+    applyLang(currentLang);
+  </script>
+
+</body>
+</html>

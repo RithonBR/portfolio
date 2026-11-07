@@ -1,71 +1,193 @@
-/* Estilo para o vídeo de fundo */
-.video-background {
-    position: relative; /* Define o vídeo de fundo como relativo, permitindo o posicionamento de outros elementos em relação a ele */
-}
+/* ============================================================
+   SIMPLE THINGS — classes utilitárias reutilizáveis em todas as páginas.
+   Não são específicas de nenhum componente — qualquer elemento pode usá-las.
+   Para adicionar uma nova classe utilitária, adicione apenas aqui.
+   ============================================================ */
 
-/* Estilo para o título */
+/* --- Título decorativo --- */
+
+/* .title usa a fonte RubikGlitch (declarada em fonts.css) com animação de flutuação.
+   clamp(1.4rem, 4vw, 2rem): tamanho fluido — cresce com a tela sem ultrapassar 2rem.
+   display: block + width: 100% garantem que o título ocupe toda a linha e
+   possa ser centralizado pelo elemento pai sem flex adicional. */
 .title {
-    font-family: 'rubikiglitch'; /* Define a fonte como 'rubikiglitch' para o título */
-    text-decoration: underline; /* Adiciona um sublinhado ao texto do título */
-    color: var(--amarelo-destaque); /* Define a cor do título usando a variável CSS 'amarelo-destaque' */
-    font-size: 1.5rem; /* Define o tamanho da fonte para 1.5rem */
-    margin-top: 0.5rem; /* Define uma margem superior de 0.5rem */
-    animation: jump 1s infinite ease-in-out; /* Aplica uma animação de 'pular' no título */
-    -webkit-text-stroke: 0.2px var(--teste); /* Aplica um contorno ao texto com a cor definida pela variável 'teste' */
+    font-family: 'rubikiglitch';
+    text-decoration: none;
+    color: var(--rosa-neon);
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    margin-top: 0.4rem;
+    /* animation referencia @keyframes jump definido abaixo neste arquivo */
+    animation: jump 1.6s infinite ease-in-out;
+    /* -webkit-text-stroke adiciona um contorno branco muito sutil (0.15px) que
+       melhora a legibilidade da fonte decorativa sobre fundos escuros sem
+       tornar o contorno visível a olho nu */
+    -webkit-text-stroke: 0.15px rgba(255, 255, 255, 0.25);
+    text-shadow: var(--glow-rosa);
+    letter-spacing: 0.12em;
+    word-spacing: 0.1em;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 
-/* Estilo para o texto com a classe 'text-pad' */
+/* --- Texto corrido (bio, descrições, parágrafos) --- */
+
+/* .text-pad é a classe para parágrafos de conteúdo.
+   text-align: justify alinha o texto nas duas margens (efeito de coluna de jornal).
+   text-indent: 1.5em adiciona o recuo de parágrafo tradicional (espaço no início).
+   Em mobile (< 540px), justify e indent são removidos pelo responsive.css
+   porque em telas estreitas o justify cria espaços irregulares feios entre palavras. */
 .text-pad {
-    font-family: 'rubikiglitch'; /* Define a mesma fonte 'rubikiglitch' para o texto */
-    color: var(--cinza-escuro); /* Define a cor do texto usando a variável 'cinza-escuro' */
-    font-size: 1rem; /* Define o tamanho da fonte para 1rem */
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+    /* rgba com opacidade 0.88 em vez de branco puro — branco 100% em fundo escuro
+       cansa mais a vista. 0.88 é mais suave sem perder legibilidade. */
+    color: rgba(230, 240, 255, 0.88);
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
     text-align: justify;
+    text-indent: 1.5em;
+    line-height: 1.7;
+    margin-bottom: 1rem;
 }
 
+/* Legenda de foto: texto pequeno e discreto abaixo de imagens na bio.
+   Opacidade 0.6 (vs 0.88 do .text-pad) cria hierarquia visual — informação secundária.
+   text-align: center centraliza em relação à foto acima.
+   font-style: italic diferencia visualmente das legendas de texto principal.
+   margin: 0 necessário porque o seletor de grupo abaixo (.text-pad, ...) adiciona
+   margin-top: 10px em muitos elementos — legendas ficam coladas à foto. */
+.text-pad-legenda {
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+    font-size: 0.78rem;
+    color: rgba(230, 240, 255, 0.6);
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Variante de texto menor para legendas ou informações secundárias.
+   Opacidade 0.75 (vs 0.88 do .text-pad) cria hierarquia visual sutil. */
 .text-pad-2 {
-    font-family: 'rubikiglitch'; /* Define a mesma fonte 'rubikiglitch' para o texto */
-    color: var(--cinza-escuro); /* Define a cor do texto usando a variável 'cinza-escuro' */
-    font-size: 1rem; /* Define o tamanho da fonte para 1rem */
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+    color: rgba(230, 240, 255, 0.75);
+    font-size: clamp(0.78rem, 1.8vw, 0.9rem);
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+/* Margem superior para listas e quick-facts — separa visualmente do elemento acima.
+   O grupo inclui .text-pad para que textos dentro de listas também tenham margem. */
+.quick-facts, .list-facts, .text-pad, .titulo {
     margin-top: 10px;
 }
 
-/* Estilo para os elementos 'quick-facts', 'list-facts', 'text-pad' e 'titulo' */
-.quick-facts, .list-facts, .text-pad, .titulo {
-    margin-top: 10px; /* Adiciona uma margem superior de 10px para esses elementos */
-}
+/* --- Imagem de perfil circular --- */
 
-/* Estilo para a imagem com a classe 'char-img' */
+/* width: 50vw em mobile e max-width: 160px em desktop — imagem responsiva sem media query.
+   border-radius: 50% transforma qualquer quadrado em círculo. */
 .char-img {
-    width: 50vw; /* Define a largura da imagem como 50% da largura da janela de visualização */
-    max-width: 180px; /* Define a largura máxima da imagem como 180px */
-    border-radius: 60px; /* Aplica bordas arredondadas com raio de 60px para a imagem */
+    width: 50vw;
+    max-width: 160px;
+    border-radius: 50%;
+    /* Borda ciano sutil com brilho suave ao redor — identidade visual HUD do site */
+    border: 2px solid rgba(0, 245, 255, 0.35);
+    box-shadow:
+        0 0 15px rgba(0, 245, 255, 0.2),
+        0 0 40px rgba(0, 245, 255, 0.08);
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-/* Estilo para os elementos com a classe 'contrast' */
+/* Hover intensifica o brilho — sensação de que a imagem "acende" ao passar o mouse */
+.char-img:hover {
+    border-color: rgba(0, 245, 255, 0.7);
+    box-shadow:
+        0 0 20px rgba(0, 245, 255, 0.4),
+        0 0 60px rgba(0, 245, 255, 0.15);
+}
+
+/* --- Links de destaque --- */
+
+/* .contrast é usada em links dentro de texto corrido (ex: "LinkedIn" e "GitHub" na bio).
+   Cor ciano + glow os diferencia do texto sem precisar de sublinhado. */
 .contrast {
-    color: var(--amarelo-destaque); /* Aplica a cor definida pela variável 'amarelo-destaque' ao texto */
+    color: var(--neon-ciano);
+    text-shadow: var(--glow-ciano);
+    text-decoration: none;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
 }
 
-/* Estilo para a barra de decoração */
+/* Hover: muda para branco puro e intensifica o glow — máximo contraste no mouseover */
+.contrast:hover {
+    color: #ffffff;
+    text-shadow: var(--glow-ciano), 0 0 30px rgba(0, 245, 255, 0.5);
+}
+
+/* .destaque realça trechos de texto ou links que merecem atenção especial.
+   Uso: <span class="destaque">texto</span> ou <a class="destaque" href="...">link</a>.
+   Cor verde neon diferencia do ciano (hover/interação) e do rosa (títulos). */
+.destaque {
+    color: var(--neon-verde);
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.45);
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+}
+
+/* Hover intensifica o brilho — útil quando .destaque é usado em links */
+.destaque:hover {
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.8), 0 0 22px rgba(57, 255, 20, 0.35);
+}
+
+/* --- Divisor HUD --- */
+
+/* Linha horizontal neon que separa seções dentro do container-home.
+   linear-gradient cria o efeito de "fade nas bordas" — a linha não termina abruptamente,
+   desaparece gradualmente para transparente nas extremidades.
+   height: 1px é intencional — mais grosso quebraria a estética minimalista. */
 .decoration-bar {
-    width: 100%; /* A barra ocupa 100% da largura disponível */
-    height: 15px; /* Define a altura da barra como 15px */
-    border-bottom: 1.5px solid rgba(255, 255, 255, .25); /* Aplica uma borda inferior sutil com 25% de opacidade */
+    width: 100%;
+    height: 1px;
+    margin: 0.8rem 0;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(0, 245, 255, 0.5) 30%,
+        rgba(0, 245, 255, 0.8) 50%,
+        rgba(0, 245, 255, 0.5) 70%,
+        transparent 100%
+    );
+    box-shadow: 0 0 6px rgba(0, 245, 255, 0.3);
 }
 
-/* Animação 'jump' que faz o elemento subir e descer */
+/* --- Animação de flutuação dos títulos --- */
+
+/* @keyframes jump faz o título subir 4px e voltar em loop de 1.6s.
+   translateY em vez de margin-top porque transform não afeta o layout —
+   outros elementos não se movem junto quando o título flutua. */
 @keyframes jump {
-    0% {
-      transform: translateY(0); /* No início da animação, o elemento está na posição normal */
-    }
-    50% {
-      transform: translateY(-5px); /* No meio da animação, o elemento se move para cima 5px */
-    }
-    100% {
-      transform: translateY(0); /* No final da animação, o elemento retorna à posição normal */
-    }
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
 }
 
-imput , label {
-    font-family: 'rubikiglitch';
+/* --- Acessibilidade: respeitar preferência de movimento reduzido --- */
+
+/* Alguns usuários têm epilepsia, vertigem ou sensibilidade a movimentos.
+   @media (prefers-reduced-motion: reduce) é ativado quando o usuário configura
+   "Reduzir movimento" no sistema operacional (Windows, macOS, iOS, Android).
+   Sem este bloco, o site causaria desconforto físico a esses usuários.
+   Remover este bloco seria uma violação de acessibilidade. */
+@media (prefers-reduced-motion: reduce) {
+    /* Para a animação de flutuação do título */
+    .title { animation: none; }
+    /* Remove transições de hover — mudanças de estado são instantâneas */
+    .char-img, .icone-rede-social, .contrast { transition: none; }
+}
+
+/* --- Formulários --- */
+
+/* Garante que inputs e labels usem a fonte monospace do site em vez da fonte
+   padrão do sistema operacional, que varia entre Windows, macOS e Android. */
+input, label {
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
 }

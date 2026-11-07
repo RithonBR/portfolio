@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- RTH Gráficos de Vegetação — página de detalhe do projeto -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RTH Gráficos de Vegetação — índices de vegetação para mapeamento agrícola por Luciano (RithonDev)." />
+    <link rel="shortcut icon" href="../icons/tridente.ico" type="image/x-icon">
+    <title>RTH Gráficos de Vegetação — RithonDev</title>
+    <link rel="stylesheet" href="home/home.css">
+    <link rel="stylesheet" href="projeto.css">
+</head>
+<body>
+
+  <nav class="nav-principal" role="navigation" aria-label="Navegação principal">
+    <a href="../index.html" class="nav-brand">RTH</a>
+    <ul>
+      <li><a href="../index.html" data-key="nav-sobre">Sobre</a></li>
+      <li><a href="projetos.html" aria-current="page" data-key="nav-projetos">Projetos</a></li>
+      <li><a href="rth-project.html" data-key="nav-rth">RTH Project</a></li>
+      <li><a href="catalogo.html" data-key="nav-catalogo">Catálogo de Culturas</a></li>
+      <li><a href="rth-explorer.html" data-key="nav-explorer">RTH World Explorer</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="lang-item">
+      <span class="lang-label" data-key="lang-label">Idioma</span>
+      <button class="lang-toggle" data-active="pt" aria-label="Switch to English">
+        <span class="opt-en">EN</span> | <span class="opt-pt">PT</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="painel-home">
+      <div class="container-projeto">
+        <a href="projetos.html" class="back-link" data-key="back-projetos">← Projetos</a>
+        <h1 class="title-container">
+          <!-- data-key="proj-3-title" vinculado ao texto em langHandler.js para EN/PT -->
+          <span class="title" data-key="proj-3-title">RTH Gráficos de Vegetação</span>
+        </h1>
+        <div class="projeto-content">
+          <p class="text-pad" style="text-align: center;"><span data-key="link-projeto">Link do Projeto:</span> <a href="https://luciano-ufsc.projects.earthengine.app/view/rthseriesvegtime" target="_blank" rel="noopener noreferrer" class="destaque" data-key="acesse-aqui">Acesse aqui</a></p>
+          <p class="text-pad" data-key="proj-3-detail">Gráficos de Vegetação de uma latitude e longitude conhecida de índices importantes como <span class="destaque">NDVI, EVI, SAVI, MSAVI e NDMI</span></p>
+          <img src="../img/projeto-vegtime.png" alt="Gráficos de índices de vegetação gerados pelo RTH Gráficos de Vegetação">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="video-background" aria-hidden="true">
+    <video src="../img/background.mp4" autoplay loop muted playsinline poster="../img/background.jpg" class="videoback"></video>
+  </div>
+
+  <script type="module" src="../js/global.js"></script>
+</body>
+</html>

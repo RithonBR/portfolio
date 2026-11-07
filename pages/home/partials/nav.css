@@ -1,0 +1,223 @@
+/* ============================================================
+   NAV — barra de navegação fixa no topo, 3 colunas:
+   marca (esquerda) · links (centro) · seletor de idioma (direita)
+   ============================================================ */
+
+/* --- Estrutura principal do nav --- */
+
+/* position: fixed mantém o nav sempre visível no topo mesmo ao rolar a página.
+   z-index: 100 garante que fique na frente de qualquer outro elemento.
+   height: 56px é referenciado em hero.css para calcular o padding-top correto. */
+.nav-principal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background: rgba(5, 4, 15, 0.88);
+    /* backdrop-filter cria o efeito de vidro fosco atrás do nav.
+       Só funciona porque o fundo é semi-transparente — sem isso, não haveria
+       nada "atrás" do nav para desfocar. */
+    backdrop-filter: blur(12px);
+    /* Linha sutil na base para separar visualmente o nav do conteúdo abaixo */
+    border-bottom: 1px solid rgba(0, 245, 255, 0.18);
+}
+
+/* --- Marca / logo RTH --- */
+
+/* flex-shrink: 0 impede que o logo encolha quando a tela for pequena.
+   Ele sempre mantém o tamanho original, independente do espaço disponível. */
+.nav-brand {
+    font-family: 'rubikiglitch';
+    color: var(--rosa-neon);
+    text-shadow: var(--glow-rosa);
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    flex-shrink: 0;
+    transition: text-shadow 0.3s ease;
+}
+
+/* Hover intensifica o brilho rosa ao redor do logo */
+.nav-brand:hover {
+    text-shadow: var(--glow-rosa), 0 0 40px rgba(255, 16, 240, 0.3);
+}
+
+/* --- Links de navegação (centro) --- */
+
+/* display: flex coloca os links em linha horizontal com espaço uniforme entre eles */
+.nav-principal ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+/* :not(.nav-brand) garante que este estilo não afete o logo, que também é um <a> no nav */
+.nav-principal a:not(.nav-brand) {
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+    /* Opacidade 0.55 deixa links inativos menos chamativos que o item ativo */
+    color: rgba(230, 240, 255, 0.55);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover acende o link em ciano neon */
+.nav-principal a:not(.nav-brand):hover {
+    color: var(--neon-ciano);
+    text-shadow: var(--glow-ciano);
+}
+
+/* aria-current="page" é adicionado via HTML ao link da página atual.
+   Destaca visualmente qual página o usuário está visitando. */
+.nav-principal a[aria-current="page"] {
+    color: var(--rosa-neon);
+    text-shadow: var(--glow-rosa);
+    /* Linha inferior fina reforça visualmente que este é o item ativo */
+    border-bottom: 1px solid var(--rosa-neon);
+    padding-bottom: 2px;
+}
+
+/* --- Seletor de idioma (direita) --- */
+
+/* flex-shrink: 0 impede que o seletor encolha junto com os links centrais.
+   A borda à esquerda separa visualmente o idioma dos links de navegação. */
+.lang-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    padding-left: 1.2rem;
+    border-left: 1px solid rgba(0, 245, 255, 0.15);
+}
+
+/* Rótulo "Idioma" / "Language" — opacidade baixa pois é informativo, não interativo */
+.lang-label {
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+    color: rgba(230, 240, 255, 0.35);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Botão EN | PT — fundo transparente mantém a estética minimalista do nav */
+.lang-toggle {
+    background: transparent;
+    border: 1px solid rgba(0, 245, 255, 0.25);
+    color: rgba(230, 240, 255, 0.35);
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.7rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* transition garante que a troca de idioma mude a cor de forma suave */
+.lang-toggle .opt-en,
+.lang-toggle .opt-pt {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Quando data-active="en", a opção EN acende em ciano.
+   O atributo data-active é atualizado pelo langHandler.js ao trocar idioma. */
+.lang-toggle[data-active="en"] .opt-en {
+    color: var(--neon-ciano);
+    text-shadow: var(--glow-ciano);
+}
+
+/* Quando data-active="pt", a opção PT acende em ciano */
+.lang-toggle[data-active="pt"] .opt-pt {
+    color: var(--neon-ciano);
+    text-shadow: var(--glow-ciano);
+}
+
+/* Hover clareia a borda do botão para dar feedback visual ao usuário */
+.lang-toggle:hover {
+    border-color: rgba(0, 245, 255, 0.5);
+}
+
+/* --- Hamburger button (oculto no desktop) --- */
+
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px 4px;
+    flex-shrink: 0;
+}
+
+.nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: rgba(230, 240, 255, 0.7);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Animação ☰ → ✕ quando o menu abre */
+.nav-principal.nav-open .nav-hamburger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-principal.nav-open .nav-hamburger span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.nav-principal.nav-open .nav-hamburger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --- Responsivo: nav em telas pequenas --- */
+
+@media (max-width: 900px) {
+    .nav-principal ul { gap: 1.2rem; }
+    .nav-principal { padding: 0 1.2rem; }
+}
+
+/* Em telas estreitas (<= 680px): hamburger substitui os links em linha.
+   O menu abre como dropdown position:absolute (não empurra o conteúdo abaixo). */
+@media (max-width: 680px) {
+    .nav-hamburger { display: flex; }
+
+    /* Links ficam ocultos por padrão — aparecem como dropdown ao abrir */
+    .nav-principal ul {
+        display: none;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(5, 4, 15, 0.97);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 1.2rem 2rem 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid rgba(0, 245, 255, 0.18);
+        z-index: 99;
+    }
+
+    /* Quando nav-open: mostra o dropdown */
+    .nav-principal.nav-open ul {
+        display: flex;
+    }
+
+    /* "Idioma"/"Language" dispensável no mobile — o botão EN|PT basta */
+    .lang-label { display: none; }
+}

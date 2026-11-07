@@ -1,0 +1,162 @@
+/* ============================================================
+   PROJETOS — lista de cartões de projeto com imagem + texto
+   Cada cartão é um link <a> que leva à página do projeto.
+   O estilo imita o container HUD com cantos ciano que acendem no hover.
+   ============================================================ */
+
+/* --- Seção de projetos --- */
+
+/* justify-content: flex-start empurra os cards para o topo da página.
+   Sobrescreve o padrão de .painel-home que usa justify-content: flex-start
+   (explicitado aqui para deixar claro que é intencional nesta seção). */
+.painel-projetos {
+    justify-content: flex-start;
+}
+
+/* Container que agrupa título + lista de projetos.
+   900px (vs 820px do container-home) para acomodar os cards com imagem lateral. */
+.container-projetos {
+    width: min(88vw, 900px);
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Remove marcadores da lista — os <li> são apenas wrappers dos cards */
+.lista-projetos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* --- Cartão de projeto --- */
+
+/* display: flex coloca a imagem à esquerda e o texto à direita em linha.
+   text-decoration: none remove o sublinhado padrão de links. */
+.projeto-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    text-decoration: none;
+    border: 1px solid rgba(0, 245, 255, 0.15);
+    padding: 1.2rem 1.5rem;
+    /* position: relative é necessário para ::before/::after (cantos HUD)
+       serem posicionados corretamente dentro do card */
+    position: relative;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cantos HUD do cartão — menores que os do container-home (10px vs 16px)
+   para manter hierarquia visual: container principal > card individual */
+.projeto-card::before,
+.projeto-card::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-color: var(--neon-ciano);
+    border-style: solid;
+    /* opacity: 0.5 em repouso — aumenta para 1 no hover para dar feedback visual */
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+/* Canto superior esquerdo — border-width: 1px 0 0 1px desenha apenas topo e esquerda */
+.projeto-card::before {
+    top: -1px;
+    left: -1px;
+    border-width: 1px 0 0 1px;
+}
+
+/* Canto inferior direito — border-width: 0 1px 1px 0 desenha apenas direita e baixo */
+.projeto-card::after {
+    bottom: -1px;
+    right: -1px;
+    border-width: 0 1px 1px 0;
+}
+
+/* Hover: clareia a borda, adiciona brilho sutil e acende os cantos HUD */
+.projeto-card:hover {
+    border-color: rgba(0, 245, 255, 0.35);
+    box-shadow: 0 0 24px rgba(0, 245, 255, 0.07);
+}
+
+.projeto-card:hover::before,
+.projeto-card:hover::after {
+    opacity: 1;
+}
+
+/* --- Imagem do projeto (esquerda do card) --- */
+
+/* min-width: 160px + flex-shrink: 0 impedem que a imagem encolha quando o título é longo.
+   Sem isso, o flex tentaria comprimir a imagem para dar mais espaço ao texto. */
+.projeto-img {
+    width: 160px;
+    min-width: 160px;
+    height: 110px;
+    /* Fundo ciano escuro como placeholder antes de adicionar a imagem real */
+    background: rgba(0, 245, 255, 0.04);
+    border: 1px solid rgba(0, 245, 255, 0.1);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+/* object-fit: cover preenche o espaço sem distorcer a imagem
+   (corta as bordas se necessário, mas mantém a proporção) */
+.projeto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Informações do projeto (direita do card) --- */
+
+/* flex em coluna com gap pequeño entre título e descrição */
+.projeto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* clamp(0.78rem, 1.8vw, 0.92rem): tamanho fluido — cresce com a tela,
+   mas nunca menor que 0.78rem nem maior que 0.92rem */
+.projeto-titulo {
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+    color: var(--neon-ciano);
+    text-shadow: var(--glow-ciano);
+    font-size: clamp(0.78rem, 1.8vw, 0.92rem);
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Opacidade 0.65 cria hierarquia visual: título (ciano brilhante) > descrição (branco suave) */
+.projeto-desc {
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+    color: rgba(230, 240, 255, 0.65);
+    font-size: clamp(0.7rem, 1.4vw, 0.82rem);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* --- Responsivo mobile --- */
+
+/* Em telas menores que 540px, empilha imagem acima do texto em vez de lado a lado */
+@media (max-width: 540px) {
+    .projeto-card {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    /* width: 100% faz a imagem ocupar toda a largura do card no mobile */
+    .projeto-img {
+        width: 100%;
+        min-width: unset;
+        height: 140px;
+    }
+}

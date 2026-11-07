@@ -1,0 +1,156 @@
+/* ============================================================
+   HERO — painel principal e container de conteúdo flutuante
+   O painel ocupa toda a altura da tela. O container flutua sobre o
+   vídeo de fundo com uma borda HUD (estilo heads-up display de cockpit).
+   ============================================================ */
+
+/* --- Painel principal (envolve tudo abaixo do nav) --- */
+
+/* padding-top: calc(56px + 1rem) empurra o conteúdo para baixo do nav fixo.
+   Os 56px são a altura exata do nav (definida em nav.css). Sem esse padding,
+   o conteúdo ficaria escondido atrás do nav. */
+.painel-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    /* border-box faz o min-height incluir o padding no cálculo.
+       O reset.css usado (Meyer Reset) NÃO define box-sizing: border-box,
+       então sem esta linha o min-height seria aplicado só na área de conteúdo
+       e o padding-top (72px) + padding-bottom (48px) seriam somados por cima —
+       causando 120px de scroll desnecessário. */
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding-top: calc(56px + 1rem);
+    padding-bottom: 3rem;
+}
+
+/* Legado: container fixo que abrigava o switch Dev/Agro.
+   Mantido oculto para não quebrar referências caso o switch seja reativado. */
+.container-home-switch {
+    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+/* Wrapper centralizado genérico — usado onde é preciso centralizar sem
+   criar um componente dedicado */
+.container-teste {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Wrapper do título — centraliza o .title (.title está definido em simpleThings.css) */
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Container de conteúdo (Sobre, RTH Project, Catálogo) --- */
+
+/* width: min(88vw, 820px): responsivo — 88% da tela em mobile, no máximo 820px em desktop */
+.container-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 4vw, 3.5rem) clamp(2rem, 5vw, 5rem);
+    width: min(88vw, 820px);
+    /* min-height evita que o container encolha quando o texto em EN é mais curto que em PT */
+    min-height: clamp(420px, 55vh, 650px);
+    margin: 10px auto 0;
+    background: none;
+    /* Borda HUD sutil — imita painel de cockpit espacial */
+    border: 1px solid rgba(0, 245, 255, 0.15);
+    box-shadow:
+        inset 0 0 30px rgba(0, 245, 255, 0.03),
+        0 0 40px rgba(0, 245, 255, 0.05);
+    /* position: relative é obrigatório para ::before/::after (cantos HUD)
+       serem posicionados corretamente em relação ao container */
+    position: relative;
+}
+
+/* Cantos HUD — ::before = canto superior esquerdo, ::after = canto inferior direito.
+   Juntos criam a aparência de interface de cockpit espacial/cyberpunk. */
+.container-home::before,
+.container-home::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: var(--neon-ciano);
+    border-style: solid;
+    /* opacity: 0.6 deixa os cantos presentes mas sem competir com o conteúdo */
+    opacity: 0.6;
+}
+
+/* border-width: 2px 0 0 2px desenha apenas os lados superior e esquerdo do canto */
+.container-home::before {
+    top: -1px;
+    left: -1px;
+    border-width: 2px 0 0 2px;
+}
+
+/* border-width: 0 2px 2px 0 desenha apenas os lados direito e inferior do canto */
+.container-home::after {
+    bottom: -1px;
+    right: -1px;
+    border-width: 0 2px 2px 0;
+}
+
+/* Páginas em construção ficam visíveis mas levemente opacas para comunicar
+   que o conteúdo ainda não está pronto — opacity: 0 seria invisível, 0.6 indica
+   "existe mas não está completo". Movido de social-bar.css onde não pertencia. */
+.painel-placeholder {
+    opacity: 0.6;
+}
+
+/* --- Imagem com legenda (fotos da bio "Sobre") --- */
+
+/* Agrupa uma imagem e seu texto de legenda em coluna centralizada.
+   Usado nas fotos da seção "Sobre" para contextualizar cada imagem.
+   gap: 0.5rem é menor que o padrão para manter legenda próxima da foto. */
+.image-container-texto-legenda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+/* Imagens dentro do bloco foto+legenda: responsivas e arredondadas.
+   max-width: 100% impede overflow do container pai. */
+.image-container-texto-legenda img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* --- Grupo de fotos lado a lado (.containerflex) --- */
+
+/* .containerflex coloca dois .image-container-texto-legenda em linha horizontal.
+   flex-wrap: wrap empilha em telas estreitas quando não há espaço para dois itens.
+   margin: 1rem 0 garante respiro vertical entre grupos de fotos e parágrafos. */
+.containerflex {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* Cada foto dentro do .containerflex ocupa metade do espaço disponível.
+   flex: 1 1 0 distribui o espaço igualmente entre as colunas.
+   min-width: 0 evita que flex items extrapolem o container em browsers antigos. */
+.containerflex .image-container-texto-legenda {
+    flex: 1 1 0;
+    min-width: 0;
+}

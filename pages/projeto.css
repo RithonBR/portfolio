@@ -1,0 +1,146 @@
+/* ============================================================
+   PROJETO — estilos da página de detalhe de um projeto individual
+   Importado apenas nas páginas pages/projeto-*.html, não no home.css.
+   O container usa a mesma borda HUD do container-home (hero.css),
+   mas com alinhamento à esquerda para texto de artigo.
+   ============================================================ */
+
+/* --- Container do projeto --- */
+
+/* align-items: flex-start alinha o conteúdo à esquerda (ao contrário do container-home
+   que centraliza). Texto de artigo/projeto é mais legível alinhado à esquerda. */
+.container-projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(2rem, 4vw, 3.5rem) clamp(2rem, 5vw, 5rem);
+    width: min(88vw, 820px);
+    margin: 10px auto 0;
+    background: none;
+    /* Mesma borda HUD do container-home para manter consistência visual entre páginas */
+    border: 1px solid rgba(0, 245, 255, 0.15);
+    box-shadow:
+        inset 0 0 30px rgba(0, 245, 255, 0.03),
+        0 0 40px rgba(0, 245, 255, 0.05);
+    /* position: relative obrigatório para os cantos ::before/::after
+       serem posicionados dentro do container */
+    position: relative;
+}
+
+/* Cantos HUD — idênticos ao container-home para manter a linguagem visual do site */
+.container-projeto::before,
+.container-projeto::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: var(--neon-ciano);
+    border-style: solid;
+    opacity: 0.6;
+}
+
+/* Canto superior esquerdo: border-width: 2px 0 0 2px desenha topo e esquerda */
+.container-projeto::before {
+    top: -1px;
+    left: -1px;
+    border-width: 2px 0 0 2px;
+}
+
+/* Canto inferior direito: border-width: 0 2px 2px 0 desenha direita e baixo */
+.container-projeto::after {
+    bottom: -1px;
+    right: -1px;
+    border-width: 0 2px 2px 0;
+}
+
+/* --- Link de retorno para a lista de projetos --- */
+
+/* display: inline-block é necessário para que margin-bottom funcione no elemento.
+   Links são inline por padrão e ignoram margin-top/bottom. */
+.back-link {
+    display: inline-block;
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+    /* Opacidade 0.55 no repouso — mesmo valor dos links inativos do nav */
+    color: rgba(230, 240, 255, 0.55);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover acende o link em ciano — padrão de interatividade do site */
+.back-link:hover {
+    color: var(--neon-ciano);
+    text-shadow: var(--glow-ciano);
+}
+
+/* --- Área de conteúdo do projeto --- */
+
+/* width: 100% garante que o conteúdo use toda a largura disponível do container */
+.projeto-content {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Impede que imagens transbordem o container — sem max-width: 100%, imagens com
+   resolução nativa maior que ~820px ultrapassam a borda do container-projeto.
+   display: block remove o espaço inline padrão abaixo das imagens (quirk do HTML).
+   margin: auto centraliza horizontalmente imagens menores que a largura disponível. */
+.projeto-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 4px;
+}
+
+/* --- Título centralizado na página de projeto --- */
+
+/* width: 100% é necessário para que .title-container ocupe toda a largura do
+   container-projeto. Sem isso, container-projeto (align-items: flex-start) faz
+   o <h1> encolher ao tamanho do texto e ficar à esquerda, quebrando o
+   text-align: center definido em .title (simpleThings.css). */
+.container-projeto .title-container {
+    width: 100%;
+}
+
+/* --- Grupos de imagens lado a lado (.img-grid) --- */
+
+/* .img-grid distribui qualquer número de imagens em colunas de largura igual.
+   grid-auto-flow: column coloca cada imagem em uma coluna nova automaticamente.
+   grid-auto-columns: 1fr garante que todas as colunas tenham o mesmo tamanho,
+   independente das dimensões naturais de cada imagem — resolve o problema de
+   uma imagem maior "dominar" a linha que ocorre com flexbox. Funciona para 2
+   imagens (2 colunas iguais) e para 3 imagens (3 colunas iguais) sem CSS extra. */
+.img-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* width: 100% faz a imagem preencher a célula do grid inteiramente.
+   margin: 0 sobrescreve o margin: 1.5rem auto de .projeto-content img. */
+.img-grid img {
+    width: 100%;
+    margin: 0;
+}
+
+/* --- Grupos de imagens empilhadas (.img-stack) --- */
+
+/* .img-stack empilha imagens verticalmente com espaçamento uniforme via gap.
+   Substitui inline style="display: flex; flex-direction: column; gap: 1rem". */
+.img-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* gap do flex já cuida do espaçamento — margin individual causaria espaço duplicado */
+.img-stack img {
+    margin: 0;
+}

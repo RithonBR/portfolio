@@ -1,0 +1,345 @@
+/* ============================================================
+   RTH DOCS — layout da página de documentação do plugin RTH Project
+   Controla: estrutura de 2 colunas (sidebar + conteúdo), acordeão das
+   categorias, estado ativo dos itens e comportamento mobile colapsável.
+   As cores e fontes vêm das variáveis de color.css, carregadas via home.css.
+   ============================================================ */
+
+/* --- Layout principal --- */
+
+/* margin-top: 56px empurra o wrapper para baixo do nav fixo (altura definida em nav.css).
+   height: calc(100vh - 56px) limita o wrapper à altura restante da viewport —
+   isso é o que garante que a sidebar não role: o wrapper tem tamanho fixo e cada
+   coluna gerencia seu próprio scroll internamente.
+   overflow: hidden impede que o wrapper em si gere scrollbar; o scroll fica em
+   .docs-content (coluna direita). */
+.docs-wrapper {
+    display: flex;
+    margin-top: 56px;
+    height: calc(100vh - 56px);
+    overflow: hidden;
+}
+
+/* --- Sidebar --- */
+
+/* height: 100% faz a sidebar preencher a altura exata do wrapper (viewport - nav).
+   overflow-y: auto adiciona scroll interno se a lista de itens for maior que a tela.
+   overflow-x: hidden evita scrollbar horizontal causada pelo efeito colateral do CSS:
+   quando overflow-y é auto, overflow-x muda de visible para auto automaticamente,
+   criando scrollbar horizontal se qualquer item ultrapassar 1px a largura da sidebar. */
+.docs-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border-right: 1px solid rgba(0, 245, 255, 0.15);
+    background: rgba(5, 4, 15, 0.70);
+    backdrop-filter: blur(8px);
+    padding: 1rem 0;
+}
+
+/* Scrollbar discreta para não poluir o visual neon */
+.docs-sidebar::-webkit-scrollbar { width: 3px; }
+.docs-sidebar::-webkit-scrollbar-track { background: transparent; }
+.docs-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(0, 245, 255, 0.20);
+    border-radius: 2px;
+}
+
+/* --- Navegação da sidebar (acordeão via <details>/<summary>) --- */
+
+/* <details>/<summary> é o mecanismo nativo do HTML para acordeões:
+   não precisa de JS para abrir/fechar, funciona com teclado e é acessível. */
+
+.docs-nav { width: 100%; }
+
+.docs-nav-list {
+    list-style: none;
+    margin: 0;
+    /* padding-bottom: 4rem garante espaço rolável abaixo do último item.
+       Sem isso, ao abrir todos os acordeões e rolar até o fim, o último
+       item fica encostado na borda inferior da sidebar — difícil de clicar. */
+    padding: 0 0 4rem 0;
+}
+
+.docs-nav-item {
+    border-bottom: 1px solid rgba(0, 245, 255, 0.06);
+}
+
+/* Remove o triângulo padrão que browsers adicionam no <summary> */
+.docs-nav-item details > summary {
+    list-style: none;
+    cursor: pointer;
+}
+.docs-nav-item details > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Estilo base: aplicado tanto em <button> (itens simples) quanto
+   em <summary> (cabeçalhos de categorias com subcategorias) */
+.docs-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-box faz width: 100% incluir o padding no cálculo.
+       O Meyer Reset não define box-sizing: border-box. Sem esta linha,
+       width: 100% + padding lateral (2 × 1.1rem ≈ 35px) faz o botão
+       transbordar a sidebar, e o overflow-x: hidden clipa a seta ▶. */
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.6rem 1.1rem;
+    background: none;
+    border: none;
+    color: rgba(200, 220, 255, 0.70);
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+    font-size: 0.80rem;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.18s, background 0.18s;
+    line-height: 1.4;
+}
+
+.docs-nav-btn:hover {
+    color: var(--neon-ciano);
+    background: rgba(0, 245, 255, 0.05);
+}
+
+/* Seta rotaciona 90° quando a categoria está aberta (details[open]) */
+.docs-nav-btn .arrow {
+    font-size: 0.60rem;
+    opacity: 0.45;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
+    transition: transform 0.18s;
+}
+details[open] > summary .arrow {
+    transform: rotate(90deg);
+}
+
+/* Lista de subcategorias — indentada dentro do acordeão */
+.docs-nav-sub {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(0, 245, 255, 0.06);
+    background: rgba(0, 245, 255, 0.02);
+}
+
+/* Subcategorias: mais indentadas e cor mais sutil para criar hierarquia visual */
+.docs-nav-sub .docs-nav-btn {
+    padding-left: 1.8rem;
+    font-size: 0.76rem;
+    color: rgba(180, 200, 240, 0.50);
+}
+
+/* Estado ativo: item selecionado acende em ciano com borda esquerda neon.
+   padding-left compensado em 2px para o texto não deslocar com o border. */
+.docs-nav-btn.active {
+    color: var(--neon-ciano);
+    background: rgba(0, 245, 255, 0.07);
+    border-left: 2px solid var(--neon-ciano);
+    padding-left: calc(1.1rem - 2px);
+}
+.docs-nav-sub .docs-nav-btn.active {
+    padding-left: calc(1.8rem - 2px);
+}
+
+/* --- Acordeão aninhado (3º nível: sub de sub) ---
+   Usado em "Análises para Drone" dentro de Agricultura de Precisão.
+   .docs-nav-sub-deep herda fundo mais escuro para indicar profundidade.
+   .docs-nav-btn-deep adiciona 0.7rem de recuo extra sobre o 2º nível. */
+.docs-nav-sub-deep {
+    background: rgba(0, 245, 255, 0.015);
+}
+
+.docs-nav-btn-deep {
+    box-sizing: border-box;
+    padding-left: 2.5rem;
+    font-size: 0.72rem;
+    color: rgba(160, 185, 230, 0.45);
+}
+
+.docs-nav-btn-deep:hover {
+    color: var(--neon-ciano);
+    background: rgba(0, 245, 255, 0.05);
+}
+
+.docs-nav-btn-deep.active {
+    color: var(--neon-ciano);
+    background: rgba(0, 245, 255, 0.07);
+    border-left: 2px solid var(--neon-ciano);
+    padding-left: calc(2.5rem - 2px);
+}
+
+/* --- Área de conteúdo --- */
+
+/* flex: 1 faz a área de conteúdo ocupar o espaço restante após a sidebar.
+   height: 100% + overflow-y: auto é o que dá scroll à coluna direita — a sidebar
+   não rola porque ela não tem overflow; só .docs-content tem.
+   min-width: 0 é necessário em flex: sem ele, um texto longo pode fazer o
+   item crescer além do espaço disponível, quebrando o layout. */
+.docs-content {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    overflow-y: auto;
+    padding: clamp(1.5rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+/* Cada seção começa oculta. O JS adiciona .active na seção selecionada. */
+.docs-section {
+    display: none;
+}
+.docs-section.active {
+    display: block;
+    animation: fadeInDocs 0.20s ease;
+    padding-bottom: 4rem;
+}
+
+/* Fade suave ao trocar de seção — translateY sutil para não chamar atenção */
+@keyframes fadeInDocs {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Layout texto + imagem lado a lado nas seções de docs ---
+   Uso: <div class="docs-flex"> com dois filhos diretos.
+   Cada filho recebe flex: 1 1 280px — no desktop ficam lado a lado,
+   no mobile empilham verticalmente (flex-wrap: wrap). */
+.docs-flex {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* Cada filho (texto ou imagem) cresce igualmente e encolhe quando necessário.
+   flex-basis: 320px → empilha em coluna quando o container fica estreito. */
+.docs-flex > * {
+    flex: 1 1 320px;
+    min-width: 0;
+}
+
+/* Por padrão (tela estreita/empilhada) a imagem ocupa 100% — visível.
+   Em telas largas o limite de 44% é aplicado via min-width abaixo. */
+.docs-flex .image-container-texto-legenda {
+    max-width: 100%;
+}
+
+/* Desktop: lado a lado — limita a imagem para o texto ter mais espaço.
+   700px refere-se à largura do docs-content, não da viewport. */
+@media (min-width: 1300px) {
+    .docs-flex .image-container-texto-legenda {
+        max-width: 44%;
+    }
+}
+
+/* --- Layout centralizado (tutorial: texto + imagens em coluna centrada) ---
+   Uso: <div class="center"> ao redor de parágrafos e imagens.
+   align-items: center centraliza horizontalmente cada filho.
+   Os <p> ficam em largura 100% para o texto não quebrar em coluna estreita. */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.center p {
+    width: 100%;
+    text-align: center;
+}
+
+.center img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Título da seção de conteúdo — usa a paleta neon do projeto */
+.docs-section-title {
+    font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    color: var(--neon-ciano);
+    text-shadow: var(--glow-ciano);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid rgba(0, 245, 255, 0.15);
+    line-height: 1.3;
+}
+
+/* --- Toggle mobile (oculto no desktop) --- */
+
+/* display: none no desktop — aparece apenas via media query abaixo */
+.docs-mobile-toggle {
+    display: none;
+}
+
+/* --- Responsivo: mobile (≤ 768px) --- */
+
+@media (max-width: 768px) {
+
+    /* Empilha sidebar acima do conteúdo em vez de lado a lado.
+       height: auto e overflow: visible revertem o layout fixo do desktop:
+       no mobile, a página rola normalmente — não há split-pane. */
+    .docs-wrapper {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+
+    /* Sidebar ocupa largura total, altura automática, sem scroll lateral */
+    .docs-sidebar {
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 245, 255, 0.15);
+        padding: 0.75rem;
+    }
+
+    /* Botão de toggle aparece apenas no mobile */
+    .docs-mobile-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.6rem 0.85rem;
+        background: rgba(0, 245, 255, 0.06);
+        border: 1px solid rgba(0, 245, 255, 0.20);
+        border-radius: 4px;
+        color: var(--neon-ciano);
+        font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+        font-size: 0.82rem;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+    }
+
+    /* A seta do toggle gira quando o menu está aberto */
+    .docs-mobile-toggle .arrow {
+        transition: transform 0.18s;
+    }
+    .docs-mobile-toggle.open .arrow {
+        transform: rotate(180deg);
+    }
+
+    /* A nav começa recolhida no mobile — JS adiciona/remove .collapsed */
+    .docs-nav.collapsed {
+        display: none;
+    }
+
+    /* height: auto + overflow-y: visible revertem o scroll interno do desktop.
+       No mobile a página rola inteira, não o div de conteúdo. */
+    .docs-content {
+        height: auto;
+        overflow-y: visible;
+        padding: 1.25rem 1rem;
+        max-width: 100%;
+    }
+}

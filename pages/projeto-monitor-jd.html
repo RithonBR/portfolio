@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Monitor John Deere — página de detalhe do projeto -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Problema do monitor agrícola John Deere — solução com análise de imagem por Luciano (RithonDev)." />
+    <link rel="shortcut icon" href="../icons/tridente.ico" type="image/x-icon">
+    <title>Monitor John Deere — RithonDev</title>
+    <link rel="stylesheet" href="home/home.css">
+    <link rel="stylesheet" href="projeto.css">
+</head>
+<body>
+
+  <nav class="nav-principal" role="navigation" aria-label="Navegação principal">
+    <a href="../index.html" class="nav-brand">RTH</a>
+    <ul>
+      <li><a href="../index.html" data-key="nav-sobre">Sobre</a></li>
+      <li><a href="projetos.html" aria-current="page" data-key="nav-projetos">Projetos</a></li>
+      <li><a href="rth-project.html" data-key="nav-rth">RTH Project</a></li>
+      <li><a href="catalogo.html" data-key="nav-catalogo">Catálogo de Culturas</a></li>
+      <li><a href="rth-explorer.html" data-key="nav-explorer">RTH World Explorer</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="lang-item">
+      <span class="lang-label" data-key="lang-label">Idioma</span>
+      <button class="lang-toggle" data-active="pt" aria-label="Switch to English">
+        <span class="opt-en">EN</span> | <span class="opt-pt">PT</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="painel-home">
+      <div class="container-projeto">
+        <a href="projetos.html" class="back-link" data-key="back-projetos">← Projetos</a>
+        <h1 class="title-container">
+          <!-- data-key="proj-6-title" vinculado ao texto em langHandler.js para EN/PT -->
+          <span class="title" data-key="proj-6-title">Problema monitor agrícola John Deere</span>
+        </h1>
+        <div class="projeto-content">
+          <p class="text-pad" style="text-align: center;"><span data-key="link-projeto">Link do Projeto:</span> <a href="https://github.com/RithonBR/Projeto_Monitor_Agricola" target="_blank" rel="noopener noreferrer" class="destaque" data-key="acesse-aqui">Acesse aqui</a></p>
+          <p class="text-pad" data-key="proj-6-p1">O <span class="destaque">pendrive não estava conseguindo descarregar as informações da colheita do pivô central.</span> Recebi uma foto do monitor e utilizei <span class="destaque">reconhecimento de imagem para identificar os pixels e bater com a legenda.</span></p>
+          <div class="img-grid">
+            <img src="../img/projeto-fotoMonitordoTrator.jpeg" alt="Monitor agrícola John Deere no trator">
+            <img src="../img/projeto-fotoMonitorLegenda.jpeg" alt="Legenda de cores do monitor agrícola John Deere" style="max-width: 250px; justify-self: center;">
+          </div>
+          <p class="text-pad" data-key="proj-6-p2">Porém havia <span class="destaque">tratamentos comerciais dentro do pivô central</span>, e com isso consegui separar e diferenciar os resultados por tratamento.</p>
+          <img src="../img/Projeto-monitor_tratamentos_no_pivo.jpg" alt="Mapa do pivô central com tratamentos comerciais identificados">
+          <p class="text-pad" data-key="proj-6-p3">Após o tratamento dos dados, recebemos um Excel com resultados do pivô central e conseguimos obter os dados separados por tratamento.</p>
+          <div class="img-grid">
+            <img src="../img/projeto-monitor_resultados_por_tratamento.png" alt="Resultados de produtividade por tratamento do pivô central">
+            <img src="../img/projeto-monitor_pivo.png" alt="Visualização do pivô central com tratamentos mapeados">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="video-background" aria-hidden="true">
+    <video src="../img/background.mp4" autoplay loop muted playsinline poster="../img/background.jpg" class="videoback"></video>
+  </div>
+
+  <script type="module" src="../js/global.js"></script>
+</body>
+</html>

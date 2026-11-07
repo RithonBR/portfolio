@@ -1,125 +1,115 @@
-/* 
-Para telas muito pequenas (máximo de 302px) 
-Objetivo: Garantir uma exibição funcional para telas extremamente pequenas.
-*/
+/* ============================================================
+   RESPONSIVE — media queries para adaptar o layout em mobile e tablet.
+   Os estilos base (desktop) estão nos arquivos de componente (nav.css, hero.css etc.).
+   Este arquivo APENAS sobrescreve o que muda em cada breakpoint.
+   ============================================================ */
+
+/* ===========================
+   Telas muito pequenas (< 302px)
+   ===========================
+   302px é menor que qualquer smartphone moderno (menor é 360px).
+   Abaixo disso o layout quebraria visualmente — mais simples ocultar que distorcer.
+   Não foi encontrado nenhum dispositivo real nesse tamanho; é um safety net. */
 @media (max-width: 302px) {
-  /* Esconde o conteúdo principal para telas muito pequenas */
-  .container-home {
-      opacity: 0;
-  }
-
-  /* Remove o vídeo de fundo para economizar recursos */
-  .videoback {
-      display: none;
-  }
-
-  /* Oculta os ícones laterais das redes sociais */
-  .redes-sociais-Lateral {
-      visibility: hidden;
-  }
-
-  /* Esconde seções específicas para telas pequenas */
-  #prog, #agro, #mobile, .container-home-switch {
-      display: none;
-  }
-
-  /* Define uma imagem de fundo fixa para contexto */
-  body {
-      background-image: url(../icons/gato-com-arma.jpg);
-  }
+    /* Oculta o container com opacity: 0 (em vez de display: none) para manter
+       o espaço e não colapsar o layout — apenas torna invisível */
+    .container-home {
+        opacity: 0;
+    }
+    /* Remove o vídeo para economizar recursos em dispositivos muito limitados */
+    .videoback {
+        display: none;
+    }
 }
 
-/* 
-Para telas de largura entre 303px e 540px 
-Objetivo: Ajustar o layout para dispositivos móveis pequenos.
-*/
-@media (min-width: 303px) and (max-width: 540px) {
-  /* Define um tamanho mínimo para o contêiner principal */
-  .container-home {
-      min-width: 185.156px;
-  }
+/* ===========================
+   Mobile (até 540px)
+   ===========================
+   540px cobre celulares em portrait e pequenos tablets.
+   Abaixo desse valor o nav de 3 colunas (RTH · links · idioma) não cabe em
+   uma linha horizontal — quebra para 2 linhas. */
+@media (max-width: 540px) {
 
-  /* Ajusta a direção dos elementos de projeto e experiência para coluna */
-  .projects-experience {
-    flex-direction: column;
-  }
+    /* Nav em 2 linhas: [RTH · Idioma] na primeira, [links de navegação] na segunda.
+       flex-wrap: wrap permite que os itens flex quebrem linha.
+       height: auto sobrescreve o height: 56px fixo do desktop (nav.css),
+       permitindo que o nav cresça verticalmente. */
+    .nav-principal {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0.5rem 1rem;
+        gap: 0.3rem;
+    }
 
-  /* Reduz o tamanho da fonte dos títulos */
-  .title {
-      font-size: 0.7rem;
-  }
+    /* order: 2 empurra a <ul> de links para a segunda linha, abaixo de marca e idioma.
+       width: 100% ocupa toda a largura para centralizar os links horizontalmente. */
+    .nav-principal ul {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+        gap: 0.8rem;
+        padding-bottom: 0.4rem;
+    }
 
-  /* Oculta os ícones laterais das redes sociais */
-  .redes-sociais-Lateral {
-      visibility: hidden;
-  }
+    /* Reduz a fonte dos links de navegação para caberem na segunda linha sem quebrar */
+    .nav-principal a:not(.nav-brand) {
+        font-size: 0.68rem;
+        letter-spacing: 0.06em;
+    }
 
-  /* Esconde as seções "prog" e "agro" */
-  #prog, #agro {
-      display: none;
-  }
+    /* padding-top: 110px compensa o nav que agora ocupa ~110px (2 linhas) em vez de 56px.
+       Sem isso o conteúdo ficaria escondido atrás do nav.
+       O valor 110px foi ajustado manualmente para o tamanho real do nav em 2 linhas. */
+    .painel-home {
+        padding-top: 110px;
+    }
 
-  /* Mostra o conteúdo específico para dispositivos móveis */
-  #mobile {
-      display: block;
-  }
+    /* Container usa 95vw (quase toda a tela) e padding compacto para mobile */
+    .container-home {
+        width: 95vw;
+        padding: 1.5rem 1.2rem;
+    }
 
-  /* Reduz o tamanho da fonte nos textos de experiência e projetos */
-  .projects-experience .list-experience .text-pad,
-  .projects-experience .list-projects .text-pad {
-    font-size: 0.9rem;
-  }
+    /* Reduz o título para 1rem — se ficar com o tamanho clamp do desktop, trunca no mobile */
+    .title {
+        font-size: 1rem;
+    }
 
-  /* Adiciona margem superior à seção de experiência */
-  .experience {
-      margin-top: 10px;
-  }
+    /* Ícones sociais menores no mobile: 32px ainda são clicáveis (tamanho mínimo recomendado)
+       mas ocupam menos espaço horizontal */
+    .icone-rede-social {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-bar {
+        gap: 1rem;
+    }
+
+    /* Em telas estreitas, text-align: justify cria espaços irregulares entre palavras
+       (especialmente quando há palavras longas como "sensoriamento"). Substitui por left.
+       text-indent: 0 remove o recuo de parágrafo que fica estranho sem o justify. */
+    .text-pad {
+        text-align: left;
+        text-indent: 0;
+    }
 }
 
-/* 
-Para telas de largura entre 541px e 768px 
-Objetivo: Ajustar o layout para tablets e dispositivos intermediários.
-*/
+/* ===========================
+   Tablet (541px – 768px)
+   ===========================
+   O layout desktop funciona em tablet, mas precisa de pequenos ajustes
+   de fonte e padding para otimizar a legibilidade no tamanho intermediário. */
 @media (min-width: 541px) and (max-width: 768px) {
-  /* Define um tamanho máximo para o contêiner principal */
-  .container-home {
-      max-width: 333.656px;
-  }
+    /* Diminui levemente os links do nav para evitar que quebrem linha no tablet */
+    .nav-principal a:not(.nav-brand) {
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+    }
 
-  /* Esconde o conteúdo específico para dispositivos móveis */
-  #mobile {
-      display: none;
-  }
-
-  /* Oculta elementos não necessários nesta faixa */
-  #teste {
-    display: none;
-  }
-  #hidden {
-    display: none;
-  }
-}
-
-/* 
-Para telas maiores (mínimo de 769px) 
-Objetivo: Layout para dispositivos com grandes resoluções, como desktops.
-*/
-@media (min-width: 769px) {
-  /* Define o mesmo tamanho máximo para o contêiner principal */
-  .container-home {
-      max-width: 333.656px;
-  }
-
-  /* Esconde o conteúdo específico para dispositivos móveis */
-  #mobile {
-      display: none;
-  }
-
-  /* Oculta elementos não necessários */
-  #teste {
-    display: none;
-  }
-  #hidden {
-    display: none;
-  }
+    /* Container um pouco mais largo e com padding intermediário entre mobile e desktop */
+    .container-home {
+        width: 92vw;
+        padding: 2rem 2.5rem;
+    }
 }

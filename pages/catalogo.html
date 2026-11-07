@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!-- Catálogo de Culturas — referência técnica de culturas agrícolas com layout de documentação -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de Culturas — referência técnica agrícola por Luciano (RithonDev)." />
+    <link rel="shortcut icon" href="../icons/tridente.ico" type="image/x-icon">
+    <title>Catálogo de Culturas — RithonDev</title>
+    <!-- home.css carrega nav, variáveis de cor, fontes, reset e vídeo de fundo -->
+    <link rel="stylesheet" href="home/home.css">
+    <!-- rth-docs.css: layout de documentação compartilhado com rth-project.html -->
+    <link rel="stylesheet" href="rth-docs.css">
+</head>
+<body>
+
+  <!-- Navegação principal — 3 colunas: marca · links · idioma -->
+  <nav class="nav-principal" role="navigation" aria-label="Navegação principal">
+    <a href="../index.html" class="nav-brand">RTH</a>
+    <ul>
+      <li><a href="../index.html" data-key="nav-sobre">Sobre</a></li>
+      <li><a href="projetos.html" data-key="nav-projetos">Projetos</a></li>
+      <li><a href="rth-project.html" data-key="nav-rth">RTH Project</a></li>
+      <!-- aria-current="page" marca esta página como ativa no nav -->
+      <li><a href="catalogo.html" aria-current="page" data-key="nav-catalogo">Catálogo de Culturas</a></li>
+      <li><a href="rth-explorer.html" data-key="nav-explorer">RTH World Explorer</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="lang-item">
+      <span class="lang-label" data-key="lang-label">Idioma</span>
+      <button class="lang-toggle" data-active="pt" aria-label="Switch to English">
+        <span class="opt-en">EN</span> | <span class="opt-pt">PT</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Layout de documentação: sidebar esquerda + conteúdo direita -->
+  <div class="docs-wrapper">
+
+    <!-- Sidebar: coluna fixa no desktop, colapsável no mobile -->
+    <aside class="docs-sidebar">
+
+      <!-- Botão toggle: oculto no desktop, aparece no mobile para abrir/fechar a nav -->
+      <button class="docs-mobile-toggle" id="docs-mobile-toggle" aria-label="Abrir navegação">
+        <span data-key="cat-nav-toggle">Navegação</span>
+        <span class="arrow">▾</span>
+      </button>
+
+      <!-- Lista de culturas.
+           Culturas simples: <button data-section="id"> navega para a seção.
+           Cana de Açúcar: <details>/<summary> abre/fecha o acordeão sem JS. -->
+      <nav class="docs-nav" id="docs-nav" aria-label="Culturas">
+        <ul class="docs-nav-list">
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-mapeamento">
+              <span data-key="cat-mapeamento">Mapeamento Agrícola</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-soja">
+              <span data-key="cat-soja">Soja</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <details>
+              <summary class="docs-nav-btn">
+                <span data-key="cat-milho">Milho</span>
+                <span class="arrow">▶</span>
+              </summary>
+              <ul class="docs-nav-sub">
+                <li><button class="docs-nav-btn" data-section="sec-cat-milho-grao"><span data-key="cat-milho-grao">Grão</span></button></li>
+                <li><button class="docs-nav-btn" data-section="sec-cat-milho-silagem"><span data-key="cat-milho-silagem">Silagem</span></button></li>
+              </ul>
+            </details>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-algodao">
+              <span data-key="cat-algodao">Algodão</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-sorgo">
+              <span data-key="cat-sorgo">Sorgo</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-milheto">
+              <span data-key="cat-milheto">Milheto</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-gergelim">
+              <span data-key="cat-gergelim">Gergelim</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-inverno">
+              <span data-key="cat-inverno">Culturas de Inverno</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-feijao">
+              <span data-key="cat-feijao">Feijão</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-girassol">
+              <span data-key="cat-girassol">Girassol</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-amendoim">
+              <span data-key="cat-amendoim">Amendoim</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <details>
+              <summary class="docs-nav-btn">
+                <span data-key="cat-arroz">Arroz</span>
+                <span class="arrow">▶</span>
+              </summary>
+              <ul class="docs-nav-sub">
+                <li><button class="docs-nav-btn" data-section="sec-cat-arroz-sequeiro"><span data-key="cat-arroz-sequeiro">Sequeiro</span></button></li>
+                <li><button class="docs-nav-btn" data-section="sec-cat-arroz-inundado"><span data-key="cat-arroz-inundado">Inundado</span></button></li>
+              </ul>
+            </details>
+          </li>
+
+          <!-- Cana de Açúcar — acordeão com 6 subcategorias -->
+          <li class="docs-nav-item">
+            <details>
+              <summary class="docs-nav-btn">
+                <span data-key="cat-cana">Cana de Açúcar</span>
+                <span class="arrow">▶</span>
+              </summary>
+              <ul class="docs-nav-sub">
+                <li><button class="docs-nav-btn" data-section="sec-cat-cana-geral"><span data-key="cat-cana-geral">Geral</span></button></li>
+                <li><button class="docs-nav-btn" data-section="sec-cat-cana-reformada"><span data-key="cat-cana-reformada">Cana Reformada</span></button></li>
+                <li><button class="docs-nav-btn" data-section="sec-cat-cana-soca"><span data-key="cat-cana-soca">Cana Soca</span></button></li>
+                <li><button class="docs-nav-btn" data-section="sec-cat-cana-reforma"><span data-key="cat-cana-reforma">Cana Reforma</span></button></li>
+                <li><button class="docs-nav-btn" data-section="sec-cat-cana-rotacao"><span data-key="cat-cana-rotacao">Rotação</span></button></li>
+                <li><button class="docs-nav-btn" data-section="sec-cat-cana-curiosidades"><span data-key="cat-cana-curiosidades">Curiosidades</span></button></li>
+              </ul>
+            </details>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-nabo">
+              <span data-key="cat-nabo">Nabo Forrageiro</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-abacaxi">
+              <span data-key="cat-abacaxi">Abacaxi</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-mandioca">
+              <span data-key="cat-mandioca">Mandioca</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-cafe">
+              <span data-key="cat-cafe">Café</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-citros">
+              <span data-key="cat-citros">Citros</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-banana">
+              <span data-key="cat-banana">Banana</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-viticultura">
+              <span data-key="cat-viticultura">Viticultura</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-pastagens">
+              <span data-key="cat-pastagens">Pastagens</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-reflorestamento">
+              <span data-key="cat-reflorestamento">Reflorestamento</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-desmatamento">
+              <span data-key="cat-desmatamento">Desmatamento</span>
+            </button>
+          </li>
+
+          <li class="docs-nav-item">
+            <button class="docs-nav-btn" data-section="sec-cat-usinas-fotovoltaicas">
+              <span data-key="cat-usinas-fotovoltaicas">Usinas Fotovoltaicas</span>
+            </button>
+          </li>
+
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Área de conteúdo: apenas a seção ativa é exibida (JS controla .active) -->
+    <main class="docs-content">
+
+      <section class="docs-section" id="sec-cat-mapeamento">
+        <h2 class="docs-section-title" data-key="cat-mapeamento">Mapeamento Agrícola</h2>
+        <p class="text-pad" data-key="cat-mapeamento-p1">O mapeamento agrícola e o sensoriamento remoto são hoje <span class="destaque">infraestrutura essencial para qualquer empresa que atua no agronegócio</span> — tão estratégicos quanto logística ou finanças. Com um setor dedicado, <span class="destaque">sua organização deixa de depender de dados do governo (incluindo dados de países concorrentes)</span> e passa a verificar e <span class="destaque">produzir suas próprias informações territoriais com precisão, velocidade e independência.</span></p>
+        <p class="text-pad" data-key="cat-mapeamento-p2">Por meio do sensoriamento remoto — imagens de satélites como Sentinel-2, Landsat e CBERS — é possível monitorar em escala regional ou nacional: <span class="destaque">alertas de emergência</span> (incêndios, secas, inundações); <span class="destaque">estádio fenológico de culturas</span> (plantio, desenvolvimento e colheita talhão a talhão); detecção e <span class="destaque">monitoramento de desmatamento</span> em tempo quase real; <span class="destaque">gestão logística</span> de fazendas ao porto, otimizando rotas com base na distribuição espacial das lavouras.</p>
+        <p class="text-pad" data-key="cat-mapeamento-p3">Com o mapeamento agrícola vai além: <span class="destaque">é possível estimar com precisão a área plantada</span> de uma determinada cultura em qualquer escala geográfica — município, estado, país ou até múltiplos países (Brasil, EUA, China, Argentina). Por que confiar nos números oficiais de um país concorrente quando é possível verificar por conta própria, com metodologia auditável? Essa capacidade é a base para decisões estratégicas de alto impacto:</p>
+        <p class="text-pad" data-key="cat-mapeamento-p4">Planejamento de escoamento: com área plantada mapeada por município, é possível estimar volumes de produção, dimensionar a frota de caminhões necessária e <span class="destaque">antecipar gargalos logísticos antes da colheita</span>. Inteligência de mercado — <span class="destaque">monitorar expansão ou retração de área plantada</span> de forma contínua permite antecipar tendências de oferta. Trade com precisão se confirma nos dados: quanto <span class="destaque">maior a área plantada em um município, menor tende a ser o preço local</span> — e saber isso antes do mercado é vantagem competitiva real para contratos e negociações. <span class="destaque">ESG e rastreabilidade</span> — o mapeamento de uso do solo é a evidência objetiva exigida por iniciativas como a <span class="destaque">EUDR</span> (regulação europeia anti-desmatamento), garantindo que as culturas não estejam associadas a áreas de conversão ilegal.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-soja">
+        <h2 class="docs-section-title" data-key="cat-soja">Soja</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-milho-grao">
+        <h2 class="docs-section-title" data-key="cat-milho-grao">Grão</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-milho-silagem">
+        <h2 class="docs-section-title" data-key="cat-milho-silagem">Silagem</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-algodao">
+        <h2 class="docs-section-title" data-key="cat-algodao">Algodão</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-sorgo">
+        <h2 class="docs-section-title" data-key="cat-sorgo">Sorgo</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-milheto">
+        <h2 class="docs-section-title" data-key="cat-milheto">Milheto</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-gergelim">
+        <h2 class="docs-section-title" data-key="cat-gergelim">Gergelim</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-inverno">
+        <h2 class="docs-section-title" data-key="cat-inverno">Culturas de Inverno</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-feijao">
+        <h2 class="docs-section-title" data-key="cat-feijao">Feijão</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-girassol">
+        <h2 class="docs-section-title" data-key="cat-girassol">Girassol</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-amendoim">
+        <h2 class="docs-section-title" data-key="cat-amendoim">Amendoim</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-arroz-sequeiro">
+        <h2 class="docs-section-title" data-key="cat-arroz-sequeiro">Sequeiro</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-arroz-inundado">
+        <h2 class="docs-section-title" data-key="cat-arroz-inundado">Inundado</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-cana-geral">
+        <h2 class="docs-section-title" data-key="cat-cana-geral">Geral</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-cana-reformada">
+        <h2 class="docs-section-title" data-key="cat-cana-reformada">Cana Reformada</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-cana-soca">
+        <h2 class="docs-section-title" data-key="cat-cana-soca">Cana Soca</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-cana-reforma">
+        <h2 class="docs-section-title" data-key="cat-cana-reforma">Cana Reforma</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-cana-rotacao">
+        <h2 class="docs-section-title" data-key="cat-cana-rotacao">Rotação</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-cana-curiosidades">
+        <h2 class="docs-section-title" data-key="cat-cana-curiosidades">Curiosidades</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-nabo">
+        <h2 class="docs-section-title" data-key="cat-nabo">Nabo Forrageiro</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-abacaxi">
+        <h2 class="docs-section-title" data-key="cat-abacaxi">Abacaxi</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-mandioca">
+        <h2 class="docs-section-title" data-key="cat-mandioca">Mandioca</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-cafe">
+        <h2 class="docs-section-title" data-key="cat-cafe">Café</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-citros">
+        <h2 class="docs-section-title" data-key="cat-citros">Citros</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-banana">
+        <h2 class="docs-section-title" data-key="cat-banana">Banana</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-viticultura">
+        <h2 class="docs-section-title" data-key="cat-viticultura">Viticultura</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-pastagens">
+        <h2 class="docs-section-title" data-key="cat-pastagens">Pastagens</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-reflorestamento">
+        <h2 class="docs-section-title" data-key="cat-reflorestamento">Reflorestamento</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-desmatamento">
+        <h2 class="docs-section-title" data-key="cat-desmatamento">Desmatamento</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+      <section class="docs-section" id="sec-cat-usinas-fotovoltaicas">
+        <h2 class="docs-section-title" data-key="cat-usinas-fotovoltaicas">Usinas Fotovoltaicas</h2>
+        <p class="text-pad" data-key="coming-soon">Em breve.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- aria-hidden="true": vídeo decorativo, sem informação para leitores de tela -->
+  <div id="video-background" aria-hidden="true">
+    <video src="../img/background.mp4" autoplay loop muted playsinline poster="../img/background.jpg" class="videoback"></video>
+  </div>
+
+  <!-- type="module" permite import/export no JS; inicializa langHandler (EN/PT) -->
+  <script type="module" src="../js/global.js"></script>
+
+  <!-- Script de navegação dos docs (script regular, não-module).
+       Executa imediatamente, antes do langHandler (module), garantindo que
+       a primeira cultura apareça ativa ao carregar a página. -->
+  <script>
+    (function () {
+        const navBtns = document.querySelectorAll('.docs-nav-btn[data-section]');
+        const sections = document.querySelectorAll('.docs-section');
+        const mobileToggle = document.getElementById('docs-mobile-toggle');
+        const docsNav = document.getElementById('docs-nav');
+
+        // Oculta todas as seções, remove .active dos botões, exibe apenas a solicitada
+        function showSection(id) {
+            sections.forEach(s => s.classList.remove('active'));
+            navBtns.forEach(b => b.classList.remove('active'));
+            const target = document.getElementById(id);
+            if (target) target.classList.add('active');
+            navBtns.forEach(b => {
+                if (b.dataset.section === id) b.classList.add('active');
+            });
+        }
+
+        // Clique em item de navegação: exibe seção + fecha sidebar no mobile
+        navBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                showSection(this.dataset.section);
+                if (window.innerWidth <= 768) {
+                    docsNav.classList.add('collapsed');
+                    if (mobileToggle) mobileToggle.classList.remove('open');
+                }
+            });
+        });
+
+        // Toggle mobile: abre/fecha a sidebar
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', function () {
+                docsNav.classList.toggle('collapsed');
+                this.classList.toggle('open');
+            });
+        }
+
+        // Exibe Mapeamento Agrícola como primeira seção ao carregar
+        showSection('sec-cat-mapeamento');
+
+        // No mobile, a sidebar começa recolhida
+        if (window.innerWidth <= 768) {
+            docsNav.classList.add('collapsed');
+        }
+    }());
+  </script>
+
+</body>
+</html>

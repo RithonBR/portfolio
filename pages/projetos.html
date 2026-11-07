@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projetos de Luciano (RithonDev) — sensoriamento remoto, agricultura de precisão e análise de dados." />
+    <link rel="shortcut icon" href="../icons/tridente.ico" type="image/x-icon">
+    <title>Projetos — RithonDev</title>
+    <!-- home/home.css carrega todos os módulos CSS do site (nav, hero, projetos etc.) -->
+    <link rel="stylesheet" href="home/home.css">
+</head>
+<body>
+
+  <!-- Navegação principal — 3 colunas: marca (esquerda) · links (centro) · idioma (direita) -->
+  <nav class="nav-principal" role="navigation" aria-label="Navegação principal">
+    <a href="../index.html" class="nav-brand">RTH</a>
+    <ul>
+      <!-- aria-current="page" marca o link da página atual para leitores de tela e CSS -->
+      <li><a href="../index.html" data-key="nav-sobre">Sobre</a></li>
+      <li><a href="projetos.html" aria-current="page" data-key="nav-projetos">Projetos</a></li>
+      <li><a href="rth-project.html" data-key="nav-rth">RTH Project</a></li>
+      <li><a href="catalogo.html" data-key="nav-catalogo">Catálogo de Culturas</a></li>
+      <li><a href="rth-explorer.html" data-key="nav-explorer">RTH World Explorer</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="lang-item">
+      <span class="lang-label" data-key="lang-label">Idioma</span>
+      <!-- data-active="pt" diz ao CSS qual opção acender; langHandler.js atualiza esse atributo -->
+      <button class="lang-toggle" data-active="pt" aria-label="Switch to English">
+        <span class="opt-en">EN</span> | <span class="opt-pt">PT</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="painel-home painel-projetos">
+
+      <!-- Container da lista de projetos — estilos em pages/home/partials/projetos.css -->
+      <div class="container-projetos">
+
+        <h1 class="title-container">
+          <span class="title" data-key="heading-projetos">Projetos</span>
+        </h1>
+
+        <!-- Lista de projetos — cada <li> é um card clicável que leva à página do projeto -->
+        <ul class="lista-projetos">
+
+          <!-- Projeto 1: TCC Machine Learning -->
+          <li>
+            <a href="projeto-tcc.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-tcc-ImagensStackModelos.png" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-1-title">Machine learning aplicado ao monitoramento agrícola: estudo de caso no cultivo de milho em Luís Eduardo Magalhães (BA)</h2>
+                <p class="projeto-desc" data-key="proj-1-desc">O TCC buscou verificar quais dos 9 modelos de machine learning foram mais representativos em relação ao mapeamento manual de culturas agrícolas. A ideia foi executar os modelos sem processamento de ruído ou validação manual, comprovando a acurácia de cada um e identificando qual exigiria menos retrabalho na revisão.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto: RTH PROJECT QGIS Plugin -->
+          <li>
+            <a href="projeto-rth-project.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/Modulos-Plugin.png" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-rthproject-title">RTH PROJECT — Plugin QGIS para Mapeamento Agrícola &amp; ESG</h2>
+                <p class="projeto-desc" data-key="proj-rthproject-desc">Plugin open-source para QGIS que centraliza ferramentas de sensoriamento remoto e mapeamento agrícola em um único ambiente. Do catálogo de imagens via STAC ao planejador de voo para drones, cada ferramenta foi desenvolvida para otimizar o fluxo de trabalho do profissional de geotecnologias no agronegócio.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto: Catálogo de Culturas -->
+          <li>
+            <a href="projeto-catalogo.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-gifs-rgb.gif" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-catalogo-title">Catálogo de Culturas</h2>
+                <p class="projeto-desc" data-key="proj-catalogo-desc">Catálogo pessoal de assinaturas espectrais e padrões visuais de culturas agrícolas — uma espécie de Pokédex do agro. Reúne composições de bandas, índices de vegetação e comportamento temporal de cada cultura, servindo como referência rápida para identificação em imagens de satélite.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto: RTH World Explorer App -->
+          <li>
+            <a href="projeto-rth-explorer.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/app-home.png" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-explorer-title">RTH World Explorer — Aplicativo de Celular do Campo ao Escritório</h2>
+                <p class="projeto-desc" data-key="proj-explorer-desc">Aplicativo Android desenvolvido para o profissional que trabalha do campo ao escritório. Captura pontos georreferenciados de culturas com fotos, coleta parâmetros produtivos (soja, milho, algodão, arroz e outros) e gera grids amostrais de agricultura de precisão — totalmente integrado ao plugin RTH PROJECT para QGIS.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto 2: RTH Análise de Polígono -->
+          <li>
+            <a href="projeto-rth-poligono.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-analisePoligono.png" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-2-title">RTH Análise de Polígono</h2>
+                <p class="projeto-desc" data-key="proj-2-desc">O projeto recebe um polígono específico em JSON junto com um intervalo de tempo, gerando thumbnails em três composições de bandas — RGB, NIR-SWIR-RED e NIR-SWIR-RED contrastada — que podem ser clicadas para melhor visualização no mapa central.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto 3: RTH Gráficos de Vegetação -->
+          <li>
+            <a href="projeto-rth-vegetacao.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-vegtime.png" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-3-title">RTH Gráficos de Vegetação</h2>
+                <p class="projeto-desc" data-key="proj-3-desc">O projeto recebe uma coordenada de latitude e longitude e plota gráficos de índices de vegetação relevantes para o mapeamento agrícola, permitindo uma melhor diferenciação entre culturas sem depender de sites externos.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto 4: RTH Visualizador de Clima -->
+          <li>
+            <a href="projeto-rth-clima.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-climate.png" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-4-title">RTH Visualizador de Clima</h2>
+                <p class="projeto-desc" data-key="proj-4-desc">O projeto plota variáveis climáticas importantes para estados brasileiros ou para o Brasil, incluindo um modelo de previsão do tempo, eliminando a dependência de sites externos para análises agrícolas.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto 5: RTH Verificar Desmatamento -->
+          <li>
+            <a href="projeto-rth-desmatamento.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-rthdesmatamento.png" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-5-title">RTH Verificar Desmatamento</h2>
+                <p class="projeto-desc" data-key="proj-5-desc">O projeto recebe um polígono específico em JSON junto com a seleção dos anos e meses de interesse, gerando thumbnails que facilitam a visualização e a análise do desmatamento nos períodos selecionados.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto 6: Monitor John Deere -->
+          <li>
+            <a href="projeto-monitor-jd.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-fotoMonitordoTrator.jpeg" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-6-title">Problema monitor agrícola John Deere</h2>
+                <p class="projeto-desc" data-key="proj-6-desc">Este monitor não transferia os dados para o pendrive, causando a perda dos registros de produção por tratamento. Com o pacote pliman foi possível catalogar a cor de cada pixel e medir as produtividades, resolvendo o problema de perda de dados.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto 7: Extração de PDF -->
+          <li>
+            <a href="projeto-pdf.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-extraçãopdf.png" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-7-title">Extração de Dados de PDF</h2>
+                <p class="projeto-desc" data-key="proj-7-desc">O projeto resolveu o problema de extrair dados de PDFs do CEASA de SC, obtendo as cotações de verduras e frutas em formato de tabela estruturada. Com isso foi possível criar um banco de dados robusto e atualizado automaticamente.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto 8: Extrair Chuva INMET -->
+          <li>
+            <a href="projeto-inmet.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-inmet-imagem.png" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-8-title">Extrair Chuva INMET</h2>
+                <p class="projeto-desc" data-key="proj-8-desc">O projeto automatizou o download de dados de precipitação do site do INMET utilizando Selenium, reduzindo significativamente o tempo gasto na coleta dessas informações.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto 9: TimeLapse -->
+          <li>
+            <a href="projeto-timelapse.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-latlongapresentacao.png" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-9-title">TimeLapse utilizando Latitude e Longitude</h2>
+                <p class="projeto-desc" data-key="proj-9-desc">O projeto recebe uma latitude, longitude e um intervalo de tempo, gerando um GIF do local em diferentes composições de bandas (RGB, NIR-SWIR-RED etc.), facilitando a criação de materiais didáticos.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto 10: ABRAPA -->
+          <li>
+            <a href="projeto-abrapa.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-abrapa.png" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-10-title">Extrair dados da ABRAPA</h2>
+                <p class="projeto-desc" data-key="proj-10-desc">O projeto recebe um arquivo Excel com empresas que beneficiam algodão, busca cada empresa no Google e extrai sua latitude e longitude, criando um banco de dados geolocalizado de unidades beneficiadoras de algodão.</p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Projeto 11: Contagem de Colônias -->
+          <li>
+            <a href="projeto-colonias.html" class="projeto-card">
+              <div class="projeto-img" aria-hidden="true"><img src="../img/projeto-contagem.jpg" alt="" srcset=""></div>
+              <div class="projeto-info">
+                <h2 class="projeto-titulo" data-key="proj-11-title">Contagem de elementos</h2>
+                <p class="projeto-desc" data-key="proj-11-desc">O projeto resolveu o problema de contar manualmente os elementos em placas de Petri ou grãos de soja, automatizando o processo por meio de análise de imagem a partir de uma fotografia.</p>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Vídeo de fundo — aria-hidden="true" porque é puramente decorativo -->
+  <div id="video-background" aria-hidden="true">
+    <video src="../img/background.mp4" autoplay loop muted playsinline poster="../img/background.jpg" class="videoback"></video>
+  </div>
+
+  <!-- global.js inicializa o sistema de tradução EN/PT -->
+  <script type="module" src="../js/global.js"></script>
+</body>
+</html>

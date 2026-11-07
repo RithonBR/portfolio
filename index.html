@@ -1,212 +1,160 @@
 <!DOCTYPE html>
+<!-- Portfólio pessoal de Luciano (RithonDev) — página principal "Sobre" -->
+<!-- lang="pt-br" define o idioma padrão. langHandler.js atualiza para "en" se o usuário trocar. -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta 
-    name="description" 
-    content="Portfólio de Luciano, formado em Técnico em Informática, Tecnólogo em Análise e Desenvolvimento de Sistemas e Agronomia. Experiência em tecnologia, desenvolvimento de sistemas e projetos ligados à agricultura digital e inovação." 
-    />
+    <meta name="description" content="Portfolio of Luciano (RithonDev), developer and agronomist. Data science, geoprocessing and digital agriculture." />
     <link rel="shortcut icon" href="icons/tridente.ico" type="image/x-icon">
     <title>RithonDev</title>
+    <!-- home.css carrega todos os módulos CSS: reset, cores, fontes, nav, hero, projetos etc.
+         O caminho pages/home/home.css é relativo à raiz do projeto (onde este index.html está). -->
     <link rel="stylesheet" href="pages/home/home.css">
 </head>
 <body>
 
-  <div class="container-teste">
-  <div class="container-home-switch">
-  <div class="switch__container">
-    <input id="switch-shadow" class="switch switch--shadow" type="checkbox">
-    <label for="switch-shadow"></label>
-  </div></div>
+  <!-- ============================================================
+       NAV — barra de navegação fixa no topo, visível em todas as páginas
+       3 colunas: marca (esquerda) · links (centro) · idioma (direita)
+       ============================================================ -->
 
-      <!-- PROG -->
-       <div  id="prog" style="display: none; opacity: 1; transition: opacity 0.1s ease-out;">
-    <div class="painel-home"> 
-        <div class="container-home">
-            <img src="img/char-prg.jpg" alt="" class="char-img">
-            <div class="decoration-bar"></div>
-            <div class="title-container">
-                <!-- Gambiarra para a fonte nao quebrar quando for pra celular pequeno -->
-                <span class="title">Welcome to my</span>
-                <span class="title">Dev profile</span>  
-                <!-- Gambiarra para a fonte nao quebrar quando for pra celular pequeno -->
-            </div>
-            <span class="text-pad">Hi, I’m a 25-year-old developer, passionate about space and data science.You can find more information about my projects <a href="https://github.com/RithonBR?tab=repositories" class="contrast">here ! </a> and my experiences <a href="https://www.linkedin.com/in/luciano-dos-santos-cardoso-junior/" class="contrast">here ! </a>. Feel free to click the social media buttons to connect with me!</span>
-            <div class="decoration-bar"></div>
-            <div class="quick-facts">
-            <div class="title-container">
-                <span class="title">Facts About</span>
-                <span class="title">Me:</span>
-            </div>
-                <ul class="list-facts">
-                    <li class="text-pad">I have dual citizenship (Brazilian and Portuguese).</li>
-                    <li class="text-pad">I love data science with R</li>
-                    <li class="text-pad">I am a double graduate with degrees</li>
-                    <li class="text-pad">All of this in pure HTML, CSS, and JS</li>
-                </ul>
-              </div>
-                <div class="decoration-bar"></div>
-                <div class="projects-experience">
-                  <div class="projects">
-                    <div class="title-container">
-                    <span class="title">Projects</span></div>
-                    <ul class="list-projects">
-                      <li class="text-pad-2">Agricultural Monitoring</li>
-                      <li class="text-pad-2">Google Earth Engine</li>
-                      <li class="text-pad-2">PDF Data Extraction</li>
-                  </ul>
-                  </div>
-                  <div class="decoration-bar" id="hidden"></div>
-                  <div class="experience">
-                    <div class="title-container">
-                    <span class="title">Experience</span></div>
-                    <ul class="list-experience">
-                      <li class="text-pad-2">IT Instructor</li>
-                      <li class="text-pad-2">Project Intern</li>
-                      <li class="text-pad-2">Intern in Geoprocessing and Data</li>
-                  </ul>
-                  </div>
-                </div>
-
-                <div id="teste">
-                <div class="decoration-bar"></div>
-                <div class="redes-sociais">
-                  <div class="os-tres-icones">
-                      <a href="https://github.com/RithonBR" aria-label="Acesse meu perfil no GitHub">
-                        <img src="icons/github.png" alt="Ícone do GitHub" class="icone-rede-social">
-                      </a>
-                      <a href="https://www.linkedin.com/in/luciano-dos-santos-cardoso-junior/" aria-label="Acesse meu perfil no LinkedIn">
-                        <img src="icons/linkedin.png" alt="Ícone do LinkedIn" class="icone-rede-social">
-                      </a>
-                      <a href="https://www.instagram.com/luciano.scjr/" aria-label="Acesse meu perfil no Instagram">
-                        <img src="icons/instagram.png" alt="Ícone do Instagram" class="icone-rede-social">
-                      </a>
-                    </div>
-                    <div class="os-dois-icones">
-                      <a href="https://www.youtube.com/@lucianosantoscardosojunior/videos" aria-label="Acesse meu canal no YouTube">
-                        <img src="icons/youtube.png" alt="Ícone do YouTube" class="icone-rede-social">
-                      </a>
-                      <a href="http://lattes.cnpq.br/0532260360572768" aria-label="Acesse meu currículo Lattes">
-                        <img src="icons/lattes.png" alt="Ícone do Currículo Lattes" class="icone-rede-social">
-                      </a>
-                    </div>                      
-              </div>
-          </div></div>
-            </div>
-
-            <div class="redes-sociais-Lateral">
-              <a href="https://github.com/RithonBR" aria-label="Acesse meu perfil no GitHub">
-                <img src="icons/github.png" alt="Ícone do GitHub" class="icone-rede-social">
-              </a>
-              <a href="https://www.linkedin.com/in/luciano-dos-santos-cardoso-junior/" aria-label="Acesse meu perfil no LinkedIn">
-                <img src="icons/linkedin.png" alt="Ícone do LinkedIn" class="icone-rede-social">
-              </a>
-              <a href="https://www.instagram.com/luciano.scjr/" aria-label="Acesse meu perfil no Instagram">
-                <img src="icons/instagram.png" alt="Ícone do Instagram" class="icone-rede-social">
-              </a>
-              <a href="https://www.youtube.com/@lucianosantoscardosojunior/videos" aria-label="Acesse meu canal no YouTube">
-                <img src="icons/youtube.png" alt="Ícone do YouTube" class="icone-rede-social">
-              </a>
-              <a href="http://lattes.cnpq.br/0532260360572768" aria-label="Acesse meu currículo Lattes">
-                <img src="icons/lattes.png" alt="Ícone do Currículo Lattes" class="icone-rede-social">
-              </a>
-            </div>
-          </div></div>
-
-           <!-- AGRONOMIA -->
-           <div  id="agro" style="display: none; opacity: 0; transition: opacity 0.1s ease-out;">  
-           <div class="painel-home">
-              <div class="container-home">
-                  <img src="img/char.jpg" alt="" class="char-img">
-                  <div class="decoration-bar"></div>
-                  <div class="title-container">
-                      <!-- Gambiarra para a fonte nao quebrar quando for pra celular pequeno -->
-                      <span class="title">Welcome to my</span>
-                      <span class="title">Agronomy profile</span>  
-                      <!-- Gambiarra para a fonte nao quebrar quando for pra celular pequeno -->
-                  </div>
-                  <span class="text-pad">Hello, I am a 25-year-old agronomist, passionate about space agriculture and technology focused on agribusiness. You can find more information about my projects <a href="https://github.com/RithonBR?tab=repositories" class="contrast">here!</a> and my experiences <a href="https://www.linkedin.com/in/luciano-dos-santos-cardoso-junior/" class="contrast">here!</a>. Feel free to click on the social media buttons to connect with me!</span>
-                  <div class="decoration-bar"></div>
-                  <div class="quick-facts">
-                  <div class="title-container">
-                      <span class="title">Facts About</span>
-                      <span class="title">Me:</span>
-                  </div>
-                      <ul class="list-facts">
-                          <li class="text-pad">I believe precision agriculture is the future.</li>
-                          <li class="text-pad">I enjoy creating electronic boards.</li>
-                          <li class="text-pad">Space agriculture will be our only chance to leave the planet</li>
-                      </ul>
-                    </div>
-                      <div class="decoration-bar"></div>
-                      <div class="projects-experience">    
-                        <div class="experience">
-                          <div class="title-container">
-                          <span class="title">Experience</span></div>
-                          <ul class="list-experience">
-                            <li class="text-pad">Scientific Initiation Internship: Laboratory Assistant</li>
-                            <li class="text-pad">Intermediate Internship in the Course: Mushroom Production</li>
-                            <li class="text-pad">Academic Discipline Monitor - Hydraulics and Irrigation</li>
-                            <li class="text-pad">Vacation Internship: Field Crop Monitor</li>
-                            <li class="text-pad">Volunteer Researcher at Nepem</li>
-                            <li class="text-pad">Geoprocessing and Data Intern</li>
-                        </ul>
-                        </div>
-                      </div>
-                      <div id="teste">
-                        <div class="decoration-bar"></div>
-                        <div class="redes-sociais">
-                          <div class="os-tres-icones">
-                              <a href="https://github.com/RithonBR" aria-label="Acesse meu perfil no GitHub">
-                                <img src="icons/github.png" alt="Ícone do GitHub" class="icone-rede-social">
-                              </a>
-                              <a href="https://www.linkedin.com/in/luciano-dos-santos-cardoso-junior/" aria-label="Acesse meu perfil no LinkedIn">
-                                <img src="icons/linkedin.png" alt="Ícone do LinkedIn" class="icone-rede-social">
-                              </a>
-                              <a href="https://www.instagram.com/luciano.scjr/" aria-label="Acesse meu perfil no Instagram">
-                                <img src="icons/instagram.png" alt="Ícone do Instagram" class="icone-rede-social">
-                              </a>
-                            </div>
-                            <div class="os-dois-icones">
-                              <a href="https://www.youtube.com/@lucianosantoscardosojunior/videos" aria-label="Acesse meu canal no YouTube">
-                                <img src="icons/youtube.png" alt="Ícone do YouTube" class="icone-rede-social">
-                              </a>
-                              <a href="http://lattes.cnpq.br/0532260360572768" aria-label="Acesse meu currículo Lattes">
-                                <img src="icons/lattes.png" alt="Ícone do Currículo Lattes" class="icone-rede-social">
-                              </a>
-                            </div>                      
-                      </div>
-                  </div>
-                  
-                  </div>
-      
-                  
-      
-                  <div class="redes-sociais-Lateral">
-                    <a href="https://github.com/RithonBR" aria-label="Acesse meu perfil no GitHub">
-                      <img src="icons/github.png" alt="Ícone do GitHub" class="icone-rede-social">
-                    </a>
-                    <a href="https://www.linkedin.com/in/luciano-dos-santos-cardoso-junior/" aria-label="Acesse meu perfil no LinkedIn">
-                      <img src="icons/linkedin.png" alt="Ícone do LinkedIn" class="icone-rede-social">
-                    </a>
-                    <a href="https://www.instagram.com/luciano.scjr/" aria-label="Acesse meu perfil no Instagram">
-                      <img src="icons/instagram.png" alt="Ícone do Instagram" class="icone-rede-social">
-                    </a>
-                    <a href="https://www.youtube.com/@lucianosantoscardosojunior/videos" aria-label="Acesse meu canal no YouTube">
-                      <img src="icons/youtube.png" alt="Ícone do YouTube" class="icone-rede-social">
-                    </a>
-                    <a href="http://lattes.cnpq.br/0532260360572768" aria-label="Acesse meu currículo Lattes">
-                      <img src="icons/lattes.png" alt="Ícone do Currículo Lattes" class="icone-rede-social">
-                    </a>
-                  </div>
-                </div></div>
-
-        <div id="video-background">
-            <video src="img/background.mp4" autoplay loop muted plays-inline poster="img/background.jpg" class="videoback"></video>
-      </div>
+  <!-- role="navigation" e aria-label identificam este elemento para leitores de tela.
+       Sem eles, o leitor de tela anunciaria apenas "grupo" sem contexto. -->
+  <nav class="nav-principal" role="navigation" aria-label="Navegação principal">
+    <a href="index.html" class="nav-brand">RTH</a>
+    <ul>
+      <!-- aria-current="page" indica que este é o link da página atual.
+           O CSS em nav.css usa [aria-current="page"] para acender em rosa neon. -->
+      <li><a href="index.html" aria-current="page" data-key="nav-sobre">About</a></li>
+      <!-- data-key="nav-projetos": langHandler.js substitui "Projects" por "Projetos" em PT -->
+      <li><a href="pages/projetos.html" data-key="nav-projetos">Projects</a></li>
+      <li><a href="pages/rth-project.html" data-key="nav-rth">RTH Project</a></li>
+      <li><a href="pages/catalogo.html" data-key="nav-catalogo">Culture Catalog</a></li>
+      <li><a href="pages/rth-explorer.html" data-key="nav-explorer">RTH Explorer World</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="lang-item">
+      <span class="lang-label" data-key="lang-label">Language</span>
+      <!-- data-active="pt" diz ao CSS (nav.css) qual opção (EN ou PT) acender em ciano.
+           langHandler.js atualiza esse atributo toda vez que o usuário troca o idioma. -->
+      <button class="lang-toggle" data-active="pt" aria-label="Switch to English">
+        <span class="opt-en">EN</span> | <span class="opt-pt">PT</span>
+      </button>
     </div>
-    <!-- Importa o arquivo global -->
-    <script type="module" src="./js/global.js"></script>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================
+         SOBRE — seção principal: bio, fotos e trajetória de Luciano
+         ============================================================ -->
+    <section id="sobre" class="painel-home">
+
+      <!-- Barra de ícones sociais entre o nav e o container.
+           aria-label="Redes sociais" identifica o grupo para leitores de tela —
+           sem ele seria anunciado apenas como "lista de links". -->
+      <div class="social-bar" aria-label="Redes sociais">
+        <!-- rel="noopener noreferrer": noopener bloqueia acesso a window.opener
+             (vulnerabilidade de segurança); noreferrer oculta a URL de origem do visitante. -->
+        <a href="https://github.com/RithonBR" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="icons/github.png" alt="GitHub" class="icone-rede-social">
+        </a>
+        <a href="https://www.linkedin.com/in/luciano-dos-santos-cardoso-junior/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="icons/linkedin.png" alt="LinkedIn" class="icone-rede-social">
+        </a>
+        <a href="https://www.instagram.com/luciano.scjr/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="icons/instagram.png" alt="Instagram" class="icone-rede-social">
+        </a>
+        <a href="https://www.youtube.com/@lucianosantoscardosojunior/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <img src="icons/youtube.png" alt="YouTube" class="icone-rede-social">
+        </a>
+        <a href="https://lattes.cnpq.br/0532260360572768" target="_blank" rel="noopener noreferrer" aria-label="Lattes">
+          <img src="icons/lattes.png" alt="Lattes" class="icone-rede-social">
+        </a>
+      </div>
+
+      <!-- Container de conteúdo — flutua sobre o vídeo com borda HUD (hero.css).
+           Sem card ou background sólido — o vídeo de fundo é visível por baixo. -->
+      <div class="container-home">
+
+        <!-- Foto de perfil circular — alt descritivo para leitores de tela.
+             alt nunca deve ser vazio em imagens de conteúdo — só em imagens decorativas. -->
+        <img src="img/char-prg.jpg" alt="Ilustração do perfil de Luciano" class="char-img">
+
+        <!-- Linha decorativa neon horizontal que separa a foto do título (simpleThings.css) -->
+        <div class="decoration-bar"></div>
+
+        <h1 class="title-container">
+          <!-- .title: fonte RubikGlitch com animação de flutuação (simpleThings.css).
+               data-key="heading-sobre" é substituído por langHandler.js conforme o idioma. -->
+          <span class="title" data-key="heading-sobre">Hi, I'm Luciano</span>
+        </h1>
+
+        <!-- Bio parágrafo 1: apresentação profissional -->
+        <p class="text-pad"><span data-key="bio-p1"><span class="destaque">Agrônomo e desenvolvedor</span> com foco em sensoriamento remoto agrícola e agricultura de precisão. Trabalho com <span class="destaque">R, Python e Google Earth Engine</span> para transformar dados espaciais em decisões de field.</span></p>
+
+        <!-- Foto contextual: ArcGIS sendo usado como QGIS — referência à trajetória.
+             .image-container-texto-legenda: coluna flex com imagem + legenda (hero.css). -->
+        <div class="image-container-texto-legenda">
+          <img src="img/ArcgisEQgis.jpeg" alt="Captura de tela do ArcGIS sendo usado como o QGIS" style="max-width: 520px">
+          <p class="text-pad-legenda"><span data-key="bio-legenda">Hoje em dia é doido pensar que uso o ArcGIS como se fosse o QGIS.</span></p>
+        </div>
+
+        <!-- Bio parágrafo 2: RTH Project e workshops -->
+        <p class="text-pad"><span data-key="bio-p2">No lado Open Source, criei o <span class="destaque">RTH Project</span> — plugin publicado no repositório oficial do QGIS que auxilia no download de imagens Sentinel-2, Landsat, CBERS e outros satélites no CRS correto da região. Também dou <span class="destaque">palestras e workshops sobre Sensoriamento Remoto e Mapeamento Agrícola.</span></span></p>
+
+        <!-- Fotos lado a lado: workshops e encontro científico.
+             .containerflex coloca dois .image-container-texto-legenda em linha (hero.css). -->
+        <div class="containerflex">
+          <div class="image-container-texto-legenda">
+            <img src="img/CursosMapeamentoESensoriamento.jpeg" alt="Workshop de Sensoriamento Remoto e Mapeamento Agrícola">
+            <p class="text-pad-legenda"><span data-key="bio-legenda2">Workshops sobre Sensoriamento Remoto e Mapeamento Agrícola.</span></p>
+          </div>
+          <div class="image-container-texto-legenda">
+            <img src="img/entrontrocientifico.jpeg" alt="Apresentação no 3º Encontro Científico de Recursos Genéticos Vegetais" style="max-width: 88%">
+            <p class="text-pad-legenda"><span data-key="bio-legenda3">Apresentação no 3º Encontro Científico de Recursos Genéticos Vegetais.</span></p>
+          </div>
+        </div>
+
+        <!-- Bio parágrafo 3: experiência profissional com links embutidos no texto.
+             Dividido em vários data-key para que o langHandler troque cada fragmento
+             de texto sem afetar os elementos <a> embutidos no meio. -->
+        <p class="text-pad"><span data-key="bio-p3-pre">Tenho experiência na <span class="destaque">Serasa Experian</span>, referência nacional em <span class="destaque">mapeamento de culturas agrícolas</span> via satélite com a equipe de Maps generation, e na <span class="destaque">Agroconsult</span>, líder em <span class="destaque">inteligência de mercado</span> no agronegócio brasileiro. Veja minha trajetória no </span><a href="https://www.linkedin.com/in/luciano-dos-santos-cardoso-junior/" class="contrast" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Luciano"><span data-key="bio-link-linkedin">LinkedIn</span></a><span data-key="bio-p3-mid"> e os projetos no </span><a href="https://github.com/RithonBR?tab=repositories" class="contrast" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Luciano"><span data-key="bio-link-github">GitHub</span></a><span data-key="bio-p3-end">.</span></p>
+
+        <!-- Fotos lado a lado: Serasa Experian e Agroconsult -->
+        <div class="containerflex">
+          <div class="image-container-texto-legenda">
+            <img src="img/serasaExperian.jfif" alt="Serasa Experian, Blumenau" style="max-height: 530px; object-fit: contain">
+            <p class="text-pad-legenda"><span data-key="bio-legenda4">Serasa Experian, Blumenau.</span></p>
+          </div>
+          <div class="image-container-texto-legenda">
+            <img src="img/Agroconsult.jpeg" alt="Agroconsult, Florianópolis" style="max-height: 530px; object-fit: contain">
+            <p class="text-pad-legenda"><span data-key="bio-legenda5">Agroconsult, Florianópolis.</span></p>
+          </div>
+        </div>
+
+      </div><!-- fim .container-home -->
+
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       VÍDEO DE FUNDO — decorativo, cobre toda a tela atrás do conteúdo
+       ============================================================ -->
+  <!-- aria-hidden="true" oculta este div de leitores de tela.
+       O vídeo é puramente decorativo — não tem informação útil para usuários cegos. -->
+  <div id="video-background" aria-hidden="true">
+    <!-- autoplay + loop + muted: necessários para autoplay funcionar em browsers modernos.
+         Browsers bloqueiam autoplay de vídeos com som por padrão.
+         playsinline evita que o iOS abra em tela cheia automaticamente.
+         poster é exibido enquanto o vídeo carrega (fallback para conexões lentas). -->
+    <video src="img/background.mp4" autoplay loop muted playsinline poster="img/background.jpg" class="videoback"></video>
+  </div>
+
+  <!-- type="module" permite usar import/export no JS (ES Modules).
+       Sem esse atributo, o import em global.js causaria erro de sintaxe. -->
+  <script type="module" src="./js/global.js"></script>
 </body>
 </html>

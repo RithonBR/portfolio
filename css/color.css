@@ -1,13 +1,55 @@
+/* ============================================================
+   COLOR — todas as variáveis de cor, fundo e efeitos de glow do site.
+   Este é o único arquivo que define a paleta visual.
+   Para mudar qualquer cor do site, edite apenas aqui.
+   Importado pelo global.css antes de qualquer outro arquivo CSS.
+   ============================================================ */
+
 :root {
-    --roxo-fundo: #6A1B9A; /* Roxo principal para o fundo */
-    --roxo-fundo-teste: #260b36; /* Roxo principal para o fundo */
-    --roxo-claro: #8E44AD; /* Roxo mais claro para destaques */
-    --amarelo-destaque: #F1C40F; /* Contraste vibrante */
-    --cinza-claro: #F2F2F2; /* Cinza claro para textos e fundos */
-    --cinza-escuro: #2C2C2C; /* Cinza escuro para contrastes suaves */
-    --rosa-suave: #F39CBB; /* Rosa complementar para elementos de destaque */
-    --verde-suave: #27AE60; /* Verde suave para botões de ação */
-    --branco: #FFFFFF; /* Branco para textos e ícones */
-    --teste: 	#FF10F0;
-  }
-  
+    /* --- Paleta original (legado — nem todas estão em uso no design atual) --- */
+
+    /* Cores da versão anterior do portfólio, mantidas para referência e pelo switch legado */
+    --roxo-fundo:           #6A1B9A;
+    --roxo-fundo-teste:     #260b36;
+    --roxo-claro:           #8E44AD;
+    --amarelo-destaque:     #F1C40F;
+    --cinza-claro:          #F2F2F2;
+    --cinza-escuro:         #2C2C2C;
+    --rosa-suave:           #F39CBB;
+    /* --verde-suave é usada pelo switch Dev/Agro legado em menu.css */
+    --verde-suave:          #27AE60;
+    --branco:               #FFFFFF;
+
+    /* --- Paleta espacial / cyberpunk (design atual) --- */
+
+    /* Cor de fundo principal do site — quase preto com leve tom violeta espacial */
+    --espaco:               #05040f;
+
+    /* Cores neon para destaque e interatividade */
+    --rosa-neon:            #FF10F0; /* títulos (RubikGlitch), logo RTH, item ativo do nav */
+    --neon-ciano:           #00f5ff; /* hover, bordas HUD, interatividade geral */
+    --neon-roxo:            #380249; /* alternativa visual para glow e efeitos secundários */
+    --neon-verde:           #39ff14; /* destaque em texto e links de atenção (.destaque) */
+
+    /* Overlay semi-transparente sobre o vídeo de fundo.
+       0.80 de opacidade torna o vídeo visível mas sem distrair o conteúdo. */
+    --overlay:              rgba(5, 4, 15, 0.80);
+
+    /* --- Efeitos de glow (usados em text-shadow e box-shadow) --- */
+
+    /* Glow rosa: 3 camadas criam profundidade como uma luz neon real —
+       camada interna forte (8px) + média (22px) + halo roxo distante (45px).
+       O halo roxo no terceiro valor faz a transição rosa→roxo parecer natural. */
+    --glow-rosa:    0 0 8px rgba(119, 11, 112, 0.75),
+                    0 0 22px rgba(102, 7, 96, 0.5),
+                    0 0 45px rgba(191, 0, 255, 0.25);
+
+    /* Glow ciano: 2 camadas, mais compacto que o rosa.
+       Usado em hovers e bordas para dar feedback sem dominar a tela. */
+    --glow-ciano:   0 0 8px #00f5ff,
+                    0 0 20px rgba(0, 245, 255, 0.35);
+
+    /* Glow roxo: mesma estrutura do ciano, para variação em elementos secundários */
+    --glow-roxo:    0 0 8px #bf00ff,
+                    0 0 20px rgba(191, 0, 255, 0.35);
+}

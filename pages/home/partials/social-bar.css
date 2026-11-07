@@ -1,0 +1,52 @@
+/* ============================================================
+   SOCIAL BAR — ícones de redes sociais em linha horizontal
+   A barra fica entre o nav e o container de conteúdo.
+   Os ícones internos ao container também estão aqui.
+   ============================================================ */
+
+/* --- Barra de ícones horizontais (entre nav e container) --- */
+
+/* display: flex em linha com gap uniforme entre os ícones */
+.social-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 1.4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Ícones de redes sociais (dentro do container de conteúdo) --- */
+
+/* Coluna centralizada para agrupar ícones verticalmente dentro do container */
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* margin: 0 remove o espaçamento padrão que alguns navegadores adicionam a <img>.
+   display: block evita o espaço em branco extra que <img> cria como elemento inline. */
+.icone-rede-social {
+    width: 42px;
+    height: 42px;
+    margin: 0;
+    filter: none;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    opacity: 0.9;
+    display: block;
+}
+
+/* Hover: brightness aumenta o brilho, drop-shadow adiciona brilho ciano ao redor,
+   translateY(-4px) levanta o ícone levemente para dar sensação de elevação. */
+.icone-rede-social:hover {
+    filter: brightness(1.25) drop-shadow(0 0 6px rgba(0, 245, 255, 0.6));
+    transform: translateY(-4px) scale(1.15);
+    opacity: 1;
+}
+
+/* Barra lateral de ícones — removida no redesign, mantida oculta
+   para referência caso seja reativada no futuro */
+.redes-sociais-Lateral {
+    display: none;
+}

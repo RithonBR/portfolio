@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TCC: Machine Learning aplicado ao monitoramento agrícola — Luciano (RithonDev)." />
+    <link rel="shortcut icon" href="../icons/tridente.ico" type="image/x-icon">
+    <title>Machine Learning Agrícola — RithonDev</title>
+    <!-- home/home.css carrega nav, hero, social-bar, projetos e global (reset, cores, fontes) -->
+    <link rel="stylesheet" href="home/home.css">
+    <!-- projeto.css estilos exclusivos da página de detalhe: container-projeto e back-link -->
+    <link rel="stylesheet" href="projeto.css">
+</head>
+<body>
+
+  <!-- Navegação principal — 3 colunas: marca · links · idioma -->
+  <nav class="nav-principal" role="navigation" aria-label="Navegação principal">
+    <a href="../index.html" class="nav-brand">RTH</a>
+    <ul>
+      <!-- aria-current="page" em Projetos porque esta página é uma subpágina de Projetos -->
+      <li><a href="../index.html" data-key="nav-sobre">Sobre</a></li>
+      <li><a href="projetos.html" aria-current="page" data-key="nav-projetos">Projetos</a></li>
+      <li><a href="rth-project.html" data-key="nav-rth">RTH Project</a></li>
+      <li><a href="catalogo.html" data-key="nav-catalogo">Catálogo de Culturas</a></li>
+      <li><a href="rth-explorer.html" data-key="nav-explorer">RTH World Explorer</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="lang-item">
+      <span class="lang-label" data-key="lang-label">Idioma</span>
+      <!-- data-active="pt" indica o idioma padrão; langHandler.js atualiza ao trocar -->
+      <button class="lang-toggle" data-active="pt" aria-label="Switch to English">
+        <span class="opt-en">EN</span> | <span class="opt-pt">PT</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="painel-home">
+
+      <!-- Container do projeto — borda HUD, alinhado à esquerda para leitura de artigo -->
+      <div class="container-projeto">
+
+        <!-- Link de retorno para a lista completa de projetos -->
+        <a href="projetos.html" class="back-link" data-key="back-projetos">← Projetos</a>
+
+        <h1 class="title-container">
+          <!-- data-key="proj-1-title" vincula ao texto em langHandler.js para EN/PT -->
+          <span class="title" data-key="proj-1-title">Machine learning aplicado ao monitoramento agrícola: estudo de caso no cultivo de milho em Luís Eduardo Magalhães (BA)</span>
+        </h1>
+
+        <!-- Área de conteúdo — substituir o coming-soon pelo conteúdo real do projeto -->
+        <div class="projeto-content">
+          <p class="text-pad" style="text-align: center;"><span data-key="link-tcc">Link do TCC:</span> <a href="https://repositorio.ufsc.br/handle/123456789/272527" target="_blank" rel="noopener noreferrer" class="destaque" data-key="acesse-aqui">Acesse aqui</a></p>
+          <p class="text-pad" data-key="proj-1-p1">A expansão agrícola e a diversificação de culturas evidenciam que o sensoriamento
+remoto aplicado à agricultura necessita de otimizações nos processos de
+mapeamento das áreas cultivadas. Este trabalho teve como objetivo avaliar a
+capacidade preditiva de nove algoritmos de classificação supervisionada para a
+estimativa da área de milho cultivada no município de Luís Eduardo Magalhães (BA),
+durante a primeira safra do ano agrícola 2024/2025. Foram utilizadas imagens do
+satélite Sentinel-2 em duas composições: uma composição simples contendo as 3
+bandas: infravermelho próximo (B8), infravermelho de ondas curtas (B11) e vermelho
+(B4); e outra composta por um stack raster formado por 9 bandas: infravermelho
+próximo (B8), infravermelho de ondas curtas (B11), vermelho (B4), aerossol (B1), azul
+(B2), verde (B3) e Red Edge (B5, B6 e B7). Os algoritmos foram aplicados a imagens
+correspondentes a diferentes períodos fenológicos da cultura: fase de
+desenvolvimento pleno e final do ciclo (senescência), permitindo verificar a
+capacidade dos modelos em distinguir a cultura do milho a partir de uma única
+imagem, cenário comum em regiões com limitações de cobertura temporal. Três
+métricas foram utilizadas para avaliação do desempenho: o índice Kappa, a variação
+das áreas estimadas em relação ao mapeamento manual e uma avaliação qualitativa
+e participativa realizada por pesquisadores e profissionais da área. Os modelos
+testados apresentaram diferentes valores de Kappa, níveis de preenchimento, ruído e
+ocorrência de falsos positivos, cada um com suas particularidades. <span class="destaque">No entanto, o
+modelo que apresentou o melhor desempenho em relação às métricas propostas foi
+o Gaussian Mixture Model (GMM), alcançando um índice Kappa de 0,859 na
+composição simples e 0,928 no stack raster.</span> Além disso, apresentou baixa variação
+em relação à área do mapeamento manual e obteve as melhores avaliações na
+análise participativa, indicando que, na percepção dos intérpretes, o GMM pode ser
+utilizado como um assistente de pré-mapeamento (nas etapas de interpretação e
+vetorização inicial), contribuindo para a otimização do tempo de trabalho dos analistas
+humanos. Este estudo trouxe insights relevantes para o setor agrícola, evidenciando
+que a combinação de diferentes modelos de machine learning constitui uma
+abordagem promissora, uma vez que alguns algoritmos se destacam na delimitação
+e preenchimento das áreas, enquanto outros são mais eficientes na interpretação e
+refinamento dos resultados.</p>
+            <img src="../img/projeto-tcc-ComparativoDeNotasComModelo.png" alt="Gráfico comparativo de notas de desempenho dos modelos de machine learning por composição">
+            <p class="text-pad" data-key="proj-1-p2">Considerando as métricas de Kappa e a variação dos hectares da metodologia
+manual <span class="destaque">o melhor modelo para uma composição stack no início de ciclo foi novamente
+o Gaussian mixture model com seu Kappa de 0,928 e uma área de 14.315,18
+(+0,017% acima do mapeamento manual), portanto este modelo para a condição inicio
+de ciclo pode ser considerado um bom modelo assistente.</span> Por outro lado, o pior
+modelo foi do Naive Bayes, visto que seu índice de desempenho Kappa anterior foi
+de 0,843 e decaiu para 0,746 sugerindo que o conjunto de dados mais complexo
+prejudicou a capacidade de classificação do Naive Bayes. </p>
+<img src="../img/projeto-tcc-ImagensStackModelos.png" alt="Imagens de classificação stack dos modelos de machine learning aplicados ao monitoramento de milho">
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Vídeo de fundo — aria-hidden="true" porque é decorativo, não tem informação -->
+  <div id="video-background" aria-hidden="true">
+    <video src="../img/background.mp4" autoplay loop muted playsinline poster="../img/background.jpg" class="videoback"></video>
+  </div>
+
+  <!-- global.js inicializa langHandler que aplica EN/PT nos data-key da página -->
+  <script type="module" src="../js/global.js"></script>
+</body>
+</html>

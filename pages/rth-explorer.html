@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!-- RTH World Explorer — landing page do app mobile auxiliar do plugin RTH PROJECT -->
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RTH World Explorer — app mobile de coleta de dados agrícolas para uso em campo, auxiliar do plugin RTH PROJECT para QGIS." />
+  <link rel="shortcut icon" href="../icons/tridente.ico" type="image/x-icon">
+  <title>RTH World Explorer — RithonDev</title>
+  <!-- home.css: nav, variáveis de cor, fontes, reset, vídeo de fundo -->
+  <link rel="stylesheet" href="home/home.css">
+  <!-- rth-explorer.css: layout específico desta landing page -->
+  <link rel="stylesheet" href="rth-explorer.css">
+</head>
+<body>
+
+  <!-- Navegação principal — 3 colunas: marca · links · idioma -->
+  <nav class="nav-principal" role="navigation" aria-label="Navegação principal">
+    <a href="../index.html" class="nav-brand">RTH</a>
+    <ul>
+      <li><a href="../index.html" data-key="nav-sobre">Sobre</a></li>
+      <li><a href="projetos.html" data-key="nav-projetos">Projetos</a></li>
+      <li><a href="rth-project.html" data-key="nav-rth">RTH Project</a></li>
+      <li><a href="catalogo.html" data-key="nav-catalogo">Catálogo de Culturas</a></li>
+      <li><a href="rth-explorer.html" aria-current="page" data-key="nav-explorer">RTH World Explorer</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="lang-item">
+      <span class="lang-label" data-key="lang-label">Idioma</span>
+      <button class="lang-toggle" data-active="pt" aria-label="Switch to English">
+        <span class="opt-en">EN</span> | <span class="opt-pt">PT</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="explorer-page">
+
+    <!-- ─── HERO ─── -->
+    <section class="explorer-hero" aria-label="Apresentação do app">
+      <div class="hero-layout">
+
+        <div class="hero-text">
+          <span class="hero-eyebrow" data-key="explorer-eyebrow">App Mobile · Flutter</span>
+          <h1 class="hero-title">RTH World<br>Explorer</h1>
+          <p class="hero-tagline" data-key="explorer-tagline">
+            Coleta de dados agrícolas georreferenciados diretamente do campo.
+            Parâmetros produtivos, rotas, grids de amostragem e muito mais —
+            integrado ao plugin RTH PROJECT para QGIS.
+          </p>
+          <div class="store-badges">
+            <a href="#" class="store-badge" aria-label="Disponível no Google Play">
+              <span class="store-badge-icon" aria-hidden="true">▶</span>
+              <span class="store-badge-label">
+                <span class="store-badge-store">Disponível no</span>
+                <span class="store-badge-name">Google Play</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero mockup -->
+        <div class="hero-phone" aria-hidden="true">
+          <div class="phone-frame phone-frame--hero">
+            <div class="phone-screen">
+              <img src="../img/app-home.png" alt="RTH World Explorer — tela inicial">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── INTEGRAÇÃO COM QGIS ─── -->
+    <section class="explorer-integration" aria-label="Integração com o plugin RTH PROJECT">
+      <div class="section-inner">
+
+        <div class="section-heading">
+          <div class="explorer-decoration-bar" aria-hidden="true"></div>
+          <h2 data-key="explorer-integration-title">Integrado ao <span class="accent-ciano">RTH PROJECT</span></h2>
+          <p data-key="explorer-integration-sub">O app e o plugin funcionam juntos num fluxo campo → escritório sem fricção.</p>
+        </div>
+
+        <div class="integration-flow">
+          <div class="int-step">
+            <div class="int-step-num">01</div>
+            <div class="int-step-text" data-key="explorer-step-1">Planeje o grid amostral no QGIS e exporte como CSV</div>
+          </div>
+          <div class="int-arrow" aria-hidden="true">→</div>
+          <div class="int-step">
+            <div class="int-step-num">02</div>
+            <div class="int-step-text" data-key="explorer-step-2">Importe o grid no app e colete os dados no campo</div>
+          </div>
+          <div class="int-arrow" aria-hidden="true">→</div>
+          <div class="int-step">
+            <div class="int-step-num">03</div>
+            <div class="int-step-text" data-key="explorer-step-3">Exporte os pontos, rota GPX e parâmetros como CSV</div>
+          </div>
+          <div class="int-arrow" aria-hidden="true">→</div>
+          <div class="int-step">
+            <div class="int-step-num">04</div>
+            <div class="int-step-text" data-key="explorer-step-4">Importe no QGIS com as ferramentas do módulo RTH World Explorer</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── FEATURE SHOWCASES (3 principais) ─── -->
+    <section class="explorer-showcases" aria-label="Funcionalidades em destaque">
+      <div class="section-inner">
+
+        <!-- Capturar -->
+        <div class="feature-showcase">
+          <div class="feature-phone" aria-hidden="true">
+            <div class="phone-frame phone-frame--showcase">
+              <div class="phone-screen">
+                <img src="../img/app-ValidationPoints.png" alt="Capturar Pontos GPS">
+              </div>
+            </div>
+          </div>
+          <div class="feature-text">
+            <p class="feature-number" data-key="explorer-feat1-num">01 — Coleta de Campo</p>
+            <h2 class="feature-name" data-key="explorer-feat1-name">Capturar Pontos GPS</h2>
+            <p class="feature-desc" data-key="explorer-feat1-desc">
+              Capture coordenadas GPS georreferenciadas no campo com um formulário
+              intuitivo. Selecione a cultura (soja, milho, algodão, arroz, culturas
+              de inverno ou personalizado), defina o lado da lavoura, adicione fotos
+              e observações. O app monitora a qualidade do sinal GPS, alerta para
+              bateria fraca e salva rascunhos automaticamente.
+            </p>
+            <div class="feature-tags" data-key="explorer-feat1-tags">
+              <span class="feature-tag">GPS em tempo real</span>
+              <span class="feature-tag">Fotos georreferenciadas</span>
+              <span class="feature-tag">6 culturas</span>
+              <span class="feature-tag">Rascunho automático</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="feature-showcase flipped">
+          <div class="feature-text">
+            <p class="feature-number" data-key="explorer-feat2-num">02 — Visualização</p>
+            <h2 class="feature-name" data-key="explorer-feat2-name">Mapa Interativo</h2>
+            <p class="feature-desc" data-key="explorer-feat2-desc">
+              Visualize todos os pontos coletados no mapa com marcadores coloridos
+              por cultura e forma indicando o lado da lavoura. Acompanhe sua
+              posição GPS em tempo real, ative camadas georreferenciadas
+              semitransparentes (PNG+pgw ou PDF geo) com controle de opacidade
+              e sobreponha rotas planejadas ou arquivos KML importados.
+            </p>
+            <div class="feature-tags" data-key="explorer-feat2-tags">
+              <span class="feature-tag">Marcadores por cultura</span>
+              <span class="feature-tag">Camadas georreferenciadas</span>
+              <span class="feature-tag">Overlay KML</span>
+              <span class="feature-tag">Posição em tempo real</span>
+            </div>
+          </div>
+          <div class="feature-phone" aria-hidden="true">
+            <div class="phone-frame phone-frame--showcase">
+              <div class="phone-screen">
+                <img src="../img/app-maps.png" alt="Mapa Interativo">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parâmetros Produtivos -->
+        <div class="feature-showcase">
+          <div class="feature-phone" aria-hidden="true">
+            <div class="phone-frame phone-frame--showcase">
+              <div class="phone-screen">
+                <img src="../img/app-parametros.png" alt="Parâmetros Produtivos">
+              </div>
+            </div>
+          </div>
+          <div class="feature-text">
+            <p class="feature-number" data-key="explorer-feat3-num">03 — Agronomia</p>
+            <h2 class="feature-name" data-key="explorer-feat3-name">Parâmetros Produtivos</h2>
+            <p class="feature-desc" data-key="explorer-feat3-desc">
+              Formulários agronômicos específicos por cultura: Soja (plantas/5m,
+              vagens/planta, grãos/planta, peso e umidade), Milho (plantas e espigas
+              por 10m, fileiras e grãos por espiga), Algodão, Arroz e Culturas de
+              Inverno com estádio fenológico. Todas as culturas incluem aba de
+              sanidade para registro de doenças, pragas e plantas daninhas.
+            </p>
+            <div class="feature-tags" data-key="explorer-feat3-tags">
+              <span class="feature-tag">Soja · Milho · Algodão</span>
+              <span class="feature-tag">Arroz · Inverno</span>
+              <span class="feature-tag">Sanidade vegetal</span>
+              <span class="feature-tag">Estádio fenológico</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── GRID DE MÓDULOS ─── -->
+    <section class="explorer-modules" aria-label="Todos os módulos do app">
+      <div class="section-inner">
+
+        <div class="section-heading">
+          <div class="explorer-decoration-bar roxo" aria-hidden="true"></div>
+          <h2 data-key="explorer-modules-title">Todos os <span class="accent-roxo">Módulos</span></h2>
+          <p data-key="explorer-modules-sub">Ferramentas completas para o profissional que trabalha no campo.</p>
+        </div>
+
+        <div class="modules-grid">
+
+          <!-- Dashboard -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <div class="phone-frame phone-frame--card" aria-hidden="true">
+                <div class="phone-screen">
+                  <img src="../img/app-Dashboard.png" alt="Dashboard">
+                </div>
+              </div>
+              <div class="module-card-info">
+                <div class="module-card-name" data-key="explorer-mod-dashboard-name">Dashboard</div>
+                <div class="module-card-desc" data-key="explorer-mod-dashboard-desc">
+                  Painel visual com total de pontos, comparativo hoje vs ontem,
+                  gráfico dos últimos 7 dias, distribuição por cultura e rota,
+                  e status de exportação (pendentes vs exportados).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Histórico -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <div class="phone-frame phone-frame--card" aria-hidden="true">
+                <div class="phone-screen">
+                  <img src="../img/app-historico.png" alt="Histórico">
+                </div>
+              </div>
+              <div class="module-card-info">
+                <div class="module-card-name" data-key="explorer-mod-historico-name">Histórico</div>
+                <div class="module-card-desc" data-key="explorer-mod-historico-desc">
+                  Árvore colapsável Dia → Rota → Pontos com busca e filtros.
+                  Exportação em lote como CSV ou Excel, direto ou via upload
+                  para o Google Drive com barra de progresso.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Amostral -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <div class="phone-frame phone-frame--card" aria-hidden="true">
+                <div class="phone-screen">
+                  <img src="../img/app-gridAmostral.png" alt="Grid Amostral">
+                </div>
+              </div>
+              <div class="module-card-info">
+                <div class="module-card-name" data-key="explorer-mod-grid-name">Grid Amostral</div>
+                <div class="module-card-desc" data-key="explorer-mod-grid-desc">
+                  Importe um CSV com coordenadas de amostragem gerado no QGIS.
+                  Acompanhe o progresso de visitas (concluídos/total) e navegue
+                  ponto a ponto no mapa de coleta.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Planejador de Rotas -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <div class="phone-frame phone-frame--card" aria-hidden="true">
+                <div class="phone-screen">
+                  <img src="../img/app-PlanejadorRotas.png" alt="Planejador de Rotas">
+                </div>
+              </div>
+              <div class="module-card-info">
+                <div class="module-card-name" data-key="explorer-mod-rotas-name">Planejador de Rotas</div>
+                <div class="module-card-desc" data-key="explorer-mod-rotas-desc">
+                  Trace rotas de trabalho adicionando waypoints no mapa.
+                  Salve rotas para reutilização e sobreponha-as no mapa
+                  principal como guia de campo.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Talhão -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <div class="phone-frame phone-frame--card" aria-hidden="true">
+                <div class="phone-screen">
+                  <img src="../img/app-DesenharTalhao.png" alt="Talhão">
+                </div>
+              </div>
+              <div class="module-card-info">
+                <div class="module-card-name" data-key="explorer-mod-talhao-name">Talhão</div>
+                <div class="module-card-desc" data-key="explorer-mod-talhao-desc">
+                  Desenhe os limites de talhões diretamente sobre o mapa.
+                  Salve com nome e data, exporte individualmente como CSV
+                  para importar no QGIS com o plugin RTH PROJECT.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mapa Offline -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <div class="phone-frame phone-frame--card" aria-hidden="true">
+                <div class="phone-screen">
+                  <img src="../img/app-mapdown.png" alt="Mapa Offline">
+                </div>
+              </div>
+              <div class="module-card-info">
+                <div class="module-card-name" data-key="explorer-mod-offline-name">Mapa Offline</div>
+                <div class="module-card-desc" data-key="explorer-mod-offline-desc">
+                  Baixe tiles de mapa para áreas selecionadas e use o mapa
+                  mesmo sem conexão à internet no campo. Gerencie as regiões
+                  baixadas para reutilização em visitas futuras.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Relatório Produtivo -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <div class="phone-frame phone-frame--card" aria-hidden="true">
+                <div class="phone-screen">
+                  <img src="../img/app-RelatorioProdutivo.png" alt="Relatório Produtivo">
+                </div>
+              </div>
+              <div class="module-card-info">
+                <div class="module-card-name" data-key="explorer-mod-relatorio-name">Relatório Produtivo</div>
+                <div class="module-card-desc" data-key="explorer-mod-relatorio-desc">
+                  Dashboard analítico com produtividade estimada em sc/ha
+                  (média, mín, máx), plantas/m, evolução temporal, ranking
+                  de talhões e top 5 doenças/pragas/daninhas por cultura.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comprovantes -->
+          <div class="module-card">
+            <div class="module-card-top">
+              <div class="phone-frame phone-frame--card" aria-hidden="true">
+                <div class="phone-screen">
+                  <img src="../img/app-comprovantes.png" alt="Comprovantes de Gastos">
+                </div>
+              </div>
+              <div class="module-card-info">
+                <div class="module-card-name" data-key="explorer-mod-comprovantes-name">Comprovantes de Gastos</div>
+                <div class="module-card-desc" data-key="explorer-mod-comprovantes-desc">
+                  Registre despesas de campo (combustível, insumos, diárias)
+                  com histórico agrupado por dia e rota. Exporte tudo como CSV
+                  para planilhas ou sistemas de gestão.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /modules-grid -->
+      </div>
+    </section>
+
+    <!-- ─── CTA ─── -->
+    <section class="explorer-cta" aria-label="Download do app">
+      <div class="section-inner">
+        <div class="explorer-decoration-bar" style="margin: 0 auto 1.5rem;" aria-hidden="true"></div>
+        <h2 class="cta-title" data-key="explorer-cta-title">Baixe o RTH World Explorer</h2>
+        <p class="cta-sub" data-key="explorer-cta-sub">Gratuito · Android · Integrado ao plugin RTH PROJECT para QGIS</p>
+        <div class="cta-badges">
+          <a href="#" class="store-badge" aria-label="Disponível no Google Play">
+            <span class="store-badge-icon" aria-hidden="true">▶</span>
+            <span class="store-badge-label">
+              <span class="store-badge-store">Disponível no</span>
+              <span class="store-badge-name">Google Play</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /explorer-page -->
+
+  <!-- aria-hidden="true": vídeo decorativo, sem informação para leitores de tela -->
+  <div id="video-background" aria-hidden="true">
+    <video src="../img/background.mp4" autoplay loop muted playsinline poster="../img/background.jpg" class="videoback"></video>
+  </div>
+
+  <!-- type="module" permite import/export no JS; inicializa langHandler (EN/PT) -->
+  <script type="module" src="../js/global.js"></script>
+
+</body>
+</html>
