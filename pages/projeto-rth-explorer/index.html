@@ -1,25 +1,25 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- RTH World Explorer — página de detalhe do projeto -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="RTH World Explorer — aplicativo Android do campo ao escritório, por Luciano (RithonDev)." />
-    <link rel="shortcut icon" href="../icons/tridente.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/icons/tridente.ico" type="image/x-icon">
     <title>RTH World Explorer — RithonDev</title>
-    <link rel="stylesheet" href="home/home.css">
-    <link rel="stylesheet" href="projeto.css">
+    <link rel="stylesheet" href="/pages/home/home.css">
+    <link rel="stylesheet" href="/pages/projeto.css">
 </head>
 <body>
 
   <nav class="nav-principal" role="navigation" aria-label="Navegação principal">
-    <a href="../index.html" class="nav-brand">RTH</a>
+    <a href="/" class="nav-brand">RTH</a>
     <ul>
-      <li><a href="../index.html" data-key="nav-sobre">Sobre</a></li>
-      <li><a href="projetos.html" aria-current="page" data-key="nav-projetos">Projetos</a></li>
-      <li><a href="rth-project.html" data-key="nav-rth">RTH Project</a></li>
-      <li><a href="catalogo.html" data-key="nav-catalogo">Catálogo de Culturas</a></li>
-      <li><a href="rth-explorer.html" data-key="nav-explorer">RTH World Explorer</a></li>
+      <li><a href="/" data-key="nav-sobre">Sobre</a></li>
+      <li><a href="/pages/projetos/" aria-current="page" data-key="nav-projetos">Projetos</a></li>
+      <li><a href="/pages/rth-project/" data-key="nav-rth">RTH Project</a></li>
+      <li><a href="/pages/catalogo/" data-key="nav-catalogo">Catálogo de Culturas</a></li>
+      <li><a href="/pages/rth-explorer/" data-key="nav-explorer">RTH World Explorer</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="lang-item">
@@ -35,7 +35,7 @@
 
       <div class="container-projeto">
 
-        <a href="projetos.html" class="back-link" data-key="back-projetos">← Projetos</a>
+        <a href="/pages/projetos/" class="back-link" data-key="back-projetos">← Projetos</a>
 
         <h1 class="title-container">
           <span class="title" data-key="proj-explorer-title">RTH World Explorer — Aplicativo de Celular do Campo ao Escritório</span>
@@ -43,8 +43,8 @@
 
         <div class="projeto-content">
           <p class="text-pad" data-key="proj-explorer-detail">Aplicativo Android desenvolvido para o profissional que trabalha do campo ao escritório. Captura pontos georreferenciados de culturas com fotos, coleta parâmetros produtivos (soja, milho, algodão, arroz e outros) e gera grids amostrais de agricultura de precisão — totalmente integrado ao plugin RTH PROJECT para QGIS.</p>
-          <p class="text-pad" style="text-align: center;"><span data-key="link-projeto">Link do Projeto:</span> <a href="rth-explorer.html" class="destaque" data-key="acesse-aqui">Acesse aqui</a></p>
-          <img src="../img/app-home.png" alt="RTH World Explorer — tela do aplicativo" style="display:block; margin:1.5rem auto; max-width:100%; border-radius:8px;">
+          <p class="text-pad" style="text-align: center;"><span data-key="link-projeto">Link do Projeto:</span> <a href="/pages/rth-explorer/" class="destaque" data-key="acesse-aqui">Acesse aqui</a></p>
+          <img src="/img/app-home.png" alt="RTH World Explorer — tela do aplicativo" style="display:block; margin:1.5rem auto; max-width:100%; border-radius:8px;">
         </div>
 
       </div>
@@ -52,9 +52,9 @@
   </main>
 
   <div id="video-background" aria-hidden="true">
-    <video src="../img/background.mp4" autoplay loop muted playsinline poster="../img/background.jpg" class="videoback"></video>
+    <video src="/img/background.mp4" autoplay loop muted playsinline poster="/img/background.jpg" class="videoback"></video>
   </div>
 
-  <script type="module" src="../js/global.js"></script>
+  <script type="module" src="/js/global.js"></script>
 </body>
 </html>

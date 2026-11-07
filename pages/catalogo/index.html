@@ -1,29 +1,29 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- Catálogo de Culturas — referência técnica de culturas agrícolas com layout de documentação -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Catálogo de Culturas — referência técnica agrícola por Luciano (RithonDev)." />
-    <link rel="shortcut icon" href="../icons/tridente.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/icons/tridente.ico" type="image/x-icon">
     <title>Catálogo de Culturas — RithonDev</title>
     <!-- home.css carrega nav, variáveis de cor, fontes, reset e vídeo de fundo -->
-    <link rel="stylesheet" href="home/home.css">
+    <link rel="stylesheet" href="/pages/home/home.css">
     <!-- rth-docs.css: layout de documentação compartilhado com rth-project.html -->
-    <link rel="stylesheet" href="rth-docs.css">
+    <link rel="stylesheet" href="/pages/rth-docs.css">
 </head>
 <body>
 
   <!-- Navegação principal — 3 colunas: marca · links · idioma -->
   <nav class="nav-principal" role="navigation" aria-label="Navegação principal">
-    <a href="../index.html" class="nav-brand">RTH</a>
+    <a href="/" class="nav-brand">RTH</a>
     <ul>
-      <li><a href="../index.html" data-key="nav-sobre">Sobre</a></li>
-      <li><a href="projetos.html" data-key="nav-projetos">Projetos</a></li>
-      <li><a href="rth-project.html" data-key="nav-rth">RTH Project</a></li>
+      <li><a href="/" data-key="nav-sobre">Sobre</a></li>
+      <li><a href="/pages/projetos/" data-key="nav-projetos">Projetos</a></li>
+      <li><a href="/pages/rth-project/" data-key="nav-rth">RTH Project</a></li>
       <!-- aria-current="page" marca esta página como ativa no nav -->
-      <li><a href="catalogo.html" aria-current="page" data-key="nav-catalogo">Catálogo de Culturas</a></li>
-      <li><a href="rth-explorer.html" data-key="nav-explorer">RTH World Explorer</a></li>
+      <li><a href="/pages/catalogo/" aria-current="page" data-key="nav-catalogo">Catálogo de Culturas</a></li>
+      <li><a href="/pages/rth-explorer/" data-key="nav-explorer">RTH World Explorer</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="lang-item">
@@ -392,11 +392,11 @@
 
   <!-- aria-hidden="true": vídeo decorativo, sem informação para leitores de tela -->
   <div id="video-background" aria-hidden="true">
-    <video src="../img/background.mp4" autoplay loop muted playsinline poster="../img/background.jpg" class="videoback"></video>
+    <video src="/img/background.mp4" autoplay loop muted playsinline poster="/img/background.jpg" class="videoback"></video>
   </div>
 
   <!-- type="module" permite import/export no JS; inicializa langHandler (EN/PT) -->
-  <script type="module" src="../js/global.js"></script>
+  <script type="module" src="/js/global.js"></script>
 
   <!-- Script de navegação dos docs (script regular, não-module).
        Executa imediatamente, antes do langHandler (module), garantindo que

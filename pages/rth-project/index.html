@@ -1,29 +1,29 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- RTH Project — documentação do plugin RTH Project para QGIS -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Documentação do RTH Project — plugin QGIS para sensoriamento remoto agrícola por Luciano (RithonDev)." />
-    <link rel="shortcut icon" href="../icons/tridente.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/icons/tridente.ico" type="image/x-icon">
     <title>RTH Project — RithonDev</title>
     <!-- home.css carrega nav, variáveis de cor, fontes, reset e vídeo de fundo -->
-    <link rel="stylesheet" href="home/home.css">
+    <link rel="stylesheet" href="/pages/home/home.css">
     <!-- rth-docs.css: layout específico desta página (sidebar + conteúdo) -->
-    <link rel="stylesheet" href="rth-docs.css">
+    <link rel="stylesheet" href="/pages/rth-docs.css">
 </head>
 <body>
 
   <!-- Navegação principal — 3 colunas: marca · links · idioma -->
   <nav class="nav-principal" role="navigation" aria-label="Navegação principal">
-    <a href="../index.html" class="nav-brand">RTH</a>
+    <a href="/" class="nav-brand">RTH</a>
     <ul>
-      <li><a href="../index.html" data-key="nav-sobre">Sobre</a></li>
-      <li><a href="projetos.html" data-key="nav-projetos">Projetos</a></li>
+      <li><a href="/" data-key="nav-sobre">Sobre</a></li>
+      <li><a href="/pages/projetos/" data-key="nav-projetos">Projetos</a></li>
       <!-- aria-current="page" marca esta página como ativa — usada pelo CSS para destacar o link -->
-      <li><a href="rth-project.html" aria-current="page" data-key="nav-rth">RTH Project</a></li>
-      <li><a href="catalogo.html" data-key="nav-catalogo">Catálogo de Culturas</a></li>
-      <li><a href="rth-explorer.html" data-key="nav-explorer">RTH World Explorer</a></li>
+      <li><a href="/pages/rth-project/" aria-current="page" data-key="nav-rth">RTH Project</a></li>
+      <li><a href="/pages/catalogo/" data-key="nav-catalogo">Catálogo de Culturas</a></li>
+      <li><a href="/pages/rth-explorer/" data-key="nav-explorer">RTH World Explorer</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="lang-item">
@@ -313,14 +313,14 @@
         <div class="docs-flex">
           <p class="text-pad">Atualmente, o plugin reúne funcionalidades voltadas principalmente para <span class="destaque">Sensoriamento Remoto aplicado ao Mapeamento Agrícola, incorporando também recursos para Agricultura de Precisão e algumas soluções relacionadas a ESG</span>. Cada ferramenta foi criada para atender a uma necessidade real do fluxo de trabalho, desde funcionalidades mais robustas — como o catálogo de imagens baseado em STAC API, que simplifica a busca e o download de imagens de satélite — até pequenas utilidades que economizam tempo, como atalhos para alternar rapidamente entre imagens no QGIS.</p>
           <div class="image-container-texto-legenda">
-            <img src="../img/barra-plugin-qgis.png" alt="Barra de ferramentas do plugin RTH Project">
+            <img src="/img/barra-plugin-qgis.png" alt="Barra de ferramentas do plugin RTH Project">
             <p class="text-pad-legenda">Figura 1. Barra de ferramentas do plugin.</p>
           </div>
         </div>
         <p class="text-pad">O projeto começou de forma bastante modesta, desenhado em uma simples folha de papel com apenas dez ferramentas planejadas. Com o passar do tempo, novas ideias surgiram, funcionalidades foram adicionadas e o plugin evoluiu continuamente. Hoje, o objetivo permanece o mesmo: desenvolver soluções que tornem o trabalho mais produtivo, intuitivo e eficiente para profissionais que atuam com geotecnologias.</p>
         <div class="docs-flex">
           <div class="image-container-texto-legenda">
-            <img src="../img/RTH-API-BROWSER.png" alt="Catalogo de Imagens do plugin RTH Project" style="max-width: 80%">
+            <img src="/img/RTH-API-BROWSER.png" alt="Catalogo de Imagens do plugin RTH Project" style="max-width: 80%">
             <p class="text-pad-legenda">Figura 2. Catálogo de imagens.</p>
           </div>
           <p class="text-pad"><span class="destaque">O desenvolvimento do plugin é contínuo e guiado pelas necessidades dos seus usuários</span>. Se você tiver sugestões de novas ferramentas, melhorias ou identificar oportunidades para ampliar suas funcionalidades, entre em contato pelos canais disponíveis. Será um prazer receber seu feedback e conectar-nos pelo LinkedIn para trocar experiências e construir novas soluções para a comunidade.</p>
@@ -332,7 +332,7 @@
         <!-- Documentação: escreva o conteúdo desta seção aqui -->
          <div class="center">
             <p class="text-pad">Entre em um projeto existente no QGIS.</p>
-            <img src="../img/Abrir-Projeto.png" alt="Abrir Projeto no QGIS" srcset="" style="max-width: 60%">
+            <img src="/img/Abrir-Projeto.png" alt="Abrir Projeto no QGIS" srcset="" style="max-width: 60%">
           </div>
       </section>
 
@@ -341,9 +341,9 @@
         <!-- Documentação: escreva o conteúdo desta seção aqui -->
         <div class="center" style="margin-bottom: 70px;">
           <p class="text-pad">Entre em complementos e gerenciar complementos.</p>
-          <img src="../img/plugin-instalar-plugin-1.png" alt="" srcset="">
+          <img src="/img/plugin-instalar-plugin-1.png" alt="" srcset="">
           <p class="text-pad">Aperte na opção tudo e escreva o nome do plugin "RTH PROJECT", selecione-o e clique em instalar(se possivel vote no plugin).</p>
-          <img src="../img/Instalar-Plugin.png" alt="" srcset="">
+          <img src="/img/Instalar-Plugin.png" alt="" srcset="">
         </div>
       </section>
 
@@ -351,7 +351,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-navegar-modulos">Navegar entre Módulos</h2>
         <!-- Documentação: escreva o conteúdo desta seção aqui -->
         <div class="center">
-          <img src="../img/Modulos-Plugin.png" alt="" srcset="">
+          <img src="/img/Modulos-Plugin.png" alt="" srcset="">
           <ul class="text-pad" style="margin-bottom: 70px;">
             <li><span class="destaque">1- Catálogo de imagens: </span> você consegue realizar o download de imagens de satélite com diferentes composições utilizando a área da sua tela como referência.</li>
             <li><span class="destaque">2- Gee Apps: </span> contém 4 aplicativos criados no Google Earth Engine para utilizar durante o mapeamento agrícola, pesquisa de clima ou desmatamento de área.</li>
@@ -374,15 +374,15 @@
         <h2 class="docs-section-title" data-key="rth-nav-catalogo-visao-geral">Visão Geral</h2>
         <p class="text-pad">Para obter resultados precisos no catálogo, é essencial compreender a <span class="destaque">grade de tiles do satélite de interesse</span> — cada tile representa uma área geográfica específica identificada por sua órbita e ponto, e conhecer essa referência permite buscar exatamente a cena que cobre sua área de estudo.</p>
         <div class="center">
-          <img src="../img/gridbrasil.png" alt="Grade de tiles de satélite sobre o Brasil">
+          <img src="/img/gridbrasil.png" alt="Grade de tiles de satélite sobre o Brasil">
         </div>
         <p class="text-pad">O Catálogo de Imagens permite <span class="destaque">buscar e baixar imagens de satélite diretamente no QGIS</span>, utilizando a área visível na tela ou um polígono selecionado como área de interesse. A interface é organizada em abas que guiam o usuário desde a seleção do satélite e da coleção até a escolha das composições e o download ou virtualização da cena.</p>
         <div class="center">
-          <img src="../img/CatalogoImagem.png" alt="Interface do Catálogo de Imagens">
+          <img src="/img/CatalogoImagem.png" alt="Interface do Catálogo de Imagens">
         </div>
         <p class="text-pad">Internamente, o catálogo conecta-se a APIs STAC (SpatioTemporal Asset Catalog) para listar cenas disponíveis com metadados de data, cobertura de nuvens e resolução. <span class="destaque">As imagens podem vir em cenas completas ou recortadas à AOI</span> antes do download, evitando transferência desnecessária de dados.</p>
         <div class="center">
-          <img src="../img/downloadVirtualiza.png" alt="Download e virtualização no Catálogo de Imagens">
+          <img src="/img/downloadVirtualiza.png" alt="Download e virtualização no Catálogo de Imagens">
         </div>
       </section>
 
@@ -390,7 +390,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-catalogo-satelites">Satélites</h2>
         <p class="text-pad">O catálogo suporta os principais satélites de observação da Terra disponíveis via STAC API: <span class="destaque">Sentinel-2, Landsat 8 e 9, CBERS-4A e Amazônia-1</span>. Cada satélite possui suas próprias coleções, resoluções espaciais e janelas temporais de cobertura. A seleção do satélite determina quais coleções, bandas e composições estarão disponíveis nas abas seguintes. O Sentinel-2 possui maior variedade de composições espectrais, enquanto o Landsat oferece maior histórico temporal (<span class="destaque">você precisa buscar e entender o que é melhor para você</span>).</p>
         <div class="center">
-          <img src="../img/Satelites.png" alt="Aba de satélites do Catálogo de Imagens">
+          <img src="/img/Satelites.png" alt="Aba de satélites do Catálogo de Imagens">
         </div>
       </section>
 
@@ -398,19 +398,19 @@
         <h2 class="docs-section-title" data-key="rth-nav-catalogo-colecoes">Coleções</h2>
         <p class="text-pad">As coleções <span class="destaque">agrupam imagens de um mesmo satélite por tipo de processamento e nível de correção</span>. As coleções de nível 2A (reflectância de superfície) são as mais indicadas para análises quantitativas como cálculo de índices de vegetação. Após selecionar o satélite e a coleção, o catálogo lista as cenas disponíveis para a AOI e o período definido, ordenadas por data e cobertura de nuvens, permitindo escolher a cena mais adequada para o trabalho.</p>
         <div class="center">
-          <img src="../img/Colecoes.png" alt="Aba de coleções do Catálogo de Imagens">
+          <img src="/img/Colecoes.png" alt="Aba de coleções do Catálogo de Imagens">
         </div>
       </section>
 
       <section class="docs-section" id="sec-catalogo-composicoes">
         <h2 class="docs-section-title" data-key="rth-nav-catalogo-composicoes">Composições</h2>
         <div class="center">
-          <img src="../img/Composicoes1.png" alt="Composições de bandas no Catálogo de Imagens">
+          <img src="/img/Composicoes1.png" alt="Composições de bandas no Catálogo de Imagens">
         </div>
         <p class="text-pad">As composições definem quais bandas espectrais serão combinadas na imagem final. O catálogo oferece <span class="destaque">composições clássicas</span> como RGB natural (Vermelho, Verde, Azul), infravermelho colorido (NIR, Vermelho, Verde) e composições especializadas para agricultura, como SWIR-NIR-Red e SWIR-Red-Green. A ferramenta possibilita <span class="destaque">criar sua própria composição e salvá-la para sempre usar</span>.</p>
         <div class="containerflex">
-          <div class="image-container-texto-legenda"><img src="../img/composicao2.png" alt="Exemplo de composição 2"></div>
-          <div class="image-container-texto-legenda"><img src="../img/composicao3.png" alt="Exemplo de composição 3"></div>
+          <div class="image-container-texto-legenda"><img src="/img/composicao2.png" alt="Exemplo de composição 2"></div>
+          <div class="image-container-texto-legenda"><img src="/img/composicao3.png" alt="Exemplo de composição 3"></div>
         </div>
       </section>
 
@@ -418,8 +418,8 @@
         <h2 class="docs-section-title" data-key="rth-nav-catalogo-aoi">AOI</h2>
         <p class="text-pad">A Área de Interesse (AOI) define a região geográfica que será recortada na imagem baixada ou virtualizada. Pode ser definida de três formas: pela extensão visível do canvas do QGIS, por um polígono selecionado na camada ativa, ou desenhando um retângulo diretamente no mapa com a ferramenta de seleção de AOI. O recorte pela AOI é aplicado antes da transferência dos dados, <span class="destaque">garantindo que apenas a área de interesse seja baixada</span>. Isso reduz significativamente o volume de dados e o tempo de download, especialmente em cenas de satélites de alta resolução.</p>
         <div class="containerflex">
-          <div class="image-container-texto-legenda"><img src="../img/AIOImage.png" alt="AOI no Catálogo de Imagens"></div>
-          <div class="image-container-texto-legenda"><img src="../img/AIOImage1.png" alt="AOI no Catálogo de Imagens — detalhe"></div>
+          <div class="image-container-texto-legenda"><img src="/img/AIOImage.png" alt="AOI no Catálogo de Imagens"></div>
+          <div class="image-container-texto-legenda"><img src="/img/AIOImage1.png" alt="AOI no Catálogo de Imagens — detalhe"></div>
         </div>
       </section>
 
@@ -427,7 +427,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-catalogo-download-virtualizacao">Download e Virtualização</h2>
         <p class="text-pad">Após selecionar a cena, existem duas formas de carregar a imagem no QGIS: <span class="destaque">download completo</span> do recorte (salvo como GeoTIFF localmente) ou virtualização via vsicurl, que acessa a imagem diretamente na nuvem sem ocupar espaço em disco.</p>
         <div class="center">
-          <img src="../img/downloadVirtualiza.png" alt="Resultado de download e virtualização">
+          <img src="/img/downloadVirtualiza.png" alt="Resultado de download e virtualização">
         </div>
         <p class="text-pad">A <span class="destaque">virtualização</span> é ideal para visualização rápida e comparação de múltiplas cenas, pois carrega instantaneamente. O download é recomendado quando a imagem será usada em processamentos locais como classificação ou cálculo de índices offline.</p>
       </section>
@@ -436,7 +436,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-catalogo-download-inteligente">Download Inteligente</h2>
         <p class="text-pad">O Download Inteligente <span class="destaque">seleciona automaticamente a melhor cena disponível</span> para a AOI e o período escolhidos, priorizando menor porcentagem de cobertura de nuvens sobre a área de interesse. Simplifica o fluxo de trabalho ao evitar a análise manual de múltiplas cenas. O usuário define apenas o intervalo de datas e o limiar máximo de nuvens; o catálogo consulta a API STAC, filtra as cenas elegíveis e baixa automaticamente a que melhor atende ao critério. Ideal para automação de rotinas periódicas de monitoramento.</p>
         <div class="center">
-          <img src="../img/DownloadInteligente.png" alt="Download Inteligente do Catálogo de Imagens">
+          <img src="/img/DownloadInteligente.png" alt="Download Inteligente do Catálogo de Imagens">
         </div>
       </section>
 
@@ -447,7 +447,7 @@
         <p class="text-pad" style="text-align: center;">Link do Projeto: <a href="https://luciano-ufsc.projects.earthengine.app/view/rthseries" target="_blank" rel="noopener noreferrer" class="destaque">Acesse aqui</a></p>
         <p class="text-pad">Adicione o polígono desejado para análise e intervalo de tempo. <span class="destaque">Resultará em 3 thumbnails clicáveis para melhor análise</span></p>
         <div class="center">
-          <img src="../img/projeto-analisePoligono.png" alt="Interface da ferramenta RTH Análise de Polígono com thumbnails em 3 composições de bandas">
+          <img src="/img/projeto-analisePoligono.png" alt="Interface da ferramenta RTH Análise de Polígono com thumbnails em 3 composições de bandas">
         </div>
       </section>
 
@@ -456,7 +456,7 @@
         <p class="text-pad" style="text-align: center;">Link do Projeto: <a href="https://luciano-ufsc.projects.earthengine.app/view/rthseriesvegtime" target="_blank" rel="noopener noreferrer" class="destaque">Acesse aqui</a></p>
         <p class="text-pad">Gráficos de Vegetação de uma latitude e longitude conhecida de índices importantes como <span class="destaque">NDVI, EVI, SAVI, MSAVI e NDMI</span></p>
         <div class="center">
-          <img src="../img/projeto-vegtime.png" alt="Gráficos de índices de vegetação gerados pelo RTH Gráficos de Vegetação">
+          <img src="/img/projeto-vegtime.png" alt="Gráficos de índices de vegetação gerados pelo RTH Gráficos de Vegetação">
         </div>
       </section>
 
@@ -465,7 +465,7 @@
         <p class="text-pad" style="text-align: center;">Link do Projeto: <a href="https://luciano-ufsc.projects.earthengine.app/view/rthseriesclimateviewer" target="_blank" rel="noopener noreferrer" class="destaque">Acesse aqui</a></p>
         <p class="text-pad">Pode-se obter a <span class="destaque">previsão do tempo</span> de 1 dia até 15 dias nos <span class="destaque">modelos americanos e europeu</span>, bem como <span class="destaque">variáveis importantes para a agrometeorologia como Temperatura (Média, mínima e máxima), Precipitação, Umidade, Evapotranspiração, Graus dias, Dias nublados, Dias ensolarados, Dias sem chuvas e Dias com Chuva (Consecutivos ou acumulado).</span></p>
         <div class="center">
-          <img src="../img/projeto-climate.png" alt="Visualizador de Clima">
+          <img src="/img/projeto-climate.png" alt="Visualizador de Clima">
         </div>
       </section>
 
@@ -474,7 +474,7 @@
         <p class="text-pad" style="text-align: center;">Link do Projeto: <a href="https://luciano-ufsc.projects.earthengine.app/view/rthseriesmonth" target="_blank" rel="noopener noreferrer" class="destaque">Acesse aqui</a></p>
         <p class="text-pad">O projeto recebe um polígono específico em JSON junto com a seleção dos anos e meses de interesse.</p>
         <div class="center">
-          <img src="../img/projeto-rthdesmatamento.png" alt="Verificar Desmatamento">
+          <img src="/img/projeto-rthdesmatamento.png" alt="Verificar Desmatamento">
         </div>
       </section>
 
@@ -484,7 +484,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-sensoriamento-desenhar-talhao">Desenhar Talhão Automaticamente</h2>
         <p class="text-pad">Realiza a <span class="destaque">vetorização automática de talhões agrícolas</span> a partir de imagens de satélite carregadas no canvas do QGIS. O algoritmo detecta os limites da feição com base em contraste espectral, gerando o polígono sem necessidade de digitalização manual. Para ajustar os parâmetros de tolerância e sensibilidade do algoritmo, <span class="destaque">clique com o botão direito do mouse enquanto utiliza a ferramenta</span> para acessar as opções de configuração avançada.</p>
         <div class="center">
-          <img src="../img/DesenharTalhao.png" alt="Desenhar Talhão Automaticamente">
+          <img src="/img/DesenharTalhao.png" alt="Desenhar Talhão Automaticamente">
         </div>
       </section>
 
@@ -492,7 +492,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-sensoriamento-vetorizar">Vetorizar Círculo</h2>
         <p class="text-pad"><span class="destaque">Ferramenta interativa para desenhar pivôs de irrigação e outras feições circulares como vetores suaves</span>. O usuário clica no centro do pivô no canvas, arrasta para definir o raio e clica novamente para finalizar. O círculo é adicionado à camada polígono editável ativa ou a uma nova camada em memória chamada "Círculo". <span class="destaque">Utiliza 144 vértices (36 segmentos por quadrante) para gerar um polígono suave e visualmente preciso sem sobrecarregar a camada</span>. Ideal para mapear rapidamente áreas irrigadas por pivô central a partir de imagens de satélite.</p>
         <div class="center">
-          <img src="../img/vetorizarcirculo.png" alt="Ferramenta Vetorizar Círculo">
+          <img src="/img/vetorizarcirculo.png" alt="Ferramenta Vetorizar Círculo">
         </div>
       </section>
 
@@ -500,7 +500,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-sensoriamento-revisor-poligonos">Revisor de Polígonos</h2>
         <p class="text-pad"><span class="destaque">Navegador de feições poligonais com zoom automático</span> e rastreamento de revisão. O <span class="destaque">usuário seleciona os polígonos a revisar e o diálogo percorre cada um em ordem espacial</span> (vizinho mais próximo a partir do ponto mais ocidental), aplicando zoom automático a cada feição e exibindo barra de progresso. <span class="destaque">Ao visitar cada polígono, o campo "Revision" da feição é marcado como "Yes", permitindo acompanhar quais polígonos já foram revisados</span>. Permite navegar para frente e para trás entre os polígonos selecionados sem fechar o diálogo.</p>
         <div class="center">
-          <img src="../img/RevisorPoligonos.png" alt="Revisor de Polígonos">
+          <img src="/img/RevisorPoligonos.png" alt="Revisor de Polígonos">
         </div>
       </section>
 
@@ -508,7 +508,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-sensoriamento-pontos-aleatorios">Pontos Aleatórios em Camada</h2>
         <p class="text-pad"><span class="destaque">Gera N pontos aleatórios dentro dos polígonos de uma camada vetorial</span>, com distância mínima configurável entre os pontos (buffer em km). Usa um algoritmo polygon-first (sorteia um polígono, testa um candidato no seu bbox e verifica contenção geométrica) executado em segundo plano para não travar a interface do QGIS. <span class="destaque">O resultado é uma nova camada de memória com campos "revisao" e "acerto" prontos para uso imediato pelo Revisor de Pontos</span>. Ideal para amostragem espacial aleatória em trabalhos de validação de classificações e levantamentos de campo.</p>
         <div class="center">
-          <img src="../img/pontosaleatorioscamada.png" alt="Pontos Aleatórios em Camada">
+          <img src="/img/pontosaleatorioscamada.png" alt="Pontos Aleatórios em Camada">
         </div>
       </section>
 
@@ -516,7 +516,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-sensoriamento-revisor-pontos">Revisor de Pontos</h2>
         <p class="text-pad"><span class="destaque">Navegador de pontos com zoom automático para escala 1:2000 e marcação de resultado por ponto</span>. Ao visitar cada ponto o campo "revisao" é marcado como "sim"; <span class="destaque">o usuário classifica o resultado com os botões Acertou, Errou ou Indiferente, que gravam o valor no campo "acerto" da feição.</span> <span class="destaque">Projetado para trabalhar em conjunto com a ferramenta de Pontos Aleatórios, forma um fluxo completo de validação: geração de pontos → revisão campo a campo → relatório de acurácia.</span> Útil para validar classificações de uso do solo e mapas de cultura.</p>
         <div class="center">
-          <img src="../img/RevisorPontos.png" alt="Revisor de Pontos">
+          <img src="/img/RevisorPontos.png" alt="Revisor de Pontos">
         </div>
       </section>
 
@@ -524,7 +524,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-sensoriamento-cobertura">Porcentagem de Cobertura</h2>
         <p class="text-pad"><span class="destaque">Calcula a porcentagem de cobertura de uma camada de pontos (com raio de buffer configurável em km) sobre uma camada de referência de polígonos.</span> Detecta automaticamente o CRS UTM regional para cálculo de áreas em metros, une os buffers de todos os pontos e intersecta com a geometria de referência. <span class="destaque">O resultado é exibido em hectares e percentual em um card visual. Útil para avaliar a cobertura de planos de amostragem</span>, raios de influência de estações meteorológicas ou alcance de pontos de monitoramento sobre uma área de referência.</p>
         <div class="center">
-          <img src="../img/cobertura.png" alt="Porcentagem de Cobertura">
+          <img src="/img/cobertura.png" alt="Porcentagem de Cobertura">
         </div>
       </section>
 
@@ -532,7 +532,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-sensoriamento-relatorio">Relatório de Revisão de Pontos</h2>
         <p class="text-pad"><span class="destaque">Gera um relatório estatístico de revisão de uma camada de pontos que passou pelo Revisor de Pontos. Conta pontos por categoria (Acertou, Errou, Indiferente), calcula a Acurácia Geral (OA) sobre os pontos efetivamente avaliados (excluindo indiferentes) e exibe os resultados em um card com código de cores por nível de acurácia.</span> É a última etapa do fluxo de validação: geração de pontos aleatórios → revisão campo a campo → relatório com Acurácia Geral e índice Kappa. Compatível com as métricas exigidas em relatórios técnicos de sensoriamento remoto e mapeamento de uso do solo.</p>
         <div class="center">
-          <img src="../img/RelatorioPontos.png" alt="Relatório de Revisão de Pontos">
+          <img src="/img/RelatorioPontos.png" alt="Relatório de Revisão de Pontos">
         </div>
       </section>
 
@@ -540,7 +540,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-sensoriamento-monitor-desmatamento">Monitor de Desmatamento</h2>
         <p class="text-pad"><span class="destaque">Busca 5 cenas de satélite (Sentinel-2 ou Landsat) em pontos temporais estratégicos em relação a um marco de corte definido pelo usuário (ex: PRODES 31/07/2019 ou EUDR 31/12/2020). As cinco composições cobrem: histórico (5 anos antes), pré-marco (1 ano antes), pré-desmatamento (1 ano antes do evento), pós-marco e a imagem mais recente disponível.</span> <span class="destaque">Baixa as cenas recortadas à área de interesse</span> selecionada com fallback em cascata entre provedores (BDC → Element84 → S3 direto) quando um provedor falha. Projetado para atender requisitos de rastreabilidade da cadeia produtiva e relatórios de compliance ESG, como o Regulamento Europeu de Desmatamento (EUDR).</p>
         <div class="center">
-          <img src="../img/MonitorDesmatamento.png" alt="Monitor de Desmatamento">
+          <img src="/img/MonitorDesmatamento.png" alt="Monitor de Desmatamento">
         </div>
       </section>
 
@@ -548,7 +548,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-sensoriamento-indices-imagem">Índices de Vegetação em Imagem</h2>
         <p class="text-pad"><span class="destaque">Calcula índices de vegetação (NDVI, EVI, SAVI, NDWI e outros, ou fórmula personalizada) para cenas Sentinel-2 buscadas via STAC</span>, usando a área visível no canvas do QGIS como recorte. Lê apenas as bandas necessárias via vsicurl sem download completo do COG, gerando uma camada raster GeoTIFF para cada cena selecionada. <span class="destaque">Todo o processamento ocorre em segundo plano para não bloquear o QGIS. O resultado é carregado automaticamente com pseudocolor RdYlGn aplicado, pronto para análise visual imediata.</span> Diferente da ferramenta de Análise do Talhão, esta opera sobre qualquer área do canvas sem precisar de um polígono selecionado.</p>
         <div class="center">
-          <img src="../img/IndicesVeg.png" alt="Índices de Vegetação em Imagem">
+          <img src="/img/IndicesVeg.png" alt="Índices de Vegetação em Imagem">
         </div>
       </section>
 
@@ -558,7 +558,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-ml-stack">Stack de Imagem ML</h2>
         <p class="text-pad"><span class="destaque">Gera um GeoTIFF multi-banda empilhado</span> a partir de cenas Sentinel-2 buscadas via STAC, <span class="destaque">combinando bandas espectrais selecionadas (B01–B12) com índices de vegetação calculados (NDVI, EVI, SAVI, NDWI, GCVI, SR e índices personalizados).</span> O resultado é um único raster com bandas nomeadas, compressão LZW, estruturado e pronto para ingestão em pipelines de Machine Learning. A ferramenta suporta presets de composição de bandas definidos pelo usuário, permitindo padronizar e reproduzir a configuração do stack entre diferentes projetos e regiões. Inclui a <span class="destaque">pré-configuração RTH Stack</span> — um conjunto de bandas e índices espectrais validado empiricamente como configuração eficiente e comprovada para classificação de uso e cobertura do solo em contexto agrícola. Projetado para ser a etapa de preparação de dados imediatamente anterior à Classificação de Uso do Solo.</p>
         <div class="center">
-          <img src="../img/MachineStack.png" alt="Stack de Imagem ML">
+          <img src="/img/MachineStack.png" alt="Stack de Imagem ML">
         </div>
       </section>
 
@@ -566,7 +566,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-ml-classificacao">Classificação de Uso do Solo</h2>
         <p class="text-pad"><span class="destaque">Realiza classificação de uso e cobertura do solo por Machine Learning em imagens raster multibanda (drone ou satélite).</span> O usuário fornece a imagem, uma camada vetorial de amostras anotadas por classe e o campo numérico de classe; a ferramenta rasteriza as amostras, extrai pixels de treinamento e treina o modelo escolhido. Suporta os algoritmos: <span class="destaque">Random Forest, Extra Trees, Gradient Boosting, SVM, KNN, Naive Bayes, GMM Nativo e GMM sklearn/QDA</span>. Opcionalmente divide amostras em treino/teste, calcula Acurácia Geral e índice Kappa de Cohen, e exporta a matriz de confusão em CSV. O resultado é um GeoTIFF UInt16 com as classes mapeadas.</p>
         <div class="center">
-          <img src="../img/ML.png" alt="Classificação de Uso do Solo">
+          <img src="/img/ML.png" alt="Classificação de Uso do Solo">
         </div>
       </section>
 
@@ -575,22 +575,22 @@
       <section class="docs-section" id="sec-agro-pontos-poligono">
         <h2 class="docs-section-title" data-key="rth-nav-agro-pontos-poligono">Pontos de GPS para Polígono</h2>
         <div class="center">
-          <img src="../img/GPSParaPoligonoCSV.png" alt="Pontos de GPS para Polígono — importação CSV">
+          <img src="/img/GPSParaPoligonoCSV.png" alt="Pontos de GPS para Polígono — importação CSV">
         </div>
         <p class="text-pad"><span class="destaque">Gera um polígono de forma côncava (Concave Hull) a partir de um arquivo CSV com colunas latitude/longitude</span> ou da camada de pontos ativa no QGIS. Permite configurar o limiar do algoritmo (0 = muito côncavo, 1 = convexo) e suporta dois modos: um único polígono com todos os pontos, ou múltiplos polígonos agrupados por uma coluna identificadora. <span class="destaque">Especialmente útil para converter trilhas GPS de campo em talhões vetoriais</span>, eliminar a necessidade de digitalização manual e criar polígonos representativos de áreas coletadas com equipamentos GPS ou aplicativos móveis.</p>
         <div class="center">
-          <img src="../img/GPSParaPoligono.png" alt="Pontos de GPS para Polígono — resultado">
+          <img src="/img/GPSParaPoligono.png" alt="Pontos de GPS para Polígono — resultado">
         </div>
       </section>
 
       <section class="docs-section" id="sec-agro-grid-pontos">
         <h2 class="docs-section-title" data-key="rth-nav-agro-grid-pontos">Grid de Pontos</h2>
         <div class="center">
-          <img src="../img/GridDePontos1.png" alt="Grid de Pontos — configuração">
+          <img src="/img/GridDePontos1.png" alt="Grid de Pontos — configuração">
         </div>
         <p class="text-pad"><span class="destaque">Gera uma grade regular de pontos dentro de um polígono selecionado</span>, com espaçamento definido em metros. A ferramenta detecta automaticamente o datum UTM regional do polígono para garantir precisão métrica na distribuição dos pontos. Exibe uma dica de conversão de espaçamento: espaçamento (m) = √(hectares × 10.000). <span class="destaque">Ideal para criar planos de amostragem de solo, grade de coleta de dados de campo e pontos de referência para análises de agricultura de precisão.</span></p>
         <div class="center">
-          <img src="../img/GridDePontos2.png" alt="Grid de Pontos — resultado">
+          <img src="/img/GridDePontos2.png" alt="Grid de Pontos — resultado">
         </div>
       </section>
 
@@ -598,18 +598,18 @@
         <h2 class="docs-section-title" data-key="rth-nav-agro-exportar-grid">Exportar Grid CSV</h2>
         <p class="text-pad"><span class="destaque">Exporta uma camada de pontos do QGIS para um arquivo CSV</span> com as colunas na ordem latitude, longitude. Utiliza o exportador nativo GDAL e realiza pós-processamento para reordenar e renomear as colunas corretamente antes de salvar o arquivo final. O formato de saída é compatível com a importação no app RTH World Explorer e outros softwares de campo que esperam coordenadas em lat/lon separadas por vírgula. A ordem das colunas é garantida independentemente de como a camada foi criada no QGIS.</p>
         <div class="center">
-          <img src="../img/exportGridCsv.png" alt="Exportar Grid CSV">
+          <img src="/img/exportGridCsv.png" alt="Exportar Grid CSV">
         </div>
       </section>
 
       <section class="docs-section" id="sec-agro-importar-grid">
         <h2 class="docs-section-title" data-key="rth-nav-agro-importar-grid">Importar Grid CSV</h2>
         <div class="center">
-          <img src="../img/ImportarGrid.png" alt="Importar Grid CSV — interface">
+          <img src="/img/ImportarGrid.png" alt="Importar Grid CSV — interface">
         </div>
         <p class="text-pad"><span class="destaque">Importa um arquivo CSV com colunas de coordenadas como uma camada de pontos no QGIS.</span> Detecta automaticamente o delimitador do arquivo, faz auto-seleção de colunas por nomes comuns (lat, lon, x, y, longitude, latitude) e permite definir o CRS das coordenadas. Utiliza o provider nativo delimitedtext do QGIS, garantindo compatibilidade com arquivos exportados pelo app RTH World Explorer, receptores GPS, planilhas de coleta de campo e qualquer CSV com coordenadas geográficas.</p>
         <div class="center">
-          <img src="../img/importarGrid2.png" alt="Importar Grid CSV — resultado">
+          <img src="/img/importarGrid2.png" alt="Importar Grid CSV — resultado">
         </div>
       </section>
 
@@ -617,7 +617,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-agro-indices">Índices de Vegetação em Talhão</h2>
         <p class="text-pad"><span class="destaque">Busca cenas Sentinel-2 via STAC e calcula índices de vegetação (NDVI, EVI, SAVI, MSAVI, NDWI ou fórmula personalizada) recortados especificamente ao polígono do talhão selecionado</span>, sem necessidade de download da cena completa. Utiliza leitura remota de COG via vsicurl para processar apenas a área de interesse. O resultado é carregado automaticamente com pseudocolor RdYlGn aplicado, pronto para análise visual imediata. <span class="destaque">Ideal para monitoramento periódico de lavouras, detecção de variabilidade espacial dentro do talhão e tomada de decisão em agricultura de precisão.</span></p>
         <div class="center">
-          <img src="../img/IndicesVegTalhao.png" alt="Índices de Vegetação em Talhão">
+          <img src="/img/IndicesVegTalhao.png" alt="Índices de Vegetação em Talhão">
         </div>
       </section>
 
@@ -625,7 +625,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-agro-linhas">Linhas de Plantio e Colheita</h2>
         <p class="text-pad">Antes de executar a ferramenta, o usuário deve <span class="destaque">desenhar uma linha guia que define a direção das linhas paralelas</span> diretamente no canvas do QGIS — essa linha mestra determina o ângulo e orientação de toda a operação. Com a linha guia definida, a ferramenta <span class="destaque">gera linhas paralelas de plantio/colheita dentro de um polígono selecionado</span>, baseadas na linha mestra e no espaçamento do implemento agrícola. Oferece três modos: <span class="destaque">somente linhas paralelas, linhas com desconsideração de bordadura (recuo de 1× o espaçamento) e linhas com curvas de retorno em padrão serpentina (arcos circulares conectando as faixas).</span> Suporta suavização das curvas de retorno com diferentes intensidades. As linhas geradas são compatíveis com a Análise de Linhas e com a exportação para monitores agrícolas, formando um fluxo completo de planejamento de operações a campo.</p>
         <div class="center">
-          <img src="../img/Linhas%20de%20Plantio%20e%20Colheita.png" alt="Linhas de Plantio e Colheita">
+          <img src="/img/Linhas%20de%20Plantio%20e%20Colheita.png" alt="Linhas de Plantio e Colheita">
         </div>
       </section>
 
@@ -633,7 +633,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-agro-linhas-bordadura">Linhas de Bordadura</h2>
         <p class="text-pad">Gera as <span class="destaque">linhas de bordadura</span> ao redor do talhão agrícola — faixas externas que delimitam o perímetro operacional da lavoura e definem a área de manobra das máquinas. As linhas de bordadura são calculadas a partir do polígono do talhão selecionado, garantindo paralelismo com o contorno da área e compatibilidade com as demais ferramentas de planejamento de operações a campo.</p>
         <div class="center">
-          <img src="../img/LinhasBordadura.png" alt="Linhas de Bordadura">
+          <img src="/img/LinhasBordadura.png" alt="Linhas de Bordadura">
         </div>
       </section>
 
@@ -641,18 +641,18 @@
         <h2 class="docs-section-title" data-key="rth-nav-agro-analise-linhas">Análise de Linhas</h2>
         <p class="text-pad"><span class="destaque">Analisa camadas de linhas de plantio/colheita calculando métricas de qualidade e eficiência operacional: paralelismo (desvio angular entre linhas), espaçamento médio, área coberta, tempo estimado de operação por velocidade definida e custo por hora e combustível.</span> Permite também comparar até 3 estratégias de plantio lado a lado em uma tabela interativa, facilitando a escolha do melhor planejamento. Ideal para avaliar a qualidade de operações realizadas a campo e otimizar o planejamento de novas safras.</p>
         <div class="center">
-          <img src="../img/AnaliseLinhas.png" alt="Análise de Linhas">
+          <img src="/img/AnaliseLinhas.png" alt="Análise de Linhas">
         </div>
       </section>
 
       <section class="docs-section" id="sec-agro-carreadores">
         <h2 class="docs-section-title" data-key="rth-nav-agro-carreadores">Criação de Carreadores</h2>
         <div class="center">
-          <img src="../img/Carreador1.png" alt="Criação de Carreadores — configuração">
+          <img src="/img/Carreador1.png" alt="Criação de Carreadores — configuração">
         </div>
         <p class="text-pad"><span class="destaque">Cria faixas de carreador (headland) em um polígono agrícola selecionado.</span> O usuário desenha uma linha sobre o talhão usando as ferramentas nativas do QGIS e define a largura total da faixa; a ferramenta gera duas camadas de saída: o carreador (faixa centralizada na linha) e o campo restante sem o carreador. <span class="destaque">Carreadores são faixas de manobra onde a máquina agrícola realiza as curvas de retorno no final de cada passada.</span> Mapear os carreadores com precisão é essencial para calcular a área útil de plantio, definir os limites de operação das linhas e planejar a logística de campo.</p>
         <div class="center">
-          <img src="../img/Carreador2.png" alt="Criação de Carreadores — resultado">
+          <img src="/img/Carreador2.png" alt="Criação de Carreadores — resultado">
         </div>
       </section>
 
@@ -660,7 +660,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-agro-monitor">Exportar para Monitor Agrícola</h2>
         <p class="text-pad"><span class="destaque">Exporta camadas vetoriais de linhas de plantio para formatos compatíveis com monitores agrícolas</span> das principais marcas do mercado: John Deere, Case IH, New Holland, Trimble, Topcon, Raven, SOLINFTEC e Ag-Leader. Suporta exportação como Shapefile comprimido em ZIP ou, no caso do John Deere, também no formato ISO-XML (ISOBUS ISO 11783-10). Permite combinar uma camada de linhas de plantio com uma camada de curvas de retorno antes de exportar, gerando um arquivo único para o monitor. Elimina a necessidade de software proprietário adicional para converter o planejamento do QGIS para o monitor agrícola. Em alguns casos, <span class="destaque">pode ser necessário realizar ajustes adicionais junto ao software ou portal web do fabricante</span> para configurar parâmetros específicos do monitor antes da transferência definitiva — como calibração de largura, unidade de medida ou formato de arquivo aceito pelo receptor embarcado.</p>
         <div class="center">
-          <img src="../img/ExportarMonitor.png" alt="Exportar para Monitor Agrícola">
+          <img src="/img/ExportarMonitor.png" alt="Exportar para Monitor Agrícola">
         </div>
       </section>
 
@@ -668,7 +668,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-agro-planejador-voo">Planejador de Voo para Drones</h2>
         <p class="text-pad"><span class="destaque">Planejador de missão para drones agrícolas que gera linhas de voo paralelas sobre um polígono selecionado</span> a partir de parâmetros de câmera (tamanho do sensor, distância focal, resolução), altitude AGL, overlaps frontal/lateral e direção de voo. Inclui presets para os principais drones do mercado (DJI, Parrot, Autel, WingtraOne). Calcula automaticamente GSD (Ground Sample Distance), footprint de cada foto, número de fotos, tempo de voo estimado e número de baterias necessárias. Gera camadas vetoriais com as linhas de voo, waypoints de foto e polígono de cobertura, prontos para exportação para o controlador de voo.</p>
         <div class="center">
-          <img src="../img/PlanejadorVooDrone.png" alt="Planejador de Voo para Drones">
+          <img src="/img/PlanejadorVooDrone.png" alt="Planejador de Voo para Drones">
         </div>
       </section>
 
@@ -676,7 +676,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-agro-analise-voo">Análise de Voo para Drones</h2>
         <p class="text-pad"><span class="destaque">Analisa o plano de voo gerado pelo Planejador de Voo, calculando tempo de voo, número de baterias necessárias (com reserva de segurança configurável), tempo estimado de troca entre baterias, eficiência operacional e hora estimada de conclusão da missão.</span> Permite definir a hora de início do voo para projeção precisa do término e exibe um score operacional geral. Útil para planejar a logística da missão, dimensionar o número de baterias a levar a campo e estimar o horário de encerramento para aproveitar as melhores condições de iluminação.</p>
         <div class="center">
-          <img src="../img/AnaliseVoo.png" alt="Análise de Voo para Drones">
+          <img src="/img/AnaliseVoo.png" alt="Análise de Voo para Drones">
         </div>
       </section>
 
@@ -684,7 +684,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-agro-exportar-voo">Exportar Plano de Voo</h2>
         <p class="text-pad"><span class="destaque">Exporta o plano de voo para formatos compatíveis com os principais softwares e controladores de drone do mercado: KMZ (DJI Terra e Google Earth), CSV de waypoints (Litchi), formato QGC WPL 110 (Mission Planner, ArduPilot, PX4), KML genérico (Parrot, Autel), Shapefile comprimido em ZIP e GeoPackage.</span> Todas as saídas são reprojetadas automaticamente para WGS-84. A exportação para múltiplos formatos no mesmo fluxo de trabalho garante compatibilidade com diferentes fabricantes de drone sem necessidade de conversão manual posterior.</p>
         <div class="center">
-          <img src="../img/ExportarVoo.png" alt="Exportar Plano de Voo">
+          <img src="/img/ExportarVoo.png" alt="Exportar Plano de Voo">
         </div>
       </section>
 
@@ -692,7 +692,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-agro-mosaico">Mosaico Automático de Drone</h2>
         <p class="text-pad"><span class="destaque">Combina múltiplos tiles raster georreferenciados (GeoTIFF, JP2, IMG, VRT) em um único ortomosaico usando o algoritmo GDAL Merge.</span> Suporta compressão LZW, configuração de tipo de dado e valor no-data para áreas sem cobertura. Após o processamento fotogramétrico no software dedicado (Agisoft, Pix4D, WebODM, etc.), que entrega os tiles separados, esta ferramenta realiza o merge final diretamente no QGIS. Pode carregar o mosaico resultante automaticamente no projeto após a geração.</p>
         <div class="center">
-          <img src="../img/MosaicoDrone.png" alt="Mosaico Automático de Drone">
+          <img src="/img/MosaicoDrone.png" alt="Mosaico Automático de Drone">
         </div>
       </section>
 
@@ -700,7 +700,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-agro-mde-mdt">Geração de MDE/MDT de Drone</h2>
         <p class="text-pad"><span class="destaque">Gera Modelos Digitais de Elevação (MDE/DSM) ou de Terreno (MDT/DTM) a partir de tiles raster de elevação via GDAL Merge, ou de nuvens de pontos LAS/LAZ via PDAL (requer instalação separada no QGIS).</span> Diferencia entre DSM (superfície, inclui vegetação e edificações) e DTM (terreno, representa apenas o solo). Oferece pós-processamentos opcionais: preenchimento de vazios (Fill NoData), geração de Hillshade para visualização de relevo e criação de Curvas de Nível com intervalo configurável em metros. Ideal para análises topográficas de talhões, projetos de drenagem e planejamento de sistematização.</p>
         <div class="center">
-          <img src="../img/GerarMDEMDT.png" alt="Geração de MDE/MDT de Drone">
+          <img src="/img/GerarMDEMDT.png" alt="Geração de MDE/MDT de Drone">
         </div>
       </section>
 
@@ -731,11 +731,11 @@
       <section class="docs-section" id="sec-bases-dem">
         <h2 class="docs-section-title" data-key="rth-nav-bases-dem">Baixar DEM</h2>
         <div class="center">
-          <img src="../img/DEM1.png" alt="Baixar DEM — interface">
+          <img src="/img/DEM1.png" alt="Baixar DEM — interface">
         </div>
         <p class="text-pad"><span class="destaque">Ferramenta para download de Modelos Digitais de Elevação (MDE/DEM) diretamente no QGIS.</span> Permite buscar e baixar dados de elevação via STAC do INPE (Brazil Data Cube) ou a partir de grade Copernicus. <span class="destaque">O usuário desenha um retângulo no canvas para definir a área de interesse e o download ocorre em segundo plano com barra de progresso.</span> Os dados de elevação são carregados automaticamente no projeto após o download, prontos para análises topográficas, cálculo de declividade, geração de hillshade e aplicações hidrológicas. Elimina a necessidade de acessar portais externos para obter dados altimétricos.</p>
         <div class="center">
-          <img src="../img/DEM2.png" alt="Baixar DEM — resultado">
+          <img src="/img/DEM2.png" alt="Baixar DEM — resultado">
         </div>
       </section>
 
@@ -743,7 +743,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-bases-prodes">Baixar PRODES</h2>
         <p class="text-pad"><span class="destaque">Ferramenta para visualização e download de dados de desmatamento PRODES do INPE via TerraBrasilis.</span> Permite carregar camadas WMS em streaming (com filtro temporal por ano) ou baixar vetores via WFS salvos como GeoPackage, para todos os biomas brasileiros ou individualmente. Suporta tanto o incremento anual de desmatamento (novos polígonos do ano) quanto a camada acumulada de todos os polígonos históricos. Essencial para trabalhos de monitoramento ambiental, relatórios de compliance e análise de passivo de desmatamento em propriedades rurais.</p>
         <div class="center">
-          <img src="../img/Prodes.png" alt="Baixar PRODES">
+          <img src="/img/Prodes.png" alt="Baixar PRODES">
         </div>
       </section>
 
@@ -751,7 +751,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-bases-dados-brasil">Base de Dados Pública do Brasil</h2>
         <p class="text-pad"><span class="destaque">Catálogo dinâmico com mais de 60 provedores de serviços geoespaciais públicos brasileiros (INDE e outros)</span>, organizados por nível de administração: Nacional, Subnacional, Governo Local e Universidade. Conecta-se em tempo real a cada provedor via GetCapabilities (WMS, WFS ou WCS), listando todas as camadas disponíveis. O usuário pode virtualizar camadas diretamente no QGIS (streaming sem download) ou baixá-las como GeoPackage (WFS) ou GeoTIFF (WMS/WCS). Inclui fallbacks GDAL para servidores com incompatibilidades no QGIS 4 e tratamento diferenciado de erros HTTP 403, 404, SSL e timeout.</p>
         <div class="center">
-          <img src="../img/GEOBASE.png" alt="Base de Dados Pública do Brasil">
+          <img src="/img/GEOBASE.png" alt="Base de Dados Pública do Brasil">
         </div>
       </section>
 
@@ -759,7 +759,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-bases-meteo">Base de Dados Meteorológicos</h2>
         <p class="text-pad"><span class="destaque">Acessa dados meteorológicos do INPE via STAC API (Brazil Data Cube), com catálogo de 9 datasets</span>: GOES-16/19 (imagens de satélite meteorológico), GOES-13 histórico, Radiação Solar DSWRF, SAMeT horário e diário (temperatura), MERGE diário e horário (precipitação estimada) e ETA CC (projeção climática 2071-2099). O usuário seleciona o dataset e escolhe um item da lista paginada; o download ocorre em segundo plano com barra de progresso. Os arquivos entregues incluem NetCDF, GRIB2 e GZ, que podem ser carregados no QGIS para análises climáticas e de risco agrometeorológico.</p>
         <div class="center">
-          <img src="../img/BaseMeteo.png" alt="Base de Dados Meteorológicos">
+          <img src="/img/BaseMeteo.png" alt="Base de Dados Meteorológicos">
         </div>
       </section>
 
@@ -767,7 +767,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-bases-basemaps">Basemaps</h2>
         <p class="text-pad"><span class="destaque">Adiciona ao projeto QGIS camadas de imagem de satélite de fundo (basemaps)</span> para uso como referência em mapeamento agrícola. Os provedores disponíveis são: ESRI Satellite (ArcGIS World Imagery), Google Satellite e Bing Aerial. Todos são acessados via tiles XYZ sem necessidade de chave de API. Os basemaps de satélite são indispensáveis para orientação espacial, verificação de limites de talhões, identificação de estradas e estruturas e como fundo para apresentações de mapas. A qualidade e atualidade das imagens variam por provedor e região.</p>
         <div class="center">
-          <img src="../img/Basemaps.png" alt="Basemaps">
+          <img src="/img/Basemaps.png" alt="Basemaps">
         </div>
       </section>
 
@@ -775,8 +775,8 @@
         <h2 class="docs-section-title" data-key="rth-nav-bases-mock">Mock</h2>
         <p class="text-pad">Usuário pode colocar na pasta do plugin o arquivo que quiser para que assim você consiga puxar o arquivo quando bem entender.</p>
         <div class="containerflex">
-          <div class="image-container-texto-legenda"><img src="../img/Mock1.png" alt="Mock — exemplo 1"></div>
-          <div class="image-container-texto-legenda"><img src="../img/mock2.png" alt="Mock — exemplo 2"></div>
+          <div class="image-container-texto-legenda"><img src="/img/Mock1.png" alt="Mock — exemplo 1"></div>
+          <div class="image-container-texto-legenda"><img src="/img/mock2.png" alt="Mock — exemplo 2"></div>
         </div>
       </section>
 
@@ -786,7 +786,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-estilo-visao-geral">Visão Geral</h2>
         <p class="text-pad"><span class="destaque">A ferramenta de Estilos Rápidos aplica estilos visuais pré-configurados a camadas do projeto com um único clique.</span> O acervo inclui estilos para os tipos de dados mais comuns em mapeamento agrícola: polígonos de talhão, pontos de amostragem, linhas de plantio, rasters de índice de vegetação, curvas de nível e camadas de monitoramento. Os estilos pré-configurados seguem convenções visuais do sensoriamento remoto agrícola, com paletas de cores adequadas para cada tipo de dado. É possível aplicar o estilo à camada selecionada no painel de camadas sem abrir o gerenciador de estilos do QGIS.</p>
         <div class="center">
-          <img src="../img/StyleRap.png" alt="Visão Geral — Estilos Rápidos">
+          <img src="/img/StyleRap.png" alt="Visão Geral — Estilos Rápidos">
         </div>
       </section>
 
@@ -794,7 +794,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-estilo-mock">Mock</h2>
         <p class="text-pad">Usuário pode colocar na pasta do plugin o arquivo que quiser para que assim você consiga puxar o arquivo quando bem entender.</p>
         <div class="center">
-          <img src="../img/MockStyle.png" alt="Mock — Estilos Rápidos">
+          <img src="/img/MockStyle.png" alt="Mock — Estilos Rápidos">
         </div>
       </section>
 
@@ -803,11 +803,11 @@
       <section class="docs-section" id="sec-layout-visao-geral">
         <h2 class="docs-section-title" data-key="rth-nav-layout-visao-geral">Visão Geral</h2>
         <div class="center">
-          <img src="../img/Layout1.png" alt="Visão Geral — Layout de Impressão Rápidos">
+          <img src="/img/Layout1.png" alt="Visão Geral — Layout de Impressão Rápidos">
         </div>
         <p class="text-pad"><span class="destaque">A ferramenta de Layout de Impressão Rápidos aplica layouts pré-configurados ao compositor de impressão do QGIS, centralizando automaticamente a área de interesse na parte central da tela.</span> Os layouts são otimizados para mapas agrícolas e incluem elementos essenciais como legenda, barra de escala, rosa dos ventos e informações do talhão. Elimina a necessidade de configurar manualmente cada elemento do layout a cada novo mapa gerado, padronizando a apresentação visual de relatórios e entregas de campo. O usuário seleciona o template desejado e o layout é aplicado com os dados do projeto atual.</p>
         <div class="center">
-          <img src="../img/Layout2.png" alt="Layout de Impressão Rápidos — resultado">
+          <img src="/img/Layout2.png" alt="Layout de Impressão Rápidos — resultado">
         </div>
       </section>
 
@@ -815,7 +815,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-layout-mock">Mock</h2>
         <p class="text-pad">Usuário pode colocar na pasta do plugin o arquivo que quiser para que assim você consiga puxar o arquivo quando bem entender.</p>
         <div class="center">
-          <img src="../img/MockLayout.png" alt="Mock — Layout de Impressão Rápidos">
+          <img src="/img/MockLayout.png" alt="Mock — Layout de Impressão Rápidos">
         </div>
       </section>
 
@@ -824,22 +824,22 @@
       <section class="docs-section" id="sec-mais-localizacao">
         <h2 class="docs-section-title" data-key="rth-nav-mais-localizacao">Identificar Localização</h2>
         <div class="center">
-          <img src="../img/IdentificarLoc.png" alt="Identificar Localização — interface">
+          <img src="/img/IdentificarLoc.png" alt="Identificar Localização — interface">
         </div>
         <p class="text-pad"><span class="destaque">Ao clicar em qualquer ponto do mapa, converte as coordenadas em informações de endereço usando a API Nominatim (OpenStreetMap). Identifica cidade, município, estado e país do ponto clicado</span> e exibe o resultado na barra de mensagens do QGIS, copiando automaticamente para o clipboard. A consulta HTTP é executada em uma thread separada para não bloquear a interface do QGIS durante a requisição. Útil para identificar rapidamente a localização de pontos ou áreas de interesse sem precisar sair do QGIS para consultar um mapa externo.</p>
         <div class="center">
-          <img src="../img/IdentificarLoc2.png" alt="Identificar Localização — resultado">
+          <img src="/img/IdentificarLoc2.png" alt="Identificar Localização — resultado">
         </div>
       </section>
 
       <section class="docs-section" id="sec-mais-lat-long">
         <h2 class="docs-section-title" data-key="rth-nav-mais-lat-long">Capturar Lat/Long</h2>
         <div class="center">
-          <img src="../img/LATLON.png" alt="Capturar Lat/Long — interface">
+          <img src="/img/LATLON.png" alt="Capturar Lat/Long — interface">
         </div>
         <p class="text-pad"><span class="destaque">Ativa um modo de clique no canvas do QGIS para capturar as coordenadas exatas de qualquer ponto do mapa. Ao clicar, exibe a latitude e longitude com 8 casas decimais na barra de mensagens e copia automaticamente para o clipboard no formato pronto para uso.</span> A ferramenta se desativa sozinha após o clique, sem necessidade de pressionar Escape. Útil para extrair coordenadas de pontos específicos para uso em outros sistemas, tabelas ou comunicações com equipe de campo.</p>
         <div class="center">
-          <img src="../img/LATLON2.png" alt="Capturar Lat/Long — resultado">
+          <img src="/img/LATLON2.png" alt="Capturar Lat/Long — resultado">
         </div>
       </section>
 
@@ -847,29 +847,29 @@
         <h2 class="docs-section-title" data-key="rth-nav-mais-json">Capturar JSON</h2>
         <p class="text-pad"><span class="destaque">Exporta a geometria da(s) feição(ões) selecionada(s) na camada ativa para o formato GeoJSON.</span> Reprojecta automaticamente para WGS84 (EPSG:4326) se necessário, serializa a geometria com a chave "coordinates" antes de "type" e copia o resultado compacto para o clipboard. Suporta exportação de uma ou múltiplas feições simultaneamente. O JSON gerado é compatível com APIs de geoanálise, ferramentas de desenvolvimento web e plataformas como Google Earth Engine, Mapbox e qualquer serviço que aceite GeoJSON como entrada.</p>
         <div class="center">
-          <img src="../img/catchjson.png" alt="Capturar JSON">
+          <img src="/img/catchjson.png" alt="Capturar JSON">
         </div>
       </section>
 
       <section class="docs-section" id="sec-mais-google-pro">
         <h2 class="docs-section-title" data-key="rth-nav-mais-google-pro">Enviar ao Google Earth Pro</h2>
         <div class="center">
-          <img src="../img/enviarGoogle.png" alt="Enviar ao Google Earth Pro — interface">
+          <img src="/img/enviarGoogle.png" alt="Enviar ao Google Earth Pro — interface">
         </div>
         <p class="text-pad"><span class="destaque">Envia um ponto clicado no mapa diretamente para o Google Earth Pro via arquivo KML temporário.</span> Gera o KML com as coordenadas do clique e tenta abrir o Google Earth Pro pelos caminhos de instalação padrão do Windows. Se o Google Earth Pro não for encontrado nos caminhos padrão, abre o arquivo KML com o aplicativo padrão do sistema operacional associado à extensão .kml. Útil para verificar rapidamente uma localização no Google Earth Pro sem precisar digitar coordenadas manualmente.</p>
         <div class="center">
-          <img src="../img/enviarGoogle2.png" alt="Enviar ao Google Earth Pro — resultado">
+          <img src="/img/enviarGoogle2.png" alt="Enviar ao Google Earth Pro — resultado">
         </div>
       </section>
 
       <section class="docs-section" id="sec-mais-poligono-gep">
         <h2 class="docs-section-title" data-key="rth-nav-mais-poligono-gep">Enviar Polígono ao Google Earth Pro</h2>
         <div class="center">
-          <img src="../img/enviarGooglePoly1.png" alt="Enviar Polígono ao Google Earth Pro — interface">
+          <img src="/img/enviarGooglePoly1.png" alt="Enviar Polígono ao Google Earth Pro — interface">
         </div>
         <p class="text-pad"><span class="destaque">Exporta polígonos selecionados na camada vetorial ativa para o Google Earth Pro via arquivo KML.</span> Reprojecta automaticamente as geometrias para WGS84 e gera um KML com estilo de contorno vermelho (sem preenchimento), suportando polígonos simples e multipolígonos. Diferente da ferramenta de envio de ponto, esta trabalha com geometrias poligonais completas, permitindo visualizar talhões, áreas de interesse e polígonos de análise no Google Earth Pro com fidelidade geométrica total.</p>
         <div class="center">
-          <img src="../img/enviarGooglePoly2.png" alt="Enviar Polígono ao Google Earth Pro — resultado">
+          <img src="/img/enviarGooglePoly2.png" alt="Enviar Polígono ao Google Earth Pro — resultado">
         </div>
       </section>
 
@@ -877,7 +877,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-mais-area">Calcular Área (ha)</h2>
         <p class="text-pad"><span class="destaque">Calcula a área total das feições selecionadas na camada ativa em hectares, com reprojeção automática para a zona UTM regional detectada a partir do centroide da primeira feição.</span> Exibe o resultado com 4 casas decimais junto com o datum e EPSG utilizado para o cálculo. O valor numérico é copiado automaticamente para o clipboard. A detecção automática da zona UTM garante precisão métrica independentemente do CRS original da camada, sendo mais confiável que calcular área diretamente em coordenadas geográficas.</p>
         <div class="center">
-          <img src="../img/CalcArea.png" alt="Calcular Área (ha)">
+          <img src="/img/CalcArea.png" alt="Calcular Área (ha)">
         </div>
       </section>
 
@@ -885,7 +885,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-mais-perimetro">Calcular Perímetro (m)</h2>
         <p class="text-pad"><span class="destaque">Calcula o perímetro total das feições selecionadas em metros ou quilômetros (ajuste automático conforme a magnitude), usando reprojeção para a zona UTM regional detectada automaticamente pelo centroide da primeira feição.</span> Exibe o resultado com o datum e EPSG utilizados. O valor é copiado para o clipboard ao final. Útil para dimensionar cercas, estradas internas, bordaduras e qualquer elemento linear associado ao talhão. O ajuste automático de unidade (m vs km) facilita a leitura do resultado sem conversão manual.</p>
         <div class="center">
-          <img src="../img/CalcPerim.png" alt="Calcular Perímetro (m)">
+          <img src="/img/CalcPerim.png" alt="Calcular Perímetro (m)">
         </div>
       </section>
 
@@ -893,7 +893,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-mais-distancia">Medir Distância</h2>
         <p class="text-pad"><span class="destaque">Ferramenta de medição geodésica entre dois pontos clicados no mapa.</span> Exibe uma linha laranja com rubber band e uma etiqueta flutuante em tempo real enquanto o cursor se move, mostrando a distância atualizada antes mesmo de confirmar o segundo ponto. Ao finalizar, cria uma camada vetorial permanente com a linha e o rótulo de distância posicionado abaixo da linha, usando o elipsoide do projeto para cálculo preciso. A camada criada pode ser salva ou usada como referência de distância em apresentações e relatórios.</p>
         <div class="center">
-          <img src="../img/Medir.png" alt="Medir Distância">
+          <img src="/img/Medir.png" alt="Medir Distância">
         </div>
       </section>
 
@@ -901,7 +901,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-mais-copa">Medir Copa das Árvores</h2>
         <p class="text-pad"><span class="destaque">Ferramenta interativa para medir o diâmetro e raio da copa de árvores.</span> O usuário clica no centro da árvore e arrasta até a borda da copa; o círculo de medição e os valores de diâmetro (acima) e raio (abaixo) são exibidos em tempo real enquanto o cursor se move. Ao finalizar, cria uma camada vetorial com o círculo da copa e os atributos diametro_m e raio_m, com rótulos posicionados por regras. Útil para inventários florestais, mapeamento de arborização urbana e monitoramento do desenvolvimento de pomares.</p>
         <div class="center">
-          <img src="../img/MedirCopa.png" alt="Medir Copa das Árvores">
+          <img src="/img/MedirCopa.png" alt="Medir Copa das Árvores">
         </div>
       </section>
 
@@ -909,7 +909,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-mais-renomear">Renomear Layer Rápido</h2>
         <p class="text-pad"><span class="destaque">Ferramenta de alternância de prefixo que adiciona ou remove o símbolo ★ no início do nome das camadas selecionadas no painel de camadas.</span> Funciona como toggle: se todas as camadas selecionadas já têm o prefixo, remove de todas; caso contrário, adiciona nas que ainda não têm. Funciona com múltiplas camadas simultaneamente. O símbolo ★ serve como marcador visual para destacar as camadas mais importantes ou de uso frequente no projeto, facilitando a localização rápida em projetos com muitas camadas.</p>
         <div class="center">
-          <img src="../img/RenomearRapido.png" alt="Renomear Layer Rápido">
+          <img src="/img/RenomearRapido.png" alt="Renomear Layer Rápido">
         </div>
       </section>
 
@@ -917,7 +917,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-mais-arcgis">Exportar para ArcGIS</h2>
         <p class="text-pad"><span class="destaque">Exporta as camadas do projeto QGIS para uma File Geodatabase (.gdb) no formato ArcGIS, usando o driver OpenFileGDB do GDAL (requer versão >= 3.6). Suporta camadas vetoriais (com correção automática de geometrias inválidas e sanitização de nomes de campos) e rasters exportados como GeoTIFF.</span> Gera automaticamente um relatório TXT com a lista de camadas exportadas, erros ocorridos e instruções de uso no ArcGIS Pro. Opcionalmente exporta a simbologia das camadas em formato SLD para facilitar a replicação do visual no ArcGIS. Resolve o principal gargalo de interoperabilidade entre os dois softwares.</p>
         <div class="center">
-          <img src="../img/ExportArcGis.png" alt="Exportar para ArcGIS">
+          <img src="/img/ExportArcGis.png" alt="Exportar para ArcGIS">
         </div>
       </section>
 
@@ -925,23 +925,23 @@
         <h2 class="docs-section-title" data-key="rth-nav-mais-respawn">Respawn</h2>
         <p class="text-pad">O Respawn é uma ferramenta de <span class="destaque">ponto de retorno georreferenciado</span> para navegação rápida no canvas do QGIS. Ao acionar <span class="destaque">Setar Respawn</span>, a ferramenta registra a posição atual do canvas — incluindo coordenadas centrais e escala — criando um marcador de retorno. Ao acionar <span class="destaque">Teleportar</span>, o canvas é restaurado exatamente para aquela visão: mesma localização, mesma escala e mesmo nível de zoom do momento em que o respawn foi definido. Útil para alternar rapidamente entre áreas de trabalho distintas sem perder a referência visual de um ponto de interesse fixo.</p>
         <div class="center">
-          <img src="../img/Respawn.png" alt="Respawn — ponto de retorno no QGIS">
+          <img src="/img/Respawn.png" alt="Respawn — ponto de retorno no QGIS">
         </div>
       </section>
 
       <section class="docs-section" id="sec-mais-alternar">
         <h2 class="docs-section-title" data-key="rth-nav-mais-alternar">Alternar Camadas</h2>
         <div class="center">
-          <img src="../img/AlterarCamadas1Grupo.png" alt="Configuração de grupo mutualmente exclusivo">
+          <img src="/img/AlterarCamadas1Grupo.png" alt="Configuração de grupo mutualmente exclusivo">
         </div>
         <p class="text-pad">O modo <span class="destaque">múltiplo</span> requer que as camadas estejam organizadas em um <span class="destaque">grupo com a configuração "Mutualmente Exclusivo" ativada</span> no painel de camadas do QGIS. Com essa configuração, apenas uma camada do grupo fica visível por vez — ao ativar uma, as demais são ocultadas automaticamente. Para ativar: clique com o botão direito no grupo no painel de camadas e marque a opção <em>Mutualmente Exclusivo</em>.</p>
         <div class="center">
-          <img src="../img/AlterarCamadas2.png" alt="Configuração de grupo mutualmente exclusivo no QGIS">
+          <img src="/img/AlterarCamadas2.png" alt="Configuração de grupo mutualmente exclusivo no QGIS">
         </div>
         <p class="text-pad"><span class="destaque">Ferramenta de alternância de visibilidade de camadas com dois modos: modo simples (cicla sequencialmente entre camadas selecionadas no painel com cada clique) e modo multi (grupos independentes configuráveis, cada um com seu próprio ciclo de alternância).</span> Suporta alternância automática por timer configurável em segundos, permitindo comparar visualmente imagens de datas diferentes em modo de animação sem precisar clicar manualmente. A configuração é persistida tanto no QSettings global quanto no arquivo do projeto QGIS entre sessões.</p>
         <div class="containerflex">
-          <div class="image-container-texto-legenda"><img src="../img/AlterarCamadas3.png" alt="Alternar Camadas — modo simples"></div>
-          <div class="image-container-texto-legenda"><img src="../img/AlterarCamadas4.png" alt="Alternar Camadas — modo múltiplo"></div>
+          <div class="image-container-texto-legenda"><img src="/img/AlterarCamadas3.png" alt="Alternar Camadas — modo simples"></div>
+          <div class="image-container-texto-legenda"><img src="/img/AlterarCamadas4.png" alt="Alternar Camadas — modo múltiplo"></div>
         </div>
       </section>
 
@@ -949,7 +949,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-mais-deslocamento-camera">Deslocamento de Câmera</h2>
         <p class="text-pad">Desloca o canvas do QGIS automaticamente em uma direção configurável pelo usuário — <span class="destaque">para cima ou para baixo</span> — movendo a visão do mapa continuamente sem interação manual. Útil para percorrer grandes áreas de forma contínua durante análises visuais, inspeções de ortomosaicos ou apresentações, sem a necessidade de arrastar o mapa manualmente a cada momento.</p>
         <div class="center">
-          <img src="../img/Deslocamento.png" alt="Deslocamento de Câmera">
+          <img src="/img/Deslocamento.png" alt="Deslocamento de Câmera">
         </div>
       </section>
 
@@ -957,7 +957,7 @@
         <h2 class="docs-section-title" data-key="rth-nav-mais-autosave">Auto-Save</h2>
         <p class="text-pad"><span class="destaque">Salva automaticamente o projeto QGIS e comita todas as camadas vetoriais que estejam em modo de edição com modificações em intervalos configuráveis.</span> O diálogo permite definir o intervalo (mínimo 30 segundos) com atalhos rápidos pré-definidos de 1, 5 e 10 minutos. O estado habilitado/desabilitado é persistido no QSettings entre sessões do QGIS, garantindo que o auto-save continue ativo ao reabrir o programa. Evita a perda de trabalho em longas sessões de digitalização ou edição de atributos.</p>
         <div class="center">
-          <img src="../img/AutoSave.png" alt="Auto-Save">
+          <img src="/img/AutoSave.png" alt="Auto-Save">
         </div>
       </section>
 
@@ -966,12 +966,12 @@
       <section class="docs-section" id="sec-explorer-importar-rota">
         <h2 class="docs-section-title" data-key="rth-nav-explorer-importar-rota">Importar Rota</h2>
         <div class="containerflex">
-          <div class="image-container-texto-legenda"><img src="../img/RotasCell.webp" alt="Rotas no app RTH World Explorer" style="max-width:160px;margin:0 auto;display:block;"></div>
-          <div class="image-container-texto-legenda"><img src="../img/importarRota.png" alt="Importar Rota no QGIS"></div>
+          <div class="image-container-texto-legenda"><img src="/img/RotasCell.webp" alt="Rotas no app RTH World Explorer" style="max-width:160px;margin:0 auto;display:block;"></div>
+          <div class="image-container-texto-legenda"><img src="/img/importarRota.png" alt="Importar Rota no QGIS"></div>
         </div>
         <p class="text-pad"><span class="destaque">Importa arquivos .gpx para o QGIS carregando automaticamente todas as sublayers com feições: waypoints (estrela laranja), tracks/trilhas percorridas (linha azul sólida) e routes/rotas planejadas (linha verde tracejada). Compatível com arquivos exportados pelo app RTH World Explorer ou qualquer dispositivo GPS.</span> Sublayers vazias são silenciosamente ignoradas e cada sublayer carregada recebe simbologia pré-definida antes de ser adicionada ao projeto. Elimina a necessidade de configurar manualmente a simbologia de cada camada GPX após a importação.</p>
         <div class="center">
-          <img src="../img/Rotas.png" alt="Resultado da importação de rota no QGIS">
+          <img src="/img/Rotas.png" alt="Resultado da importação de rota no QGIS">
         </div>
       </section>
 
@@ -979,8 +979,8 @@
         <h2 class="docs-section-title" data-key="rth-nav-explorer-pontos-validacao">Importar Pontos de Validação</h2>
         <p class="text-pad"><span class="destaque">Importa pontos de validação de campo exportados pelo app RTH World Explorer (CSV com separador ponto-e-vírgula). Para cada ponto, calcula o ângulo de exibição da seta direcional com base no heading GPS registrado e no lado em que a cultura foi observada (Direita, Esquerda ou Ambos).</span> Cria uma camada de pontos com setas direcionais coloridas por valor usando QgsRuleBasedRenderer. Suporta BOM UTF-8 e detecção de colunas case-insensitive. As setas direcionais facilitam a interpretação dos pontos de validação em análises pós-campo.</p>
         <div class="containerflex">
-          <div class="image-container-texto-legenda"><img src="../img/pontosvalidacao1.png" alt="Importar Pontos de Validação — exemplo 1"></div>
-          <div class="image-container-texto-legenda"><img src="../img/pontosvalidacao2.png" alt="Importar Pontos de Validação — exemplo 2"></div>
+          <div class="image-container-texto-legenda"><img src="/img/pontosvalidacao1.png" alt="Importar Pontos de Validação — exemplo 1"></div>
+          <div class="image-container-texto-legenda"><img src="/img/pontosvalidacao2.png" alt="Importar Pontos de Validação — exemplo 2"></div>
         </div>
       </section>
 
@@ -988,30 +988,30 @@
         <h2 class="docs-section-title" data-key="rth-nav-explorer-parametros">Importar Parâmetros Produtivos</h2>
         <p class="text-pad"><span class="destaque">Importa parâmetros produtivos de campo (CSV com até 60+ colunas) exportados pelo app RTH World Explorer</span>, criando uma camada de pontos no QGIS com todos os campos do CSV preservados como atributos para análises posteriores (filtros, heat maps, joins espaciais). Diferente da ferramenta de Pontos de Validação, não aplica simbologia direcional — o foco é preservar todos os dados de campo íntegros para análise. Ignora automaticamente coordenadas 0,0 (placeholders inválidos do app) e deduplica nomes de campos truncados pelo limite de caracteres do QGIS.</p>
         <div class="containerflex">
-          <div class="image-container-texto-legenda"><img src="../img/importarParametrosProdutivos1.png" alt="Importar Parâmetros Produtivos — exemplo 1"></div>
-          <div class="image-container-texto-legenda"><img src="../img/importarParametrosProdutivos2.png" alt="Importar Parâmetros Produtivos — exemplo 2"></div>
+          <div class="image-container-texto-legenda"><img src="/img/importarParametrosProdutivos1.png" alt="Importar Parâmetros Produtivos — exemplo 1"></div>
+          <div class="image-container-texto-legenda"><img src="/img/importarParametrosProdutivos2.png" alt="Importar Parâmetros Produtivos — exemplo 2"></div>
         </div>
       </section>
 
       <section class="docs-section" id="sec-explorer-pontos-poligono">
         <h2 class="docs-section-title" data-key="rth-nav-explorer-pontos-poligono">Pontos de GPS para Polígono</h2>
         <div class="center">
-          <img src="../img/GPSParaPoligonoCSV.png" alt="GPS para Polígono — importação CSV">
+          <img src="/img/GPSParaPoligonoCSV.png" alt="GPS para Polígono — importação CSV">
         </div>
         <p class="text-pad"><span class="destaque">Gera um polígono de forma côncava (Concave Hull) a partir de um arquivo CSV com colunas latitude/longitude</span> ou da camada de pontos ativa no QGIS. Permite configurar o limiar do algoritmo (0 = muito côncavo, 1 = convexo) e suporta dois modos: um único polígono com todos os pontos, ou múltiplos polígonos agrupados por uma coluna identificadora. <span class="destaque">Especialmente útil para converter trilhas GPS de campo em talhões vetoriais</span>, eliminar a necessidade de digitalização manual e criar polígonos representativos de áreas coletadas com equipamentos GPS ou aplicativos móveis. Esta ferramenta possui integração com o RTH World Explorer.</p>
         <div class="center">
-          <img src="../img/GPSParaPoligono.png" alt="Pontos de GPS para Polígono — resultado">
+          <img src="/img/GPSParaPoligono.png" alt="Pontos de GPS para Polígono — resultado">
         </div>
       </section>
 
       <section class="docs-section" id="sec-explorer-grid-pontos">
         <h2 class="docs-section-title" data-key="rth-nav-explorer-grid-pontos">Grid de Pontos</h2>
         <div class="center">
-          <img src="../img/GridDePontos1.png" alt="Grid de Pontos — configuração">
+          <img src="/img/GridDePontos1.png" alt="Grid de Pontos — configuração">
         </div>
         <p class="text-pad"><span class="destaque">Gera uma grade regular de pontos dentro de um polígono selecionado</span>, com espaçamento definido em metros. A ferramenta detecta automaticamente o datum UTM regional do polígono para garantir precisão métrica na distribuição dos pontos. Exibe uma dica de conversão de espaçamento: espaçamento (m) = √(hectares × 10.000). <span class="destaque">Ideal para criar planos de amostragem de solo, grade de coleta de dados de campo e pontos de referência para análises de agricultura de precisão.</span> Esta ferramenta possui integração com o RTH World Explorer.</p>
         <div class="center">
-          <img src="../img/GridDePontos2.png" alt="Grid de Pontos — resultado">
+          <img src="/img/GridDePontos2.png" alt="Grid de Pontos — resultado">
         </div>
       </section>
 
@@ -1019,18 +1019,18 @@
         <h2 class="docs-section-title" data-key="rth-nav-explorer-exportar-grid">Exportar Grid CSV</h2>
         <p class="text-pad"><span class="destaque">Exporta uma camada de pontos do QGIS para um arquivo CSV</span> com as colunas na ordem latitude, longitude. Utiliza o exportador nativo GDAL e realiza pós-processamento para reordenar e renomear as colunas corretamente antes de salvar o arquivo final. O formato de saída é compatível com a importação no app RTH World Explorer e outros softwares de campo que esperam coordenadas em lat/lon separadas por vírgula. A ordem das colunas é garantida independentemente de como a camada foi criada no QGIS. Esta ferramenta possui integração com o RTH World Explorer.</p>
         <div class="center">
-          <img src="../img/exportGridCsv.png" alt="Exportar Grid CSV">
+          <img src="/img/exportGridCsv.png" alt="Exportar Grid CSV">
         </div>
       </section>
 
       <section class="docs-section" id="sec-explorer-importar-grid">
         <h2 class="docs-section-title" data-key="rth-nav-explorer-importar-grid">Importar Grid CSV</h2>
         <div class="center">
-          <img src="../img/ImportarGrid.png" alt="Importar Grid CSV — configuração">
+          <img src="/img/ImportarGrid.png" alt="Importar Grid CSV — configuração">
         </div>
         <p class="text-pad"><span class="destaque">Importa um arquivo CSV com colunas de coordenadas como uma camada de pontos no QGIS.</span> Detecta automaticamente o delimitador do arquivo, faz auto-seleção de colunas por nomes comuns (lat, lon, x, y, longitude, latitude) e permite definir o CRS das coordenadas. Utiliza o provider nativo delimitedtext do QGIS, garantindo compatibilidade com arquivos exportados pelo app RTH World Explorer, receptores GPS, planilhas de coleta de campo e qualquer CSV com coordenadas geográficas. Esta ferramenta possui integração com o RTH World Explorer.</p>
         <div class="center">
-          <img src="../img/importarGrid2.png" alt="Importar Grid CSV — resultado">
+          <img src="/img/importarGrid2.png" alt="Importar Grid CSV — resultado">
         </div>
       </section>
 
@@ -1065,7 +1065,7 @@
       <section class="docs-section" id="sec-info-doacao">
         <h2 class="docs-section-title" data-key="rth-nav-info-doacao">Doação</h2>
         <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.25rem;">
-          <img src="../img/pix.png" alt="QR Code Pix para doação" style="max-width:220px;border-radius:12px;border:1px solid rgba(0,245,255,0.15);">
+          <img src="/img/pix.png" alt="QR Code Pix para doação" style="max-width:220px;border-radius:12px;border:1px solid rgba(0,245,255,0.15);">
           <p style="font-family:'Cascadia Code',ui-monospace,monospace;font-size:0.95rem;color:rgba(255,255,255,0.85);">Brasileiro? <span class="destaque">Faz um Pix para ajudar a pagar um cafezinho!</span></p>
           <p style="font-family:'Cascadia Code',ui-monospace,monospace;font-size:0.85rem;color:rgba(255,255,255,0.6);max-width:520px;line-height:1.65;">O RTH PROJECT é um plugin gratuito e de código aberto, desenvolvido e mantido de forma independente. <span class="destaque">Se ele facilitou o seu trabalho e você gostaria de contribuir com o desenvolvimento contínuo, considere fazer uma doação.</span></p>
           <p style="font-family:'Cascadia Code',ui-monospace,monospace;font-size:0.85rem;color:rgba(255,255,255,0.6);max-width:520px;line-height:1.65;"><span class="destaque">Qualquer valor é bem-vindo e ajuda a manter o projeto ativo, financiar novas funcionalidades e cobrir os custos de infraestrutura.</span></p>
@@ -1081,11 +1081,11 @@
 
   <!-- aria-hidden="true": vídeo decorativo, sem informação para leitores de tela -->
   <div id="video-background" aria-hidden="true">
-    <video src="../img/background.mp4" autoplay loop muted playsinline poster="../img/background.jpg" class="videoback"></video>
+    <video src="/img/background.mp4" autoplay loop muted playsinline poster="/img/background.jpg" class="videoback"></video>
   </div>
 
   <!-- type="module" permite import/export no JS; inicializa langHandler (EN/PT) -->
-  <script type="module" src="../js/global.js"></script>
+  <script type="module" src="/js/global.js"></script>
 
   <!-- Script de navegação dos docs (script regular, não-module).
        Scripts regulares executam antes de scripts type="module" (que são diferidos
