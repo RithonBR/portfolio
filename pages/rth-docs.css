@@ -18,6 +18,8 @@
     margin-top: 56px;
     height: calc(100vh - 56px);
     overflow: hidden;
+    /* Impede que o rubber-band scroll mobile exponha o fundo roxo do body */
+    overscroll-behavior: none;
 }
 
 /* --- Sidebar --- */

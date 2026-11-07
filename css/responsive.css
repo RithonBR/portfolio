@@ -64,10 +64,13 @@
         padding-top: 110px;
     }
 
-    /* Container usa 95vw (quase toda a tela) e padding compacto para mobile */
-    .container-home {
+    /* box-sizing: border-box faz o width incluir padding e border,
+       evitando que container-home (95vw + padding) ultrapasse 100vw */
+    .container-home,
+    .container-projeto {
         width: 95vw;
         padding: 1.5rem 1.2rem;
+        box-sizing: border-box;
     }
 
     /* Reduz o título para 1rem — se ficar com o tamanho clamp do desktop, trunca no mobile */

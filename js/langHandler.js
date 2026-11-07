@@ -366,6 +366,8 @@ const strings = {
         'rth-p-explorer-exportar-grid-1': "<span class=\"destaque\">Exports a QGIS point layer to a CSV file</span> with columns in latitude, longitude order. The output format is compatible with import in the RTH World Explorer app and other field software. This tool integrates with RTH World Explorer.",
         'rth-p-explorer-importar-grid-1': "<span class=\"destaque\">Imports a CSV file with coordinate columns as a point layer in QGIS.</span> Automatically detects the file delimiter and auto-selects columns by common names. This tool integrates with RTH World Explorer.",
         'rth-p-info-como-citar-1': "If you use RTH Project in technical reports or academic publications, use the references below according to the adopted standard.",
+        'rth-legenda-visao-geral-1': "Figure 1. Plugin toolbar.",
+        'rth-legenda-visao-geral-2': "Figure 2. Image catalogue.",
 
         'proj-11-detail':   "The project was initially written for <span class=\"destaque\">counting colonies on Petri dishes</span>, automating the process. However, <span class=\"destaque\">we found the algorithm can be applied to other uses.</span>",
     },
@@ -722,6 +724,8 @@ const strings = {
         'rth-p-explorer-exportar-grid-1': "<span class=\"destaque\">Exporta uma camada de pontos do QGIS para um arquivo CSV</span> com colunas na ordem latitude, longitude. Compatível com importação no app RTH World Explorer e outros softwares de campo. Esta ferramenta integra com o RTH World Explorer.",
         'rth-p-explorer-importar-grid-1': "<span class=\"destaque\">Importa um arquivo CSV com colunas de coordenadas como camada de pontos no QGIS.</span> Detecta automaticamente o delimitador e autoseleciona colunas por nomes comuns. Esta ferramenta integra com o RTH World Explorer.",
         'rth-p-info-como-citar-1': "Se você utilizar o RTH Project em relatórios técnicos ou publicações acadêmicas, utilize as referências abaixo de acordo com a norma adotada.",
+        'rth-legenda-visao-geral-1': "Figura 1. Barra de ferramentas do plugin.",
+        'rth-legenda-visao-geral-2': "Figura 2. Catálogo de imagens.",
 
         'proj-11-detail':   "O projeto inicialmente foi escrito para <span class=\"destaque\">contagem de colônias em placas de Petri</span>, automatizando o processo. Porém <span class=\"destaque\">percebemos que o algoritmo pode ser utilizado para outras aplicações.</span>",
     }
